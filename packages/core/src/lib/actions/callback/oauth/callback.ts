@@ -157,16 +157,19 @@ export async function handleOAuth(
     redirect_uri = provider.redirectProxyUrl
   }
 
-  console.group("handleOAuth-telemetry")
-  console.log("provider", provider)
-  console.log("codeGrantParams", codeGrantParams)
   // Has additiona parameters when customFetch and customCallbackParams are present
   const additionalParameters = callbackOptions.additionalParameters(
     provider,
     codeGrantParams
   )
-  console.log("additionalParameters", additionalParameters)
-  console.groupEnd()
+
+  if (options.debug) {
+    logger.debug("ADDITIONAL_PARAMETERS", {
+      additionalParameters,
+      provider,
+      codeGrantParams,
+    })
+  }
 
   let codeGrantResponse = await o.authorizationCodeGrantRequest(
     as,

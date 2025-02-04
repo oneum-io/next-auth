@@ -53,15 +53,6 @@ function hasProviderParamType(
 }
 
 /**
- * Checks if provider config has options
- * @param provider Provider Config
- * @returns boolean
- */
-function validateHasOptions(provider: Provider) {
-  return hasProviderParamType(provider, "options", "object")
-}
-
-/**
  * Checks if customFetch function was defined
  * @param provider Provider config
  * @returns boolean
@@ -85,26 +76,22 @@ function validateHasCustomParams(params?: string[]) {
  * @returns custom params
  */
 function getCustomCallbackParams(provider: Provider): string[] | null {
-  if (!validateHasOptions(provider)) return null
   if (!validateHasCustomFetch(provider)) return null
 
-  const { customCallbackParams } = provider.options as NonUndefined<
-    Provider["options"]
-  >
+  const { customCallbackParams } = provider as NonUndefined<Provider>
 
   if (!validateHasCustomParams(customCallbackParams)) return null
 
   return (
-    (customCallbackParams as NonUndefined<
-      Provider["options"]
-    >["customCallbackParams"]) || null
+    (customCallbackParams as NonUndefined<Provider>["customCallbackParams"]) ||
+    null
   )
 }
 
 /**
  * Returns additional parameters object to be upon OAuth2, OIDC token requested.
  * It is available only if custom params definition and customFetch are present in
- * provider's options and config, respectively.
+ * provider's config, respectively.
  *
  * @param provider Provider's config
  * @param codeGrantParams  Grant params for OAuth2 or OIDC code obtaning request
