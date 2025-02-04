@@ -2,7 +2,10 @@
   "name": "root",
   "version": "0.0.0",
   "private": true,
-  "repository": "https://github.com/nextauthjs/next-auth.git",
+  "repository": "https://github.com/oneum-io/next-auth.git",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "build:app": "turbo run build --filter=next-auth-app",
     "build:docs": "turbo run build --filter=docs",
