@@ -233,7 +233,6 @@ export interface OAuth2Config<Profile>
    */
   /** @see {conformInternal} */
   [conformInternal]?: true
-  customCallbackParams?: string[]
   options?: OAuthUserConfig<Profile>
 }
 
@@ -253,7 +252,12 @@ export interface OIDCConfig<Profile>
   idToken?: boolean
 }
 
-export type OAuthConfig<Profile> = OIDCConfig<Profile> | OAuth2Config<Profile>
+export type OAuthConfig<Profile> = (
+  | OIDCConfig<Profile>
+  | OAuth2Config<Profile>
+) & {
+  customCallbackParams?: string[]
+}
 
 export type OAuthEndpointType = "authorization" | "token" | "userinfo"
 
