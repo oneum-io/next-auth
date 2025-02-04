@@ -14,7 +14,11 @@
     "webapi"
   ],
   "homepage": "https://authjs.dev",
-  "repository": "https://github.com/nextauthjs/next-auth.git",
+  "repository": "https://github.com/oneum-io/next-auth.git",
+  "publishConfig": {
+    "access": "restricted",
+    "registry": "https://npm.pkg.github.com"
+  },
   "author": "Balázs Orbán <info@balazsorban.com>",
   "contributors": [
     "Balázs Orbán <info@balazsorban.com>",
