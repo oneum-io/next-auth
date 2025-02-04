@@ -42,8 +42,8 @@ export interface MastodonProfile extends Record<string, any> {
  *
  * #### Configuration
  *```ts
- * import { Auth } from "@auth/core"
- * import Mastodon from "@auth/core/providers/mastodon"
+ * import { Auth } from "@oneum-io/core"
+ * import Mastodon from "@oneum-io/core/providers/mastodon"
  *
  * const request = new Request(origin)
  * const response = await Auth(request, {

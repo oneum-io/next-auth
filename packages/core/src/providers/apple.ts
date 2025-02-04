@@ -121,7 +121,7 @@ export interface AppleNonConformUser {
  *
  * #### Configuration
  * ```ts
- * import Apple from "@auth/core/providers/apple"
+ * import Apple from "@oneum-io/core/providers/apple"
  * ...
  * providers: [
  *   Apple({

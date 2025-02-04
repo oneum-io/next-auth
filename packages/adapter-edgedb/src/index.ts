@@ -9,11 +9,11 @@
  * ## Installation
  *
  * ```bash npm2yarn
- * npm install edgedb @auth/edgedb-adapter
+ * npm install edgedb @oneum-io/edgedb-adapter
  * npm install @edgedb/generate --save-dev
  * ```
  *
- * @module @auth/edgedb-adapter
+ * @module @oneum-io/edgedb-adapter
  */
 
 import type {
@@ -21,7 +21,7 @@ import type {
   AdapterSession,
   AdapterUser,
   VerificationToken,
-} from "@auth/core/adapters"
+} from "@oneum-io/core/adapters"
 import type { Client } from "edgedb"
 
 export function EdgeDBAdapter(client: Client): Adapter {

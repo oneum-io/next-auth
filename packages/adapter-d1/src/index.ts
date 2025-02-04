@@ -13,10 +13,10 @@
  * ## Installation
  *
  * ```bash npm2yarn
- * npm install next-auth @auth/d1-adapter
+ * npm install next-auth @oneum-io/d1-adapter
  * ```
  *
- * @module @auth/d1-adapter
+ * @module @oneum-io/d1-adapter
  */
 
 import type { D1Database as WorkerDatabase } from "@cloudflare/workers-types"
@@ -28,7 +28,7 @@ import {
   type AdapterAccount,
   type VerificationToken as AdapterVerificationToken,
   isDate,
-} from "@auth/core/adapters"
+} from "@oneum-io/core/adapters"
 import {
   CREATE_ACCOUNT_SQL,
   CREATE_SESSION_SQL,

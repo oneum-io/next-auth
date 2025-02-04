@@ -16,7 +16,7 @@
   "author": "Auth.js Team (https://authjs.dev/contributors)",
   "license": "MIT",
   "dependencies": {
-    "@auth/express": "workspace:*",
+    "@oneum-io/express": "workspace:*",
     "express": "^4.20.0",
     "morgan": "^1.10.0",
     "pug": "^3.0.2"

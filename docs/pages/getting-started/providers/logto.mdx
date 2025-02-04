@@ -57,8 +57,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   <Code.Svelte>
 
 ```ts filename="/src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import Logto from "@auth/sveltekit/providers/logto"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import Logto from "@oneum-io/sveltekit/providers/logto"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
   providers: [Logto],
@@ -69,8 +69,8 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
   <Code.Express>
 
 ```ts filename="/src/app.ts"
-import { ExpressAuth } from "@auth/express"
-import Logto from "@auth/express/providers/logto"
+import { ExpressAuth } from "@oneum-io/express"
+import Logto from "@oneum-io/express/providers/logto"
 
 app.use("/auth/*", ExpressAuth({ providers: [Logto] }))
 ```

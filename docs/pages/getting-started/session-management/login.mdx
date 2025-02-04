@@ -82,11 +82,11 @@ The SvelteKit client supports two signin and signout methods, one server-side us
 
 #### Form Action (Server-Side)
 
-To signin your users using a SvelteKit form action, we can use the `SignIn` component exported from `@auth/sveltekit/components`.
+To signin your users using a SvelteKit form action, we can use the `SignIn` component exported from `@oneum-io/sveltekit/components`.
 
 ```svelte filename="src/routes/+page.svelte" {7-9}
 <script lang="ts">
-  import { SignIn } from "@auth/sveltekit/components"
+  import { SignIn } from "@oneum-io/sveltekit/components"
 </script>
 
 <header>
@@ -109,11 +109,11 @@ export const actions: Actions = { default: signIn }
 
 #### Client Side
 
-Client-side is a bit simpler as we just need to import a button `on:click` handler from `@auth/sveltekit/client`.
+Client-side is a bit simpler as we just need to import a button `on:click` handler from `@oneum-io/sveltekit/client`.
 
 ```svelte filename="src/routes/+page.svelte" {2, 8}
 <script lang="ts">
-  import { signIn } from "@auth/sveltekit/client"
+  import { signIn } from "@oneum-io/sveltekit/client"
 </script>
 
 <div>
@@ -246,7 +246,7 @@ export default component$(() => {
 ```svelte filename="src/routes/+page.svelte" {9-13}
 <script lang="ts">
   import { page } from "$app/stores"
-  import { SignIn } from "@auth/sveltekit/components"
+  import { SignIn } from "@oneum-io/sveltekit/components"
 </script>
 
 <header>
@@ -361,11 +361,11 @@ SvelteKit supports both server and client-side methods for signing out as well.
 
 #### Server-side
 
-To use the SvelteKit form action for signing out, we can use the `SignOut` component exported from `@auth/sveltekit/components`.
+To use the SvelteKit form action for signing out, we can use the `SignOut` component exported from `@oneum-io/sveltekit/components`.
 
 ```svelte filename="src/routes/+page.svelte" {2, 7-9}
 <script lang="ts">
-  import { SignOut } from "@auth/sveltekit/components"
+  import { SignOut } from "@oneum-io/sveltekit/components"
 </script>
 
 <header>
@@ -388,11 +388,11 @@ export const actions: Actions = { default: signOut }
 
 #### Client Side
 
-Client-side is a bit simpler as we just need to import a button `on:click` handler from `@auth/sveltekit/client`.
+Client-side is a bit simpler as we just need to import a button `on:click` handler from `@oneum-io/sveltekit/client`.
 
 ```svelte filename="src/routes/+page.svelte" {8}
 <script lang="ts">
-  import { signOut } from "@auth/sveltekit/client"
+  import { signOut } from "@oneum-io/sveltekit/client"
 </script>
 
 <div>

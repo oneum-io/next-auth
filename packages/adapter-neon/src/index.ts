@@ -9,10 +9,10 @@
  * ## Installation
  *
  * ```bash npm2yarn
- * npm install next-auth @auth/neon-adapter
+ * npm install next-auth @oneum-io/neon-adapter
  * ```
  *
- * @module @auth/neon-adapter
+ * @module @oneum-io/neon-adapter
  */
 
 import type {
@@ -20,7 +20,7 @@ import type {
   AdapterUser,
   VerificationToken,
   AdapterSession,
-} from "@auth/core/adapters"
+} from "@oneum-io/core/adapters"
 import type { Pool } from "@neondatabase/serverless"
 
 export default function PostgresAdapter(client: Pool): Adapter {

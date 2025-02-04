@@ -1,5 +1,5 @@
 {
-  "name": "@auth/edgedb-adapter",
+  "name": "@oneum-io/edgedb-adapter",
   "version": "1.7.4",
   "description": "EdgeDB adapter for next-auth.",
   "homepage": "https://authjs.dev",
@@ -42,7 +42,7 @@
     "clean": "rm -rf *.js *.d.ts*"
   },
   "dependencies": {
-    "@auth/core": "workspace:*"
+    "@oneum-io/core": "workspace:*"
   },
   "peerDependencies": {
     "edgedb": "^1.0.1"

@@ -44,8 +44,8 @@ export interface AsgardeoProfile extends Record<string, any> {
  *
  * #### Configuration
  *```ts
- * import { Auth } from "@auth/core"
- * import Asgarde from "@auth/core/providers/asgardeo";
+ * import { Auth } from "@oneum-io/core"
+ * import Asgarde from "@oneum-io/core/providers/asgardeo";
  *
  * const request = new Request(origin)
  * const response = await Auth(request, {

@@ -7,7 +7,7 @@ module.exports = {
   entryPoints: ["src/index.ts"],
   entryPointStrategy: "expand",
   tsconfig: "./tsconfig.json",
-  entryModule: "@auth/mongodb-adapter",
+  entryModule: "@oneum-io/mongodb-adapter",
   entryFileName: "../mongodb-adapter.mdx",
   includeVersion: true,
   readme: 'none',

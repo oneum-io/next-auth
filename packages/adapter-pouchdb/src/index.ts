@@ -9,10 +9,10 @@
  * ## Installation
  *
  * ```bash npm2yarn
- * npm install pouchdb pouchdb-find @auth/pouchdb-adapter
+ * npm install pouchdb pouchdb-find @oneum-io/pouchdb-adapter
  * ```
  *
- * @module @auth/pouchdb-adapter
+ * @module @oneum-io/pouchdb-adapter
  */
 
 import type {
@@ -21,7 +21,7 @@ import type {
   AdapterSession,
   AdapterUser,
   VerificationToken,
-} from "@auth/core/adapters"
+} from "@oneum-io/core/adapters"
 
 type PrefixConfig = Record<
   "user" | "account" | "session" | "verificationToken",

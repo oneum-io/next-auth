@@ -7,7 +7,7 @@ module.exports = {
   entryPoints: ["src/index.ts"],
   entryPointStrategy: "expand",
   tsconfig: "./tsconfig.json",
-  entryModule: "@auth/neo4j-adapter",
+  entryModule: "@oneum-io/neo4j-adapter",
   entryFileName: "../neo4j-adapter.mdx",
   includeVersion: true,
   readme: 'none',

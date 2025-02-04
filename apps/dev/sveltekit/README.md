@@ -8,14 +8,14 @@
    Open Source. Full Stack. Own Your Data.
    </p>
    <p align="center" style="align: center;">
-      <a href="https://npm.im/@auth/sveltekit">
-        <img alt="npm" src="https://img.shields.io/npm/v/@auth/sveltekit?color=green&label=@auth/sveltekit&style=flat-square">
+      <a href="https://npm.im/@oneum-io/sveltekit">
+        <img alt="npm" src="https://img.shields.io/npm/v/@oneum-io/sveltekit?color=green&label=@oneum-io/sveltekit&style=flat-square">
       </a>
       <a href="https://bundlephobia.com/result?p=sveltekit-auth-example">
-        <img src="https://img.shields.io/bundlephobia/minzip/@auth/sveltekit?label=size&style=flat-square" alt="Bundle Size"/>
+        <img src="https://img.shields.io/bundlephobia/minzip/@oneum-io/sveltekit?label=size&style=flat-square" alt="Bundle Size"/>
       </a>
-      <a href="https://www.npmtrends.com/@auth/sveltekit">
-        <img src="https://img.shields.io/npm/dm/@auth/sveltekit?label=%20downloads&style=flat-square" alt="Downloads" />
+      <a href="https://www.npmtrends.com/@oneum-io/sveltekit">
+        <img src="https://img.shields.io/npm/dm/@oneum-io/sveltekit?label=%20downloads&style=flat-square" alt="Downloads" />
       </a>
       <a href="https://npm.im/next-auth">
         <img src="https://img.shields.io/badge/TypeScript-blue?style=flat-square" alt="TypeScript" />

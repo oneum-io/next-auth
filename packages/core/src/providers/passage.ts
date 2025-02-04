@@ -46,8 +46,8 @@ export interface PassageProfile {
  *
  * #### Configuration
  *```ts
- * import { Auth } from "@auth/core"
- * import Passage from "@auth/core/providers/passage"
+ * import { Auth } from "@oneum-io/core"
+ * import Passage from "@oneum-io/core/providers/passage"
  *
  * const request = new Request(origin)
  * const response = await Auth(request, {

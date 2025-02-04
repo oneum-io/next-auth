@@ -7,7 +7,7 @@ module.exports = {
   entryPoints: ["src/index.ts", "src/xata.ts"],
   entryPointStrategy: "expand",
   tsconfig: "./tsconfig.json",
-  entryModule: "@auth/xata-adapter",
+  entryModule: "@oneum-io/xata-adapter",
   entryFileName: "../xata-adapter.mdx",
   includeVersion: true,
   readme: 'none',

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import packageJSON from "@auth/sveltekit/package.json"
+  import packageJSON from "@oneum-io/sveltekit/package.json"
   import ExternalIcon from "./external-icon.svelte"
 </script>
 
@@ -16,8 +16,8 @@
   </div>
   <div>
     <img src="https://authjs.dev/img/logo-sm.png" alt="Auth.js Logo" />
-    <a href="https://www.npmjs.com/package/@auth/sveltekit">
-      @auth/sveltekit@{packageJSON.version}
+    <a href="https://www.npmjs.com/package/@oneum-io/sveltekit">
+      @oneum-io/sveltekit@{packageJSON.version}
       <ExternalIcon />
     </a>
   </div>

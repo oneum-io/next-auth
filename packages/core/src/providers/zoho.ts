@@ -22,8 +22,8 @@ import type { OAuthConfig, OAuthUserConfig } from "./index.js"
  *
  * #### Configuration
  *```ts
- * import { Auth } from "@auth/core"
- * import ZOHO from "@auth/core/providers/zoho"
+ * import { Auth } from "@oneum-io/core"
+ * import ZOHO from "@oneum-io/core/providers/zoho"
  *
  * const request = new Request(origin)
  * const response = await Auth(request, {

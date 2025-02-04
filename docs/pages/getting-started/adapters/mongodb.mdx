@@ -13,7 +13,7 @@ import { Code } from "@/components/Code"
 ### Installation
 
 ```bash npm2yarn
-npm install @auth/mongodb-adapter mongodb
+npm install @oneum-io/mongodb-adapter mongodb
 ```
 
 ### Environment Variables
@@ -29,7 +29,7 @@ MONGODB_URI=
 
 ```ts filename="./auth.ts"
 import NextAuth from "next-auth"
-import { MongoDBAdapter } from "@auth/mongodb-adapter"
+import { MongoDBAdapter } from "@oneum-io/mongodb-adapter"
 import client from "./lib/db"
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
@@ -42,8 +42,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 <Code.Qwik>
 
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import { MongoDBAdapter } from "@auth/mongodb-adapter"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import { MongoDBAdapter } from "@oneum-io/mongodb-adapter"
 import client from "./lib/db"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
@@ -58,8 +58,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
 <Code.Svelte>
 
 ```ts filename="./src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import { MongoDBAdapter } from "@auth/mongodb-adapter"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import { MongoDBAdapter } from "@oneum-io/mongodb-adapter"
 import client from "./lib/db"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
@@ -71,8 +71,8 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
 <Code.Express>
 
 ```ts filename="./src/routes/auth.route.ts"
-import { ExpressAuth } from "@auth/express"
-import { MongoDBAdapter } from "@auth/mongodb-adapter"
+import { ExpressAuth } from "@oneum-io/express"
+import { MongoDBAdapter } from "@oneum-io/mongodb-adapter"
 import client from "./lib/db"
 
 const app = express()

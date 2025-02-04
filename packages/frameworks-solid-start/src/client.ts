@@ -1,4 +1,4 @@
-import type { ProviderId } from "@auth/core/providers"
+import type { ProviderId } from "@oneum-io/core/providers"
 
 interface SignInOptions<Redirect extends boolean = true>
   extends Record<string, unknown> {
@@ -47,7 +47,7 @@ export type SignInAuthorizationParams =
  * Automatically adds the CSRF token to the request.
  *
  * ```ts
- * import { signIn } from "@auth/solid-start/client"
+ * import { signIn } from "@oneum-io/solid-start/client"
  * signIn()
  * signIn("provider") // example: signIn("github")
  * ```
@@ -134,7 +134,7 @@ export async function signIn<Redirect extends boolean = true>(
  * Automatically adds the CSRF token to the request.
  *
  * ```ts
- * import { signOut } from "@auth/solid-start/client"
+ * import { signOut } from "@oneum-io/solid-start/client"
  * signOut()
  * ```
  */

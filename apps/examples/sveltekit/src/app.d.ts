@@ -1,1 +1,1 @@
-/// <reference types="@auth/sveltekit" />
+/// <reference types="@oneum-io/sveltekit" />

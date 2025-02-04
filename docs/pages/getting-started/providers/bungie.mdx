@@ -82,8 +82,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   <Code.Qwik>
   
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import Bungie from "@auth/qwik/providers/boxyhq-saml";
+import { QwikAuth$ } from "@oneum-io/qwik"
+import Bungie from "@oneum-io/qwik/providers/boxyhq-saml";
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -102,8 +102,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   <Code.Svelte>
 
 ```ts filename="/src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit";
-import Bungie from "@auth/sveltekit/providers/boxyhq-saml";
+import { SvelteKitAuth } from "@oneum-io/sveltekit";
+import Bungie from "@oneum-io/sveltekit/providers/boxyhq-saml";
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
   providers: [
@@ -120,8 +120,8 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
   <Code.Express>
 
 ```ts filename="/src/app.ts"
-import { ExpressAuth } from "@auth/express";
-import Bungie from "@auth/express/providers/boxyhq-saml";
+import { ExpressAuth } from "@oneum-io/express";
+import Bungie from "@oneum-io/express/providers/boxyhq-saml";
 
 app.use(
   "/auth/*",

@@ -1,7 +1,7 @@
 /**
  *
  * :::warning
- * `@auth/qwik` is currently experimental. The API _will_ change in the future.
+ * `@oneum-io/qwik` is currently experimental. The API _will_ change in the future.
  * :::
  *
  * Qwik Auth is the official Qwik integration for Auth.js.
@@ -9,7 +9,7 @@
  *
  * ## Installation
  * ```bash npm2yarn
- * npm install @auth/qwik
+ * npm install @oneum-io/qwik
  * ```
  *
  * ## Usage
@@ -18,8 +18,8 @@
  *
  * Create a `plugin@auth.ts` file in the routes folder
  *
- * import { QwikAuth$ } from "@auth/qwik"
- * import GitHub from "@auth/qwik/providers/github"
+ * import { QwikAuth$ } from "@oneum-io/qwik"
+ * import GitHub from "@oneum-io/qwik/providers/github"
  *
  * export const {
  *   onRequest, useSession, useSignIn, useSignOut
@@ -106,12 +106,12 @@
  *
  * ```
  *
- * @module @auth/qwik
+ * @module @oneum-io/qwik
  */
 
-import type { AuthConfig } from "@auth/core"
-import { Auth, isAuthAction, skipCSRFCheck, customFetch } from "@auth/core"
-import { AuthAction, Session } from "@auth/core/types"
+import type { AuthConfig } from "@oneum-io/core"
+import { Auth, isAuthAction, skipCSRFCheck, customFetch } from "@oneum-io/core"
+import { AuthAction, Session } from "@oneum-io/core/types"
 import { implicit$FirstArg, type QRL } from "@builder.io/qwik"
 import {
   globalAction$,
@@ -125,7 +125,7 @@ import { isServer } from "@builder.io/qwik/build"
 import { parseString, splitCookiesString } from "set-cookie-parser"
 
 export { customFetch }
-export { AuthError, CredentialsSignin } from "@auth/core/errors"
+export { AuthError, CredentialsSignin } from "@oneum-io/core/errors"
 
 export type {
   Account,
@@ -133,7 +133,7 @@ export type {
   Profile,
   Session,
   User,
-} from "@auth/core/types"
+} from "@oneum-io/core/types"
 
 /** Configure the {@link QwikAuth$} method. */
 export interface QwikAuthConfig extends Omit<AuthConfig, "raw"> {}
@@ -245,8 +245,8 @@ export function QwikAuthQrl(
  *
  *  @example
  * ```ts title="plugin@auth.ts"
- * import { QwikAuth } from "@auth/qwik"
- * import GitHub from "@auth/qwik/providers/github"
+ * import { QwikAuth } from "@oneum-io/qwik"
+ * import GitHub from "@oneum-io/qwik/providers/github"
  *
  * export const {
  *   onRequest, useSession, useSignIn, useSignOut

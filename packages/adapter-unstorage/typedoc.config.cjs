@@ -7,7 +7,7 @@ module.exports = {
   entryPoints: ["src/index.ts"],
   entryPointStrategy: "expand",
   tsconfig: "./tsconfig.json",
-  entryModule: "@auth/unstorage-adapter",
+  entryModule: "@oneum-io/unstorage-adapter",
   entryFileName: "../unstorage-adapter.mdx",
   includeVersion: true,
   readme: 'none',

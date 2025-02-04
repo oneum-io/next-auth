@@ -7,7 +7,7 @@ module.exports = {
   entryPoints: ["src/index.ts"],
   entryPointStrategy: "expand",
   tsconfig: "./tsconfig.json",
-  entryModule: "@auth/dynamodb-adapter",
+  entryModule: "@oneum-io/dynamodb-adapter",
   entryFileName: "../dynamodb-adapter.mdx",
   includeVersion: true,
   readme: 'none',

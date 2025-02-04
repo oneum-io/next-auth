@@ -13,16 +13,16 @@
    Open Source. Full Stack. Own Your Data.
    </p>
    <p align="center" style="align: center;">
-      <a href="https://npm.im/@auth/solid-start">
-        <img alt="npm" src="https://img.shields.io/npm/v/@auth/solid-start?color=green&label=@auth/solid-start&style=flat-square">
+      <a href="https://npm.im/@oneum-io/solid-start">
+        <img alt="npm" src="https://img.shields.io/npm/v/@oneum-io/solid-start?color=green&label=@oneum-io/solid-start&style=flat-square">
       </a>
-      <a href="https://bundlephobia.com/result?p=@auth/solid-start">
-        <img src="https://img.shields.io/bundlephobia/minzip/@auth/solid-start?label=size&style=flat-square" alt="Bundle Size"/>
+      <a href="https://bundlephobia.com/result?p=@oneum-io/solid-start">
+        <img src="https://img.shields.io/bundlephobia/minzip/@oneum-io/solid-start?label=size&style=flat-square" alt="Bundle Size"/>
       </a>
-      <a href="https://www.npmtrends.com/@auth/solid-start">
-        <img src="https://img.shields.io/npm/dm/@auth/solid-start?label=downloads&style=flat-square" alt="Downloads" />
+      <a href="https://www.npmtrends.com/@oneum-io/solid-start">
+        <img src="https://img.shields.io/npm/dm/@oneum-io/solid-start?label=downloads&style=flat-square" alt="Downloads" />
       </a>
-      <a href="https://npm.im/@auth/solid-start">
+      <a href="https://npm.im/@oneum-io/solid-start">
         <img src="https://img.shields.io/badge/TypeScript-blue?style=flat-square" alt="TypeScript" />
       </a>
    </p>

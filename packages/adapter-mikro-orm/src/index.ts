@@ -9,10 +9,10 @@
  * ## Installation
  *
  * ```bash npm2yarn
- * npm install @mikro-orm/core @auth/mikro-orm-adapter
+ * npm install @mikro-orm/core @oneum-io/mikro-orm-adapter
  * ```
  *
- * @module @auth/mikro-orm-adapter
+ * @module @oneum-io/mikro-orm-adapter
  */
 import type {
   Connection,
@@ -20,7 +20,7 @@ import type {
   Options as ORMOptions,
 } from "@mikro-orm/core"
 
-import type { Adapter } from "@auth/core/adapters"
+import type { Adapter } from "@oneum-io/core/adapters"
 
 import { MikroORM, wrap } from "@mikro-orm/core"
 

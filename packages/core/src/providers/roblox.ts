@@ -49,8 +49,8 @@ export interface RobloxProfile extends Record<string, any> {
  *
  * #### Configuration
  *```ts
- * import { Auth } from "@auth/core"
- * import Roblox from "@auth/providers/roblox"
+ * import { Auth } from "@oneum-io/core"
+ * import Roblox from "@oneum-io/providers/roblox"
  *
  * const request = new Request(origin)
  * const response = await Auth(request, {

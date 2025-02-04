@@ -1,5 +1,5 @@
 {
-  "name": "@auth/frameworks-template",
+  "name": "@oneum-io/frameworks-template",
   "description": "Authentication for <framework-name>.",
   "version": "0.3.0",
   "private": true,
@@ -35,7 +35,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@auth/core": "workspace:*"
+    "@oneum-io/core": "workspace:*"
   },
   "peerDependencies": {},
   "keywords": [

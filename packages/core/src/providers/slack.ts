@@ -54,8 +54,8 @@ export interface SlackProfile extends Record<string, any> {
  *
  * #### Configuration
  *```ts
- * import { Auth } from "@auth/core"
- * import Slack from "@auth/core/providers/slack"
+ * import { Auth } from "@oneum-io/core"
+ * import Slack from "@oneum-io/core/providers/slack"
  *
  * const request = new Request(origin)
  * const response = await Auth(request, {

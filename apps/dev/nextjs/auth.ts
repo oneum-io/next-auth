@@ -4,7 +4,7 @@ import Keycloak from "next-auth/providers/keycloak"
 import GitHub from "next-auth/providers/github"
 
 // import { PrismaClient } from "@prisma/client"
-// import { PrismaAdapter } from "@auth/prisma-adapter"
+// import { PrismaAdapter } from "@oneum-io/prisma-adapter"
 // import SendGrid from "next-auth/providers/sendgrid"
 // import Resend from "next-auth/providers/resend"
 // import Email from "next-auth/providers/email"

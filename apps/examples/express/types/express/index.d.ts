@@ -1,4 +1,4 @@
-import { type Session } from "@auth/express"
+import { type Session } from "@oneum-io/express"
 
 declare module "express" {
   interface Response {

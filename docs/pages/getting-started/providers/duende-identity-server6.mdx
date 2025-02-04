@@ -68,8 +68,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   <Code.Qwik>
   
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import DuendeIdentityServer6 from "@auth/qwik/providers/duende-identity-server6"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import DuendeIdentityServer6 from "@oneum-io/qwik/providers/duende-identity-server6"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -82,8 +82,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   <Code.Svelte>
 
 ```ts filename="/src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import DuendeIdentityServer6 from "@auth/sveltekit/providers/duende-identity-server6"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import DuendeIdentityServer6 from "@oneum-io/sveltekit/providers/duende-identity-server6"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
   providers: [DuendeIdentityServer6],
@@ -94,8 +94,8 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
   <Code.Express>
 
 ```ts filename="/src/app.ts"
-import { ExpressAuth } from "@auth/express"
-import DuendeIdentityServer6 from "@auth/express/providers/duende-identity-server6"
+import { ExpressAuth } from "@oneum-io/express"
+import DuendeIdentityServer6 from "@oneum-io/express/providers/duende-identity-server6"
 
 app.use("/auth/*", ExpressAuth({ providers: [DuendeIdentityServer6] }))
 ```

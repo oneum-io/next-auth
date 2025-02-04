@@ -29,8 +29,8 @@ export interface TwitchProfile extends Record<string, any> {
  *
  * #### Configuration
  *```ts
- * import { Auth } from "@auth/core"
- * import Twitch from "@auth/core/providers/twitch"
+ * import { Auth } from "@oneum-io/core"
+ * import Twitch from "@oneum-io/core/providers/twitch"
  *
  * const request = new Request(origin)
  * const response = await Auth(request, {

@@ -36,8 +36,8 @@ export interface WeChatProfile {
  *
  * #### Configuration
  * ```ts
- * import { Auth } from "@auth/core"
- * import WeChat from "@auth/core/providers/wechat"
+ * import { Auth } from "@oneum-io/core"
+ * import WeChat from "@oneum-io/core/providers/wechat"
  *
  * const request = new Request(origin)
  * const response = await Auth(request, {

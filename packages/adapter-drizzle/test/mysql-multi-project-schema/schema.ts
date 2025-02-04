@@ -1,4 +1,4 @@
-import type { AdapterAccountType } from "@auth/core/adapters"
+import type { AdapterAccountType } from "@oneum-io/core/adapters"
 import { sql } from "drizzle-orm"
 import {
   boolean,

@@ -49,8 +49,8 @@ export interface BitbucketProfile {
  * #### Configuration
  *
  * ```ts
- * import { Auth } from "@auth/core"
- * import Bitbucket from "@auth/core/providers/bitbucket"
+ * import { Auth } from "@oneum-io/core"
+ * import Bitbucket from "@oneum-io/core/providers/bitbucket"
  *
  * const request = new Request(origin)
  * const response = await Auth(request, {

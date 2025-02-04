@@ -9,10 +9,10 @@
  * ## Installation
  *
  * ```bash npm2yarn
- * npm install next-auth @auth/pg-adapter pg
+ * npm install next-auth @oneum-io/pg-adapter pg
  * ```
  *
- * @module @auth/pg-adapter
+ * @module @oneum-io/pg-adapter
  */
 
 import type {
@@ -20,7 +20,7 @@ import type {
   AdapterUser,
   VerificationToken,
   AdapterSession,
-} from "@auth/core/adapters"
+} from "@oneum-io/core/adapters"
 import type { Pool } from "pg"
 
 export function mapExpiresAt(account: any): any {

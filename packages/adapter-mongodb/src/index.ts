@@ -9,10 +9,10 @@
  * ## Installation
  *
  * ```bash npm2yarn
- * npm install @auth/mongodb-adapter mongodb
+ * npm install @oneum-io/mongodb-adapter mongodb
  * ```
  *
- * @module @auth/mongodb-adapter
+ * @module @oneum-io/mongodb-adapter
  */
 import { ObjectId } from "mongodb"
 
@@ -22,7 +22,7 @@ import type {
   AdapterAccount,
   AdapterSession,
   VerificationToken,
-} from "@auth/core/adapters"
+} from "@oneum-io/core/adapters"
 import type { MongoClient } from "mongodb"
 
 /**

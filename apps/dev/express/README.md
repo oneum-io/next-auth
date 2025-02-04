@@ -8,14 +8,14 @@
    Open Source. Full Stack. Own Your Data.
    </p>
    <p align="center" style="align: center;">
-      <a href="https://npm.im/@auth/express">
-        <img alt="npm" src="https://img.shields.io/npm/v/@auth/express?color=green&label=@auth/express&style=flat-square">
+      <a href="https://npm.im/@oneum-io/express">
+        <img alt="npm" src="https://img.shields.io/npm/v/@oneum-io/express?color=green&label=@oneum-io/express&style=flat-square">
       </a>
-      <a href="https://bundlephobia.com/result?p=@auth/express">
-        <img src="https://img.shields.io/bundlephobia/minzip/@auth/express?label=size&style=flat-square" alt="Bundle Size"/>
+      <a href="https://bundlephobia.com/result?p=@oneum-io/express">
+        <img src="https://img.shields.io/bundlephobia/minzip/@oneum-io/express?label=size&style=flat-square" alt="Bundle Size"/>
       </a>
-      <a href="https://www.npmtrends.com/@auth/express">
-        <img src="https://img.shields.io/npm/dm/@auth/express?label=%20downloads&style=flat-square" alt="Downloads" />
+      <a href="https://www.npmtrends.com/@oneum-io/express">
+        <img src="https://img.shields.io/npm/dm/@oneum-io/express?label=%20downloads&style=flat-square" alt="Downloads" />
       </a>
       <a href="https://npm.im/next-auth">
         <img src="https://img.shields.io/badge/TypeScript-blue?style=flat-square" alt="TypeScript" />

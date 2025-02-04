@@ -1,5 +1,5 @@
 {
-  "name": "@auth/d1-adapter",
+  "name": "@oneum-io/d1-adapter",
   "version": "1.7.4",
   "description": "A Cloudflare D1 adapter for Auth.js",
   "homepage": "https://authjs.dev",
@@ -14,7 +14,7 @@
   "license": "ISC",
   "keywords": [
     "next-auth",
-    "@auth",
+    "@oneum-io",
     "Auth.js",
     "next.js",
     "oauth",
@@ -43,7 +43,7 @@
     "clean": "rm -rf *.js *.d.ts*"
   },
   "dependencies": {
-    "@auth/core": "workspace:*"
+    "@oneum-io/core": "workspace:*"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20230321.0",

@@ -63,8 +63,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   <Code.Qwik>
   
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import Reddit from "@auth/qwik/providers/reddit"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import Reddit from "@oneum-io/qwik/providers/reddit"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -77,8 +77,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   <Code.Svelte>
 
 ```ts filename="/src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import Reddit from "@auth/sveltekit/providers/reddit"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import Reddit from "@oneum-io/sveltekit/providers/reddit"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
   providers: [Reddit],
@@ -89,8 +89,8 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
   <Code.Express>
 
 ```ts filename="/src/app.ts"
-import { ExpressAuth } from "@auth/express"
-import Reddit from "@auth/express/providers/reddit"
+import { ExpressAuth } from "@oneum-io/express"
+import Reddit from "@oneum-io/express/providers/reddit"
 
 app.use("/auth/*", ExpressAuth({ providers: [Reddit] }))
 ```

@@ -1,7 +1,7 @@
 <script lang="ts">
   import { page } from "$app/stores"
-  import { SignIn } from "@auth/sveltekit/components"
-  import { signIn } from "@auth/sveltekit/client"
+  import { SignIn } from "@oneum-io/sveltekit/components"
+  import { signIn } from "@oneum-io/sveltekit/client"
 
   let password = ""
 </script>
@@ -33,7 +33,7 @@
       <div class="card-body">
         <p>
           These actions are all using the components exported from
-          <code>@auth/sveltekit/components</code> to run via form actions.
+          <code>@oneum-io/sveltekit/components</code> to run via form actions.
         </p>
         <div class="actions">
           <SignIn provider="github">
@@ -86,7 +86,7 @@
       <div class="card-body">
         <p>
           These actions are all using the methods exported from
-          <code>@auth/sveltekit/client</code>
+          <code>@oneum-io/sveltekit/client</code>
         </p>
         <div class="actions">
           <div class="wrapper-form social-btn">

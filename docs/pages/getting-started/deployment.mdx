@@ -58,7 +58,7 @@ This environment variable is designed for advanced use-cases only, when using Au
 1. Create the required [environment variables](#environment-variables) for your desired environments. Don't forget to also add the required environment variables for your provider(s) of choice (i.e. OAuth `clientId` / `clientSecret`, etc.).
 2. When using an OAuth provider, make sure the callback URL for your production URL is setup correctly. Many OAuth providers will only allow you to set 1 `callbackUrl` per OAuth application. In which case, you'll need to create separate applications for each environment (development, production, etc.). Other providers, like Google, allow you to add many `callbackUrl`s to one application.
    - By default, the callbackUrl for `next-auth` (Next.js) applications should look something like this: `https://company.com/api/auth/callback/[provider]` (replace `company.com` with your domain and `provider` with the provider name, i.e. `github`).
-   - All other frameworks (`@auth/sveltekit`, `@auth/express`, etc.), by default, will use the path `/auth/callback/[provider]`.
+   - All other frameworks (`@oneum-io/sveltekit`, `@oneum-io/express`, etc.), by default, will use the path `/auth/callback/[provider]`.
 3. Deploy! After having setup those two prerequisites, you should be able to deploy and run your Auth.js application on Netlify, Vercel, etc.
 
 <Callout type="warning">

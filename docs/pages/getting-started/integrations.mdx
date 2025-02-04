@@ -2,7 +2,7 @@ import { Callout } from "nextra/components"
 
 # Integrations
 
-Here are the state of planned and released integrations under the `@auth/*` and `@next-auth/*` scope, as well as `next-auth`. It also includes community created and maintained integrations. Integrations listed as "Planned" are something we'd love help with! See the [help needed](#help-needed) section below.
+Here are the state of planned and released integrations under the `@oneum-io/*` and `@next-auth/*` scope, as well as `next-auth`. It also includes community created and maintained integrations. Integrations listed as "Planned" are something we'd love help with! See the [help needed](#help-needed) section below.
 
 <Callout>
   Is your framework not supported? You can easily contribute by creating a
@@ -13,28 +13,28 @@ Here are the state of planned and released integrations under the `@auth/*` and 
 <Callout type="info">
   Note that because of preventing breaking changes on package imports,
   `next-auth` is the only framework package which is not named following the
-  `@auth/*` convention. This library initially was born as `next-auth` but [over
-  the years has evolved](/contributors#history) to be framework agnostic.
+  `@oneum-io/*` convention. This library initially was born as `next-auth` but
+  [over the years has evolved](/contributors#history) to be framework agnostic.
 </Callout>
 
 Framework and database integrations are all based on the [Auth.js Core library](/reference/core). In most cases, you will not interact with this package directly, as it is intended for library authors.
 
-| Frameworks                            | Status                                                                                    |
-| ------------------------------------- | ----------------------------------------------------------------------------------------- |
-| NextAuth.js (`next-auth`)             | [v5 (beta)](https://nextjs.authjs.dev), [v4 (maintenance mode)](https://next-auth.js.org) |
-| Astro Auth (`@auth/astro`)            | [Open PR](https://github.com/nextauthjs/next-auth/pull/9856)                              |
-| Express Auth (`@auth/express`)        | [Experimental Release](https://express.authjs.dev)                                        |
-| Fastify Auth (`@auth/fastify`)        | [Open PR](https://github.com/nextauthjs/next-auth/pull/9587)                              |
-| Nuxt Auth (`@auth/nuxt`)              | [Open PR](https://github.com/nextauthjs/next-auth/pull/10684)                             |
-| Qwik Auth (`@auth/qwik`)              | [Released](https://qwik.authjs.dev)                                                       |
-| Remix Auth (`@auth/remix`)            | [Open PR](https://github.com/nextauthjs/next-auth/pull/6767)                              |
-| SolidStart Auth (`@auth/solid-start`) | [Experimental Release](https://authjs.dev/reference/solid-start)                          |
-| SvelteKit Auth (`@auth/sveltekit`)    | [Experimental Release](https://sveltekit.authjs.dev)                                      |
+| Frameworks                                | Status                                                                                    |
+| ----------------------------------------- | ----------------------------------------------------------------------------------------- |
+| NextAuth.js (`next-auth`)                 | [v5 (beta)](https://nextjs.authjs.dev), [v4 (maintenance mode)](https://next-auth.js.org) |
+| Astro Auth (`@oneum-io/astro`)            | [Open PR](https://github.com/nextauthjs/next-auth/pull/9856)                              |
+| Express Auth (`@oneum-io/express`)        | [Experimental Release](https://express.authjs.dev)                                        |
+| Fastify Auth (`@oneum-io/fastify`)        | [Open PR](https://github.com/nextauthjs/next-auth/pull/9587)                              |
+| Nuxt Auth (`@oneum-io/nuxt`)              | [Open PR](https://github.com/nextauthjs/next-auth/pull/10684)                             |
+| Qwik Auth (`@oneum-io/qwik`)              | [Released](https://qwik.authjs.dev)                                                       |
+| Remix Auth (`@oneum-io/remix`)            | [Open PR](https://github.com/nextauthjs/next-auth/pull/6767)                              |
+| SolidStart Auth (`@oneum-io/solid-start`) | [Experimental Release](https://authjs.dev/reference/solid-start)                          |
+| SvelteKit Auth (`@oneum-io/sveltekit`)    | [Experimental Release](https://sveltekit.authjs.dev)                                      |
 
-| Databases              | Status                                                                  |
-| ---------------------- | ----------------------------------------------------------------------- |
-| `@auth/*-adapter`      | Released. Fully compatible with `next-auth` and all `@auth/*` libraries |
-| `@next-auth/*-adapter` | Maintenance has stopped. Update to `@auth/*-adapter`                    |
+| Databases              | Status                                                                      |
+| ---------------------- | --------------------------------------------------------------------------- |
+| `@oneum-io/*-adapter`  | Released. Fully compatible with `next-auth` and all `@oneum-io/*` libraries |
+| `@next-auth/*-adapter` | Maintenance has stopped. Update to `@oneum-io/*-adapter`                    |
 
 ## Community Integrations
 
@@ -52,5 +52,5 @@ them and are interested in collaborating, please do not hesitate to reach out!
 
 ### Help needed
 
-In case you are a maintainer of a package that uses `@auth/core`, feel free to [reach out to
-Balázs](https://twitter.com/balazsorban44) or [info@authjs.dev](mailto:info@authjs.dev), if you want to collaborate on making it an official package, maintained in our repository. If you are interested in bringing `@auth/core` support to your favorite framework, we would love to hear from you!
+In case you are a maintainer of a package that uses `@oneum-io/core`, feel free to [reach out to
+Balázs](https://twitter.com/balazsorban44) or [info@authjs.dev](mailto:info@authjs.dev), if you want to collaborate on making it an official package, maintained in our repository. If you are interested in bringing `@oneum-io/core` support to your favorite framework, we would love to hear from you!

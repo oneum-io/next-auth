@@ -22,8 +22,8 @@ import type { OAuthConfig, OAuthUserConfig } from "./index.js"
  *
  * #### Configuration
  *```ts
- * import { Auth } from "@auth/core"
- * import FACEIT from "@auth/core/providers/faceit"
+ * import { Auth } from "@oneum-io/core"
+ * import FACEIT from "@oneum-io/core/providers/faceit"
  *
  * const request = new Request(origin)
  * const response = await Auth(request, {

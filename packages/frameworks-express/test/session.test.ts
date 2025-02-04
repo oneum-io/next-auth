@@ -12,8 +12,8 @@ const sessionJson = {
   expires: "",
 }
 
-vi.mock("@auth/core", async (importOriginal) => {
-  const mod = await importOriginal<typeof import("@auth/core")>()
+vi.mock("@oneum-io/core", async (importOriginal) => {
+  const mod = await importOriginal<typeof import("@oneum-io/core")>()
   return {
     ...mod,
     Auth: vi.fn((request, config) => {

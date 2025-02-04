@@ -1,5 +1,5 @@
 {
-  "name": "@auth/neon-adapter",
+  "name": "@oneum-io/neon-adapter",
   "version": "1.7.4",
   "description": "Neon Postgres adapter for next-auth.",
   "homepage": "https://authjs.dev",
@@ -14,7 +14,7 @@
   "license": "ISC",
   "keywords": [
     "next-auth",
-    "@auth",
+    "@oneum-io",
     "Auth.js",
     "next.js",
     "oauth",
@@ -42,7 +42,7 @@
     "clean": "rm -rf *.js *.d.ts*"
   },
   "dependencies": {
-    "@auth/core": "workspace:*",
+    "@oneum-io/core": "workspace:*",
     "@neondatabase/serverless": "^0.10.4"
   },
   "devDependencies": {

@@ -7,7 +7,7 @@ module.exports = {
   entryPoints: ["src/index.ts", "src/entities.ts", "src/utils.ts"],
   entryPointStrategy: "expand",
   tsconfig: "./tsconfig.json",
-  entryModule: "@auth/typeorm-adapter",
+  entryModule: "@oneum-io/typeorm-adapter",
   entryFileName: "../typeorm-adapter.mdx",
   includeVersion: true,
   readme: 'none',

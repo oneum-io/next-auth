@@ -135,8 +135,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 <Code.Qwik>
 
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import ForwardEmail from "@auth/qwik/providers/forwardemail"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import ForwardEmail from "@oneum-io/qwik/providers/forwardemail"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -149,8 +149,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
 <Code.Svelte>
 
 ```ts filename="./src/auth.ts"
-import SvelteKitAuth from "@auth/sveltekit"
-import ForwardEmail from "@auth/sveltekit/providers/forwardemail"
+import SvelteKitAuth from "@oneum-io/sveltekit"
+import ForwardEmail from "@oneum-io/sveltekit/providers/forwardemail"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
   providers: [ForwardEmail],
@@ -214,7 +214,7 @@ export default component$(() => {
 
 ```html filename="src/routes/+page.svelte"
 <script lang="ts">
-  import { SignIn } from "@auth/sveltekit/components"
+  import { SignIn } from "@oneum-io/sveltekit/components"
 </script>
 
 <div>
@@ -289,8 +289,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 <Code.Qwik>
 
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import Resend from "@auth/qwik/providers/resend"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import Resend from "@oneum-io/qwik/providers/resend"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -303,8 +303,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
 <Code.Svelte>
 
 ```ts filename="./src/auth.ts"
-import SvelteKitAuth from "@auth/sveltekit"
-import Resend from "@auth/sveltekit/providers/resend"
+import SvelteKitAuth from "@oneum-io/sveltekit"
+import Resend from "@oneum-io/sveltekit/providers/resend"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
   providers: [Resend],
@@ -392,7 +392,7 @@ export default component$(() => {
 
 ```html filename="src/routes/+page.svelte"
 <script lang="ts">
-  import { SignIn } from "@auth/sveltekit/components"
+  import { SignIn } from "@oneum-io/sveltekit/components"
 </script>
 
 <div>
@@ -467,8 +467,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 <Code.Qwik>
 
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import Sendgrid from "@auth/qwik/providers/sendgrid"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import Sendgrid from "@oneum-io/qwik/providers/sendgrid"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -481,8 +481,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
 <Code.Svelte>
 
 ```ts filename="./src/auth.ts"
-import SvelteKitAuth from "@auth/sveltekit"
-import Sendgrid from "@auth/sveltekit/providers/sendgrid"
+import SvelteKitAuth from "@oneum-io/sveltekit"
+import Sendgrid from "@oneum-io/sveltekit/providers/sendgrid"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
   providers: [Sendgrid],
@@ -570,7 +570,7 @@ export default component$(() => {
 
 ```html filename="src/routes/+page.svelte"
 <script lang="ts">
-  import { SignIn } from "@auth/sveltekit/components"
+  import { SignIn } from "@oneum-io/sveltekit/components"
 </script>
 
 <div>
@@ -659,8 +659,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 <Code.Qwik>
 
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import Nodemailer from "@auth/qwik/providers/nodemailer"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import Nodemailer from "@oneum-io/qwik/providers/nodemailer"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -678,8 +678,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
 <Code.Svelte>
 
 ```ts filename="./src/auth.ts"
-import SvelteKitAuth from "@auth/sveltekit"
-import Nodemailer from "@auth/sveltekit/providers/nodemailer"
+import SvelteKitAuth from "@oneum-io/sveltekit"
+import Nodemailer from "@oneum-io/sveltekit/providers/nodemailer"
 import { env } from "$env/dynamic/private"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
@@ -738,8 +738,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 <Code.Qwik>
 
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import Nodemailer from "@auth/qwik/providers/nodemailer"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import Nodemailer from "@oneum-io/qwik/providers/nodemailer"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -764,8 +764,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
 <Code.Svelte>
 
 ```ts filename="./src/auth.ts"
-import SvelteKitAuth from "@auth/sveltekit"
-import Nodemailer from "@auth/sveltekit/providers/nodemailer"
+import SvelteKitAuth from "@oneum-io/sveltekit"
+import Nodemailer from "@oneum-io/sveltekit/providers/nodemailer"
 import { env } from "$env/dynamic/private"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
@@ -844,7 +844,7 @@ export default component$(() => {
 
 ```ts filename="src/routes/+page.svelte"
 <script lang="ts">
-  import { signIn } from '@auth/sveltekit/client'
+  import { signIn } from '@oneum-io/sveltekit/client'
 </script>
 
 <div>
@@ -916,8 +916,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 <Code.Qwik>
 
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import Postmark from "@auth/qwik/providers/postmark"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import Postmark from "@oneum-io/qwik/providers/postmark"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -930,8 +930,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
 <Code.Svelte>
 
 ```ts filename="./src/auth.ts"
-import SvelteKitAuth from "@auth/sveltekit"
-import Postmark from "@auth/sveltekit/providers/postmark"
+import SvelteKitAuth from "@oneum-io/sveltekit"
+import Postmark from "@oneum-io/sveltekit/providers/postmark"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
   providers: [Postmark],
@@ -1019,7 +1019,7 @@ export default component$(() => {
 
 ```html filename="src/routes/+page.svelte"
 <script lang="ts">
-  import { SignIn } from "@auth/sveltekit/components"
+  import { SignIn } from "@oneum-io/sveltekit/components"
 </script>
 
 <div>
@@ -1109,8 +1109,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 <Code.Svelte>
 
 ```ts filename="./src/auth.ts"
-import SvelteKitAuth from "@auth/sveltekit"
-import Loops from "@auth/sveltekit/providers/loops"
+import SvelteKitAuth from "@oneum-io/sveltekit"
+import Loops from "@oneum-io/sveltekit/providers/loops"
 import {
   AUTH_LOOPS_KEY,
   AUTH_LOOPS_TRANSACTIONAL_ID,
@@ -1164,7 +1164,7 @@ export function SignIn() {
 ```ts filename="src/routes/+page.svelte"
 
 <script lang="ts">
-  import { SignIn } from "@auth/sveltekit/components"
+  import { SignIn } from "@oneum-io/sveltekit/components"
 </script>
 
 <div>
@@ -1233,8 +1233,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 <Code.Qwik>
   
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import Mailgun from "@auth/qwik/providers/mailgun"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import Mailgun from "@oneum-io/qwik/providers/mailgun"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -1247,8 +1247,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
 <Code.Svelte>
 
 ```ts filename="./src/auth.ts"
-import SvelteKitAuth from "@auth/sveltekit"
-import Mailgun from "@auth/sveltekit/providers/mailgun"
+import SvelteKitAuth from "@oneum-io/sveltekit"
+import Mailgun from "@oneum-io/sveltekit/providers/mailgun"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
   providers: [Mailgun],
@@ -1312,7 +1312,7 @@ export default component$(() => {
 
 ```html filename="src/routes/+page.svelte"
 <script lang="ts">
-  import { SignIn } from "@auth/sveltekit/components"
+  import { SignIn } from "@oneum-io/sveltekit/components"
 </script>
 
 <div>

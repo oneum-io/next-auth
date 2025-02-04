@@ -1,5 +1,5 @@
 {
-  "name": "@auth/firebase-adapter",
+  "name": "@oneum-io/firebase-adapter",
   "version": "2.7.4",
   "description": "Firebase adapter for Auth.js",
   "homepage": "https://authjs.dev",
@@ -42,7 +42,7 @@
     "clean": "rm -rf *.js *.d.ts*"
   },
   "dependencies": {
-    "@auth/core": "workspace:*"
+    "@oneum-io/core": "workspace:*"
   },
   "peerDependencies": {
     "firebase-admin": "^12.0.0"

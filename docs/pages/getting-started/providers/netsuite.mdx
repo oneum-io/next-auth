@@ -144,7 +144,7 @@ Above is an example of returning the basic runtime information. Be sure to creat
 <Code>
   <Code.Next>
 
-```ts filename="@auth.ts"
+```ts filename="@oneum-io.ts"
 import NextAuth from "next-auth"
 import NetSuite from "next-auth/providers/netsuite"
 
@@ -170,8 +170,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   <Code.Qwik>
   
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import NetSuite from "@auth/qwik/providers/netsuite"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import NetSuite from "@oneum-io/qwik/providers/netsuite"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -197,8 +197,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   <Code.Svelte>
 
 ```ts filename="/src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import NetSuite from "@auth/sveltekit/providers/netsuite"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import NetSuite from "@oneum-io/sveltekit/providers/netsuite"
 import { env } from "$env/dynamic/private"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
@@ -223,8 +223,8 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
   <Code.Express>
 
 ```ts filename="/src/app.ts"
-import { ExpressAuth } from "@auth/express"
-import NetSuite from "@auth/express/providers/netsuite"
+import { ExpressAuth } from "@oneum-io/express"
+import NetSuite from "@oneum-io/express/providers/netsuite"
 
 app.use(
   "/auth/*",

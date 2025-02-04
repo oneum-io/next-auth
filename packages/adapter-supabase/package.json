@@ -1,5 +1,5 @@
 {
-  "name": "@auth/supabase-adapter",
+  "name": "@oneum-io/supabase-adapter",
   "version": "1.7.4",
   "description": "Supabase adapter for Auth.js",
   "homepage": "https://authjs.dev",
@@ -37,7 +37,7 @@
     "test": "./test/test.sh"
   },
   "dependencies": {
-    "@auth/core": "workspace:*"
+    "@oneum-io/core": "workspace:*"
   },
   "peerDependencies": {
     "@supabase/supabase-js": "^2.43.1"

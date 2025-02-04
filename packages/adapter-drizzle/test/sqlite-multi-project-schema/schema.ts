@@ -1,4 +1,4 @@
-import { AdapterAccountType } from "@auth/core/adapters"
+import { AdapterAccountType } from "@oneum-io/core/adapters"
 import { drizzle } from "drizzle-orm/better-sqlite3"
 import Database from "libsql"
 import {

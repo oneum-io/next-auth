@@ -102,8 +102,8 @@ export interface BankIDNorwayProfile {
  *
  * #### Configuration
  * ```ts
- * import { Auth } from "@auth/core"
- * import BankIDNorge from "@auth/core/providers/bankid-no"
+ * import { Auth } from "@oneum-io/core"
+ * import BankIDNorge from "@oneum-io/core/providers/bankid-no"
  *
  * const request = new Request(origin)
  * const response = await Auth(request, {

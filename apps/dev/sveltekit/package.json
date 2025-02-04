@@ -19,8 +19,8 @@
     "typescript": "5.2.2"
   },
   "dependencies": {
-    "@auth/sveltekit": "workspace:*",
-    "@auth/unstorage-adapter": "workspace:*",
+    "@oneum-io/sveltekit": "workspace:*",
+    "@oneum-io/unstorage-adapter": "workspace:*",
     "unstorage": "^1.10.2"
   },
   "type": "module"

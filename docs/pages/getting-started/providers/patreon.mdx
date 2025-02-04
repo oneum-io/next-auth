@@ -64,8 +64,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   <Code.Qwik>
   
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import Patreon from "@auth/qwik/providers/patreon"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import Patreon from "@oneum-io/qwik/providers/patreon"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -78,8 +78,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   <Code.Svelte>
 
 ```ts filename="/src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import Patreon from "@auth/sveltekit/providers/patreon"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import Patreon from "@oneum-io/sveltekit/providers/patreon"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
   providers: [Patreon],
@@ -90,8 +90,8 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
   <Code.Express>
 
 ```ts filename="/src/app.ts"
-import { ExpressAuth } from "@auth/express"
-import Patreon from "@auth/express/providers/patreon"
+import { ExpressAuth } from "@oneum-io/express"
+import Patreon from "@oneum-io/express/providers/patreon"
 
 app.use("/auth/*", ExpressAuth({ providers: [Patreon] }))
 ```

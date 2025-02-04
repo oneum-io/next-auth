@@ -71,8 +71,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   <Code.Svelte>
 
 ```ts filename="/src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import Frontegg from "@auth/sveltekit/providers/frontegg"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import Frontegg from "@oneum-io/sveltekit/providers/frontegg"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
   providers: [Frontegg],
@@ -83,8 +83,8 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
   <Code.Express>
 
 ```ts filename="/src/app.ts"
-import { ExpressAuth } from "@auth/express"
-import Frontegg from "@auth/express/providers/frontegg"
+import { ExpressAuth } from "@oneum-io/express"
+import Frontegg from "@oneum-io/express/providers/frontegg"
 
 app.use("/auth/*", ExpressAuth({ providers: [Frontegg] }))
 ```

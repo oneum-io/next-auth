@@ -17,7 +17,7 @@ import { Accordion, Accordions } from "@/components/Accordion"
 ### Installation
 
 ```bash npm2yarn
-npm install drizzle-orm @auth/drizzle-adapter
+npm install drizzle-orm @oneum-io/drizzle-adapter
 npm install drizzle-kit --save-dev
 ```
 
@@ -365,7 +365,7 @@ export const authenticators = sqliteTable(
 
 ```ts filename="./auth.ts"
 import NextAuth from "next-auth"
-import { DrizzleAdapter } from "@auth/drizzle-adapter"
+import { DrizzleAdapter } from "@oneum-io/drizzle-adapter"
 import { db } from "./schema.ts"
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
@@ -378,8 +378,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 <Code.Qwik>
 
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import { DrizzleAdapter } from "@auth/drizzle-adapter"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import { DrizzleAdapter } from "@oneum-io/drizzle-adapter"
 import { db } from "./schema.ts"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
@@ -394,8 +394,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
 <Code.Svelte>
 
 ```ts filename="./src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import { DrizzleAdapter } from "@auth/drizzle-adapter"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import { DrizzleAdapter } from "@oneum-io/drizzle-adapter"
 import { db } from "./schema.ts"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
@@ -408,8 +408,8 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
 <Code.Express>
 
 ```ts filename="./src/routes/auth.route.ts"
-import { ExpressAuth } from "@auth/express"
-import { DrizzleAdapter } from "@auth/drizzle-adapter"
+import { ExpressAuth } from "@oneum-io/express"
+import { DrizzleAdapter } from "@oneum-io/drizzle-adapter"
 import { db } from "./schema.ts"
 
 const app = express()
@@ -437,7 +437,7 @@ If you want to use your own tables, you can pass them as a second argument to `D
 ```ts filename="auth.ts"
 import NextAuth from "next-auth"
 import Google from "next-auth/providers/google"
-import { DrizzleAdapter } from "@auth/drizzle-adapter"
+import { DrizzleAdapter } from "@oneum-io/drizzle-adapter"
 import { db, accounts, sessions, users, verificationTokens } from "./schema"
 
 export const { handlers, auth } = NextAuth({

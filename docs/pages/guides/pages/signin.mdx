@@ -54,8 +54,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 <Code.Qwik>
 
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import Credentials from "@auth/qwik/providers/credentials"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import Credentials from "@oneum-io/qwik/providers/credentials"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -83,10 +83,10 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
 <Code.Svelte>
 
 ```tsx filename="./src/auth.ts" {6, 21-28, 32-34}
-import SvelteKitAuth from "@auth/sveltekit"
-import GitHub from "@auth/sveltekit/providers/github"
-import Credentials from "@auth/sveltekit/providers/credentials"
-import type { Provider } from "@auth/sveltekit/providers"
+import SvelteKitAuth from "@oneum-io/sveltekit"
+import GitHub from "@oneum-io/sveltekit/providers/github"
+import Credentials from "@oneum-io/sveltekit/providers/credentials"
+import type { Provider } from "@oneum-io/sveltekit/providers"
 
 const providers: Provider[] = [
   GitHub,
@@ -238,7 +238,7 @@ export default component$(() => {
 
 ```svelte filename="src/routes/signin/+page.svelte" /submitButton/ /providerMap/
 <script lang="ts">
-  import { SignIn } from "@auth/sveltekit/components"
+  import { SignIn } from "@oneum-io/sveltekit/components"
   import { providerMap } from "../../auth.ts"
 </script>
 

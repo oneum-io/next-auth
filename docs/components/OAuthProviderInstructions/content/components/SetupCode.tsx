@@ -63,8 +63,8 @@ export const { GET, POST } = handlers
           icon={TSIcon}
           dangerouslySetInnerHTML={{
             __html: highlight(`
-import { QwikAuth$ } from "@auth/qwik"
-import ${providerName} from "@auth/qwik/providers/${providerId}"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import ${providerName} from "@oneum-io/qwik/providers/${providerId}"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$({
   providers: [${providerName}],
@@ -85,8 +85,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$({
           icon={TSIcon}
           dangerouslySetInnerHTML={{
             __html: highlight(`
-import { SvelteKitAuth } from "@auth/sveltekit"
-import ${providerName} from "@auth/sveltekit/providers/${providerId}"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import ${providerName} from "@oneum-io/sveltekit/providers/${providerId}"
  
 export const { handle, signIn } = SvelteKitAuth({
   providers: [${providerName}],
@@ -144,8 +144,8 @@ export const load: LayoutServerLoad = async (event) => {
           icon={TSIcon}
           dangerouslySetInnerHTML={{
             __html: highlight(`
-import { ExpressAuth } from "@auth/express"
-import ${providerName} from "@auth/express/providers/${providerId}"
+import { ExpressAuth } from "@oneum-io/express"
+import ${providerName} from "@oneum-io/express/providers/${providerId}"
 import express from "express"
  
 const app = express()

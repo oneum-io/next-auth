@@ -47,11 +47,11 @@
         "AUTH_TRUST_HOST"
       ]
     },
-    "@auth/xata-adapter#test": {
+    "@oneum-io/xata-adapter#test": {
       "passThroughEnv": ["XATA_API_KEY", "XATA_DATABASE_URL"]
     },
-    "@auth/hasura-adapter#build": {
-      "dependsOn": ["@auth/core#build"],
+    "@oneum-io/hasura-adapter#build": {
+      "dependsOn": ["@oneum-io/core#build"],
       "outputs": [
         "lib/**",
         "*.js",
@@ -63,11 +63,11 @@
     "docs#dev": {
       "dependsOn": [
         "next-auth#build",
-        "@auth/core#build",
-        "@auth/sveltekit#build",
-        "@auth/express#build",
-        "@auth/solid-start#build",
-        "@auth/qwik#build"
+        "@oneum-io/core#build",
+        "@oneum-io/sveltekit#build",
+        "@oneum-io/express#build",
+        "@oneum-io/solid-start#build",
+        "@oneum-io/qwik#build"
       ],
       "persistent": true,
       "cache": false
@@ -85,33 +85,33 @@
         "next.config.js"
       ],
       "dependsOn": [
-        "@auth/core#build",
-        "@auth/azure-tables-adapter#build",
-        "@auth/d1-adapter#build",
-        "@auth/dgraph-adapter#build",
-        "@auth/drizzle-adapter#build",
-        "@auth/dynamodb-adapter#build",
-        "@auth/edgedb-adapter#build",
-        "@auth/fauna-adapter#build",
-        "@auth/firebase-adapter#build",
-        "@auth/hasura-adapter#build",
-        "@auth/kysely-adapter#build",
-        "@auth/mikro-orm-adapter#build",
-        "@auth/mongodb-adapter#build",
-        "@auth/neo4j-adapter#build",
-        "@auth/pg-adapter#build",
-        "@auth/pouchdb-adapter#build",
-        "@auth/prisma-adapter#build",
-        "@auth/sequelize-adapter#build",
-        "@auth/solid-start#build",
-        "@auth/supabase-adapter#build",
-        "@auth/surrealdb-adapter#build",
-        "@auth/sveltekit#build",
-        "@auth/typeorm-adapter#build",
-        "@auth/unstorage-adapter#build",
-        "@auth/upstash-redis-adapter#build",
-        "@auth/xata-adapter#build",
-        "@auth/qwik#build",
+        "@oneum-io/core#build",
+        "@oneum-io/azure-tables-adapter#build",
+        "@oneum-io/d1-adapter#build",
+        "@oneum-io/dgraph-adapter#build",
+        "@oneum-io/drizzle-adapter#build",
+        "@oneum-io/dynamodb-adapter#build",
+        "@oneum-io/edgedb-adapter#build",
+        "@oneum-io/fauna-adapter#build",
+        "@oneum-io/firebase-adapter#build",
+        "@oneum-io/hasura-adapter#build",
+        "@oneum-io/kysely-adapter#build",
+        "@oneum-io/mikro-orm-adapter#build",
+        "@oneum-io/mongodb-adapter#build",
+        "@oneum-io/neo4j-adapter#build",
+        "@oneum-io/pg-adapter#build",
+        "@oneum-io/pouchdb-adapter#build",
+        "@oneum-io/prisma-adapter#build",
+        "@oneum-io/sequelize-adapter#build",
+        "@oneum-io/solid-start#build",
+        "@oneum-io/supabase-adapter#build",
+        "@oneum-io/surrealdb-adapter#build",
+        "@oneum-io/sveltekit#build",
+        "@oneum-io/typeorm-adapter#build",
+        "@oneum-io/unstorage-adapter#build",
+        "@oneum-io/upstash-redis-adapter#build",
+        "@oneum-io/xata-adapter#build",
+        "@oneum-io/qwik#build",
         "next-auth#build",
         "^build"
       ],

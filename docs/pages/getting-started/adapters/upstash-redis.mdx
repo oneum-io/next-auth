@@ -18,7 +18,7 @@ import { Code } from "@/components/Code"
 ### Installation
 
 ```bash npm2yarn
-npm install @upstash/redis @auth/upstash-redis-adapter
+npm install @upstash/redis @oneum-io/upstash-redis-adapter
 ```
 
 ### Environment Variables
@@ -35,7 +35,7 @@ UPSTASH_REDIS_TOKEN
 
 ```ts filename="./auth.ts"
 import NextAuth from "next-auth"
-import { UpstashRedisAdapter } from "@auth/upstash-redis-adapter"
+import { UpstashRedisAdapter } from "@oneum-io/upstash-redis-adapter"
 import { Redis } from "@upstash/redis"
 
 const redis = new Redis({
@@ -53,8 +53,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 <Code.Qwik>
 
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import { UpstashRedisAdapter } from "@auth/upstash-redis-adapter"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import { UpstashRedisAdapter } from "@oneum-io/upstash-redis-adapter"
 import { Redis } from "@upstash/redis"
 
 const redis = new Redis({
@@ -74,8 +74,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
 <Code.Svelte>
 
 ```ts filename="./src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import { UpstashRedisAdapter } from "@auth/upstash-redis-adapter"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import { UpstashRedisAdapter } from "@oneum-io/upstash-redis-adapter"
 import { Redis } from "@upstash/redis"
 
 const redis = new Redis({
@@ -93,8 +93,8 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
 <Code.Express>
 
 ```ts filename="./src/routes/auth.route.ts"
-import { ExpressAuth } from "@auth/express"
-import { UpstashRedisAdapter } from "@auth/upstash-redis-adapter"
+import { ExpressAuth } from "@oneum-io/express"
+import { UpstashRedisAdapter } from "@oneum-io/upstash-redis-adapter"
 import { Redis } from "@upstash/redis"
 
 const redis = new Redis({

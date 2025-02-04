@@ -63,8 +63,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   <Code.Qwik>
   
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import Spotify from "@auth/qwik/providers/spotify"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import Spotify from "@oneum-io/qwik/providers/spotify"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -77,8 +77,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   <Code.Svelte>
 
 ```ts filename="/src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import Spotify from "@auth/sveltekit/providers/spotify"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import Spotify from "@oneum-io/sveltekit/providers/spotify"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
   providers: [Spotify],
@@ -89,8 +89,8 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
   <Code.Express>
 
 ```ts filename="/src/app.ts"
-import { ExpressAuth } from "@auth/express"
-import Spotify from "@auth/express/providers/spotify"
+import { ExpressAuth } from "@oneum-io/express"
+import Spotify from "@oneum-io/express/providers/spotify"
 
 app.use("/auth/*", ExpressAuth({ providers: [Spotify] }))
 ```

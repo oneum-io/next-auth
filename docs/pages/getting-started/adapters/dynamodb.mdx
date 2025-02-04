@@ -19,7 +19,7 @@ import { Accordion, Accordions } from "@/components/Accordion"
 ### Installation
 
 ```bash npm2yarn
-npm install @auth/dynamodb-adapter @aws-sdk/lib-dynamodb @aws-sdk/client-dynamodb
+npm install @oneum-io/dynamodb-adapter @aws-sdk/lib-dynamodb @aws-sdk/client-dynamodb
 ```
 
 ### Environment Variables
@@ -42,7 +42,7 @@ The default table name is `next-auth`, but you can customise that by passing `{ 
 import NextAuth from "next-auth"
 import { DynamoDB, DynamoDBClientConfig } from "@aws-sdk/client-dynamodb"
 import { DynamoDBDocument } from "@aws-sdk/lib-dynamodb"
-import { DynamoDBAdapter } from "@auth/dynamodb-adapter"
+import { DynamoDBAdapter } from "@oneum-io/dynamodb-adapter"
 
 const config: DynamoDBClientConfig = {
   credentials: {
@@ -70,10 +70,10 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 <Code.Qwik>
 
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
+import { QwikAuth$ } from "@oneum-io/qwik"
 import { DynamoDB, DynamoDBClientConfig } from "@aws-sdk/client-dynamodb"
 import { DynamoDBDocument } from "@aws-sdk/lib-dynamodb"
-import { DynamoDBAdapter } from "@auth/dynamodb-adapter"
+import { DynamoDBAdapter } from "@oneum-io/dynamodb-adapter"
 
 const config: DynamoDBClientConfig = {
   credentials: {
@@ -103,10 +103,10 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
 <Code.Svelte>
 
 ```ts filename="./src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
 import { DynamoDB, DynamoDBClientConfig } from "@aws-sdk/client-dynamodb"
 import { DynamoDBDocument } from "@aws-sdk/lib-dynamodb"
-import { DynamoDBAdapter } from "@auth/dynamodb-adapter"
+import { DynamoDBAdapter } from "@oneum-io/dynamodb-adapter"
 
 const config: DynamoDBClientConfig = {
   credentials: {
@@ -134,10 +134,10 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
 <Code.Express>
 
 ```ts filename="./src/routes/auth.route.ts"
-import { ExpressAuth } from "@auth/express"
+import { ExpressAuth } from "@oneum-io/express"
 import { DynamoDB, DynamoDBClientConfig } from "@aws-sdk/client-dynamodb"
 import { DynamoDBDocument } from "@aws-sdk/lib-dynamodb"
-import { DynamoDBAdapter } from "@auth/dynamodb-adapter"
+import { DynamoDBAdapter } from "@oneum-io/dynamodb-adapter"
 
 const app = express()
 

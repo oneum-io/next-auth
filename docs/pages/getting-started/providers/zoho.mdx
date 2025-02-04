@@ -63,8 +63,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   <Code.Qwik>
   
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import Zoho from "@auth/qwik/providers/zoho"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import Zoho from "@oneum-io/qwik/providers/zoho"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -77,8 +77,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   <Code.Svelte>
 
 ```ts filename="/src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import Zoho from "@auth/sveltekit/providers/zoho"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import Zoho from "@oneum-io/sveltekit/providers/zoho"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
   providers: [Zoho],
@@ -89,8 +89,8 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
   <Code.Express>
 
 ```ts filename="/src/app.ts"
-import { ExpressAuth } from "@auth/express"
-import Zoho from "@auth/express/providers/zoho"
+import { ExpressAuth } from "@oneum-io/express"
+import Zoho from "@oneum-io/express/providers/zoho"
 
 app.use("/auth/*", ExpressAuth({ providers: [Zoho] }))
 ```

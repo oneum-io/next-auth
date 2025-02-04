@@ -72,8 +72,8 @@ const response = await NextAuth({
   <Code.Qwik>
 
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import Nextcloud from "@auth/qwik/providers/nextcloud"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import Nextcloud from "@oneum-io/qwik/providers/nextcloud"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -92,8 +92,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   <Code.Svelte>
 
 ```ts filename="/src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import Nextcloud from "@auth/sveltekit/providers/nextcloud"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import Nextcloud from "@oneum-io/sveltekit/providers/nextcloud"
 import {
   AUTH_NEXTCLOUD_ID,
   AUTH_NEXTCLOUD_SECRET,
@@ -115,8 +115,8 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
   <Code.Express>
 
 ```ts filename="/src/app.ts"
-import { ExpressAuth } from "@auth/express"
-import Nextcloud from "@auth/express/providers/nextcloud"
+import { ExpressAuth } from "@oneum-io/express"
+import Nextcloud from "@oneum-io/express/providers/nextcloud"
 
 app.use(
   "/auth/*",

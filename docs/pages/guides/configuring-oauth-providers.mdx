@@ -29,8 +29,8 @@ export const { handlers, auth } = NextAuth({
 <Code.Qwik>
   
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import Auth0 from "@auth/qwik/providers/auth0";
+import { QwikAuth$ } from "@oneum-io/qwik"
+import Auth0 from "@oneum-io/qwik/providers/auth0";
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -44,8 +44,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
 </Code.Qwik>
 <Code.Svelte>
 ```ts filename="src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit";
-import Auth0 from "@auth/sveltekit/providers/auth0";
+import { SvelteKitAuth } from "@oneum-io/sveltekit";
+import Auth0 from "@oneum-io/sveltekit/providers/auth0";
 
 export const { handle, signIn } = SvelteKitAuth({
   providers: [
@@ -84,8 +84,8 @@ export const { handlers, auth } = NextAuth({
 <Code.Qwik>
   
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import Auth0 from "@auth/qwik/providers/auth0";
+import { QwikAuth$ } from "@oneum-io/qwik"
+import Auth0 from "@oneum-io/qwik/providers/auth0";
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -104,8 +104,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
 </Code.Qwik>
 <Code.Svelte>
 ```ts filename="src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit";
-import Auth0 from "@auth/sveltekit/providers/auth0";
+import { SvelteKitAuth } from "@oneum-io/sveltekit";
+import Auth0 from "@oneum-io/sveltekit/providers/auth0";
 
 export const { handle } = SvelteKitAuth({
   providers: [
@@ -156,7 +156,7 @@ export const { handlers, auth } = NextAuth({
 <Code.Qwik>
   
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
+import { QwikAuth$ } from "@oneum-io/qwik"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -175,7 +175,7 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
 </Code.Qwik>
 <Code.Svelte>
 ```ts filename="src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit";
+import { SvelteKitAuth } from "@oneum-io/sveltekit";
 
 export const { handle } = SvelteKitAuth({
   providers: [{

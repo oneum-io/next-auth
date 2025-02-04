@@ -1,5 +1,5 @@
 {
-  "name": "@auth/sveltekit",
+  "name": "@oneum-io/sveltekit",
   "version": "1.7.4",
   "description": "Authentication for SvelteKit.",
   "keywords": [
@@ -50,7 +50,7 @@
     "typedoc-plugin-markdown": "4.0.0-next.53"
   },
   "dependencies": {
-    "@auth/core": "workspace:*",
+    "@oneum-io/core": "workspace:*",
     "set-cookie-parser": "^2.7.0"
   },
   "peerDependencies": {

@@ -22,8 +22,8 @@ import type { OAuthConfig, OAuthUserConfig } from "./index.js"
  *
  * #### Configuration
  *```ts
- * import { Auth } from "@auth/core"
- * import Mailchimp from "@auth/core/providers/mailchimp"
+ * import { Auth } from "@oneum-io/core"
+ * import Mailchimp from "@oneum-io/core/providers/mailchimp"
  *
  * const request = new Request(origin)
  * const response = await Auth(request, {

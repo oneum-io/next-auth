@@ -15,7 +15,7 @@ import { Code } from "@/components/Code"
 ### Installation
 
 ```bash npm2yarn
-npm install @auth/sequelize-adapter sequelize
+npm install @oneum-io/sequelize-adapter sequelize
 ```
 
 ### Environment Variables
@@ -36,7 +36,7 @@ DATABASE_URL=postgres://postgres:adminadmin@0.0.0.0:5432/db
 
 ```ts filename="./auth.ts"
 import NextAuth from "next-auth"
-import SequelizeAdapter from "@auth/sequelize-adapter"
+import SequelizeAdapter from "@oneum-io/sequelize-adapter"
 import { Sequelize } from "sequelize"
 
 const sequelize = new Sequelize(process.env.DATABASE_URL)
@@ -51,8 +51,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 <Code.Qwik>
 
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import SequelizeAdapter from "@auth/sequelize-adapter"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import SequelizeAdapter from "@oneum-io/sequelize-adapter"
 import { Sequelize } from "sequelize"
 
 const sequelize = new Sequelize(import.meta.env.DATABASE_URL)
@@ -69,8 +69,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
 <Code.Svelte>
 
 ```ts filename="./src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import SequelizeAdapter from "@auth/sequelize-adapter"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import SequelizeAdapter from "@oneum-io/sequelize-adapter"
 import { Sequelize } from "sequelize"
 
 const sequelize = new Sequelize(process.env.DATABASE_URL)
@@ -85,8 +85,8 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
 <Code.Express>
 
 ```ts filename="./src/routes/auth.route.ts"
-import { ExpressAuth } from "@auth/express"
-import SequelizeAdapter from "@auth/sequelize-adapter"
+import { ExpressAuth } from "@oneum-io/express"
+import SequelizeAdapter from "@oneum-io/sequelize-adapter"
 import { Sequelize } from "sequelize"
 
 const sequelize = new Sequelize(process.env.DATABASE_URL)
@@ -115,7 +115,7 @@ By default, the sequelize adapter will not create tables in your database. In pr
 
 ```ts filename="./auth.ts"
 import NextAuth from "next-auth"
-import SequelizeAdapter from "@auth/sequelize-adapter"
+import SequelizeAdapter from "@oneum-io/sequelize-adapter"
 import Sequelize from "sequelize"
 
 const sequelize = new Sequelize("sqlite::memory:")
@@ -137,7 +137,7 @@ Sequelize models are option to customization like so:
 
 ```ts filename="./auth.ts"
 import NextAuth from "next-auth"
-import SequelizeAdapter, { models } from "@auth/sequelize-adapter"
+import SequelizeAdapter, { models } from "@oneum-io/sequelize-adapter"
 import Sequelize, { DataTypes } from "sequelize"
 
 const sequelize = new Sequelize("sqlite::memory:")

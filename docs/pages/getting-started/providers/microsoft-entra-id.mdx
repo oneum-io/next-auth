@@ -81,8 +81,8 @@ const { handlers, auth, signIn, signOut } = NextAuth({
   <Code.Qwik>
   
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import Entra from "@auth/qwik/providers/microsoft-entra-id"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import Entra from "@oneum-io/qwik/providers/microsoft-entra-id"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -101,8 +101,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   <Code.Svelte>
 
 ```ts filename="/src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import Entra from "@auth/sveltekit/providers/microsoft-entra-id"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import Entra from "@oneum-io/sveltekit/providers/microsoft-entra-id"
 import { env } from "$env/dynamic/private"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
@@ -120,8 +120,8 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
   <Code.Express>
 
 ```ts filename="/src/app.ts"
-import { ExpressAuth } from "@auth/express"
-import Entra from "@auth/express/providers/microsoft-entra-id"
+import { ExpressAuth } from "@oneum-io/express"
+import Entra from "@oneum-io/express/providers/microsoft-entra-id"
 
 app.use(
   "/auth/*",

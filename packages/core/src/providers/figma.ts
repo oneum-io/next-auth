@@ -32,8 +32,8 @@ interface FigmaProfile {
  * #### Configuration
  *
  * ```ts
- * import { Auth } from "@auth/core"
- * import Figma from "@auth/core/providers/figma"
+ * import { Auth } from "@oneum-io/core"
+ * import Figma from "@oneum-io/core/providers/figma"
  *
  * const request = new Request(origin)
  * const response = await Auth(request, {

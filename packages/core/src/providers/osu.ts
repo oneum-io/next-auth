@@ -71,8 +71,8 @@ export interface OsuProfile extends OsuUserCompact, Record<string, any> {
  *
  * #### Configuration
  *```ts
- * import { Auth } from "@auth/core"
- * import Osu from "@auth/core/providers/osu"
+ * import { Auth } from "@oneum-io/core"
+ * import Osu from "@oneum-io/core/providers/osu"
  *
  * const request = new Request(origin)
  * const response = await Auth(request, {

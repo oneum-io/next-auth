@@ -62,8 +62,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   <Code.Qwik>
   
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import FreshBooks from "@auth/qwik/providers/freshbooks"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import FreshBooks from "@oneum-io/qwik/providers/freshbooks"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -76,8 +76,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   <Code.Svelte>
 
 ```ts filename="/src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import FreshBooks from "@auth/sveltekit/providers/freshbooks"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import FreshBooks from "@oneum-io/sveltekit/providers/freshbooks"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
   providers: [FreshBooks],
@@ -88,8 +88,8 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
   <Code.Express>
 
 ```ts filename="/src/app.ts"
-import { ExpressAuth } from "@auth/express"
-import FreshBooks from "@auth/express/providers/freshbooks"
+import { ExpressAuth } from "@oneum-io/express"
+import FreshBooks from "@oneum-io/express/providers/freshbooks"
 
 app.use("/auth/*", ExpressAuth({ providers: [FreshBooks] }))
 ```

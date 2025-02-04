@@ -53,8 +53,8 @@ export interface ThreadsProfile {
  *
  * #### Configuration
  *```ts
- * import { Auth } from "@auth/core"
- * import Threads from "@auth/core/providers/threads"
+ * import { Auth } from "@oneum-io/core"
+ * import Threads from "@oneum-io/core/providers/threads"
  *
  * const request = new Request(origin)
  * const response = await Auth(request, {

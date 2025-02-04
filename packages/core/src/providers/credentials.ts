@@ -115,8 +115,8 @@ export type CredentialsProviderId = "credentials"
  *
  * @example
  * ```ts
- * import { Auth } from "@auth/core"
- * import Credentials from "@auth/core/providers/credentials"
+ * import { Auth } from "@oneum-io/core"
+ * import Credentials from "@oneum-io/core/providers/credentials"
  *
  * const request = new Request("https://example.com")
  * const response = await AuthHandler(request, {

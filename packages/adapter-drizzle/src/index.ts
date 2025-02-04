@@ -9,11 +9,11 @@
  * ## Installation
  *
  * ```bash npm2yarn
- * npm install drizzle-orm @auth/drizzle-adapter
+ * npm install drizzle-orm @oneum-io/drizzle-adapter
  * npm install drizzle-kit --save-dev
  * ```
  *
- * @module @auth/drizzle-adapter
+ * @module @oneum-io/drizzle-adapter
  */
 
 import { is } from "drizzle-orm"
@@ -25,7 +25,7 @@ import { DefaultPostgresSchema, PostgresDrizzleAdapter } from "./lib/pg.js"
 import { DefaultSQLiteSchema, SQLiteDrizzleAdapter } from "./lib/sqlite.js"
 import { DefaultSchema, SqlFlavorOptions } from "./lib/utils.js"
 
-import type { Adapter } from "@auth/core/adapters"
+import type { Adapter } from "@oneum-io/core/adapters"
 
 export function DrizzleAdapter<SqlFlavor extends SqlFlavorOptions>(
   db: SqlFlavor,

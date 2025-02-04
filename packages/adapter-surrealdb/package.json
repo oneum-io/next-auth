@@ -1,5 +1,5 @@
 {
-  "name": "@auth/surrealdb-adapter",
+  "name": "@oneum-io/surrealdb-adapter",
   "version": "1.7.4",
   "description": "SurrealDB adapter for next-auth.",
   "homepage": "https://authjs.dev",
@@ -42,7 +42,7 @@
     "clean": "rm -rf *.js *.d.ts*"
   },
   "dependencies": {
-    "@auth/core": "workspace:*"
+    "@oneum-io/core": "workspace:*"
   },
   "peerDependencies": {
     "surrealdb.js": "^0.11.0"

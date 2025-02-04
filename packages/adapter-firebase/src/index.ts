@@ -9,10 +9,10 @@
  * ## Installation
  *
  * ```bash npm2yarn
- * npm install @auth/firebase-adapter firebase-admin
+ * npm install @oneum-io/firebase-adapter firebase-admin
  * ```
  *
- * @module @auth/firebase-adapter
+ * @module @oneum-io/firebase-adapter
  */
 
 import { type AppOptions, getApps, initializeApp } from "firebase-admin/app"
@@ -30,7 +30,7 @@ import type {
   AdapterAccount,
   AdapterSession,
   VerificationToken,
-} from "@auth/core/adapters"
+} from "@oneum-io/core/adapters"
 
 /** Configure the Firebase Adapter. */
 export interface FirebaseAdapterConfig extends AppOptions {
@@ -375,7 +375,7 @@ export function collectionsFactory(
  *
  * @example
  * ```ts title="lib/firestore.ts"
- * import { initFirestore } from "@auth/firebase-adapter"
+ * import { initFirestore } from "@oneum-io/firebase-adapter"
  * import { cert } from "firebase-admin/app"
  *
  * export const firestore = initFirestore({

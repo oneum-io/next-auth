@@ -60,8 +60,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 <Code.Qwik>
   
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import Sendgrid from "@auth/qwik/providers/sendgrid"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import Sendgrid from "@oneum-io/qwik/providers/sendgrid"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -80,8 +80,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
 <Code.Svelte>
 
 ```ts filename="./src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import Sendgrid from "@auth/sveltekit/providers/sendgrid"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import Sendgrid from "@oneum-io/sveltekit/providers/sendgrid"
 import { env } from "$env/dynamic/prviate"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({

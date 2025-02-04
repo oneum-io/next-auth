@@ -33,8 +33,8 @@ export interface ClickUpProfile {
  *
  * #### Configuration
  * ```ts
- * import { Auth } from "@auth/core"
- * import ClickUp from "@auth/core/providers/click-up"
+ * import { Auth } from "@oneum-io/core"
+ * import ClickUp from "@oneum-io/core/providers/click-up"
  *
  * const request = new Request(origin)
  * const response = await Auth(request, {

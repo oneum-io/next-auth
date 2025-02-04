@@ -141,8 +141,8 @@ export const { GET, POST } = handlers
 `,
           sveltekit: `\
 // src/auth.ts
-import { SvelteKitAuth } from "@auth/sveltekit"
-import GitHub from '@auth/sveltekit/providers/github'
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import GitHub from '@oneum-io/sveltekit/providers/github'
 
 export const { handle } = SvelteKitAuth({
   providers: [GitHub],
@@ -154,8 +154,8 @@ export { handle } from "./auth"
           express: `\
 // server.ts
 import { express } from "express"
-import { ExpressAuth } from "@auth/express"
-import GitHub from "@auth/express/providers/github"
+import { ExpressAuth } from "@oneum-io/express"
+import GitHub from "@oneum-io/express/providers/github"
 
 const app = express()
 
@@ -163,8 +163,8 @@ app.use("/auth/\*", ExpressAuth({ providers: [GitHub] }))
 `,
           qwik: `\
 // src/routes/plugin@auth.ts
-import { QwikAuth } from "@auth/qwik"
-import GitHub from "@auth/qwik/providers/github"
+import { QwikAuth } from "@oneum-io/qwik"
+import GitHub from "@oneum-io/qwik/providers/github"
 export const { onRequest, useSession } = QwikAuth$(() => ({ providers: [GitHub] }))
 `
 }).map(([key, code]) =>

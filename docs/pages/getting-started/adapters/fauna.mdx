@@ -14,7 +14,7 @@ import { Code } from "@/components/Code"
 ### Installation
 
 ```bash npm2yarn
-npm install @auth/fauna-adapter fauna
+npm install @oneum-io/fauna-adapter fauna
 ```
 
 ### Environment Variables
@@ -32,7 +32,7 @@ AUTH_FAUNA_SECRET=abc123
 ```ts filename="./auth.ts"
 import NextAuth from "next-auth"
 import { Client } from "fauna"
-import { FaunaAdapter } from "@auth/fauna-adapter"
+import { FaunaAdapter } from "@oneum-io/fauna-adapter"
 
 const client = new Client({
   secret: process.env.AUTH_FAUNA_SECRET,
@@ -49,9 +49,9 @@ export { handlers, auth, signIn, signOut } = NextAuth({
 <Code.Qwik>
 
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
+import { QwikAuth$ } from "@oneum-io/qwik"
 import { Client } from "fauna"
-import { FaunaAdapter } from "@auth/fauna-adapter"
+import { FaunaAdapter } from "@oneum-io/fauna-adapter"
 
 const client = new Client({
   secret: import.meta.env.AUTH_FAUNA_SECRET,
@@ -70,9 +70,9 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
 <Code.Svelte>
 
 ```ts filename="./src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
 import { Client } from "fauna"
-import { FaunaAdapter } from "@auth/fauna-adapter"
+import { FaunaAdapter } from "@oneum-io/fauna-adapter"
 
 const client = new Client({
   secret: process.env.AUTH_FAUNA_SECRET,
@@ -89,9 +89,9 @@ export { handle, signIn, signOut } = SvelteKitAuth({
 <Code.Express>
 
 ```ts filename="./src/routes/auth.route.ts"
-import { ExpressAuth } from "@auth/express"
+import { ExpressAuth } from "@oneum-io/express"
 import { Client } from "fauna"
-import { FaunaAdapter } from "@auth/fauna-adapter"
+import { FaunaAdapter } from "@oneum-io/fauna-adapter"
 
 const app = express()
 
@@ -115,7 +115,7 @@ app.use(
 
 ### Migrating to v2
 
-In `@auth/adapter-fauna@2.0.0`, we've renamed the collections to use an uppercase naming pattern in accordance with the Fauna best practices. If you're migrating from v1, you'll need to rename your collections to match the new naming scheme. Additionally, we've renamed the indexes to match the new method-like index names (i.e. `account_by_user_id` to `Account.byUserId`). For more information on migrating your Fauna schema, see their migration guide [here](https://docs.fauna.com/fauna/current/migration)
+In `@oneum-io/adapter-fauna@2.0.0`, we've renamed the collections to use an uppercase naming pattern in accordance with the Fauna best practices. If you're migrating from v1, you'll need to rename your collections to match the new naming scheme. Additionally, we've renamed the indexes to match the new method-like index names (i.e. `account_by_user_id` to `Account.byUserId`). For more information on migrating your Fauna schema, see their migration guide [here](https://docs.fauna.com/fauna/current/migration)
 
 <Accordions>
   <Accordion title="Migration Example">

@@ -7,7 +7,7 @@ module.exports = {
   entryPoints: ["src/index.ts", "src/lib/client.ts"],
   entryPointStrategy: "expand",
   tsconfig: "./tsconfig.json",
-  entryModule: "@auth/hasura-adapter",
+  entryModule: "@oneum-io/hasura-adapter",
   entryFileName: "../hasura-adapter.mdx",
   includeVersion: true,
   readme: 'none',

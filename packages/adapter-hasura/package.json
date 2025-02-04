@@ -1,5 +1,5 @@
 {
-  "name": "@auth/hasura-adapter",
+  "name": "@oneum-io/hasura-adapter",
   "version": "1.7.4",
   "description": "Hasura adapter for Auth.js.",
   "homepage": "https://authjs.dev",
@@ -14,7 +14,7 @@
   ],
   "license": "ISC",
   "keywords": [
-    "@auth",
+    "@oneum-io",
     "authjs",
     "Auth.js",
     "next-auth",
@@ -46,7 +46,7 @@
     "clean": "rm -rf *.js *.d.ts* lib"
   },
   "dependencies": {
-    "@auth/core": "workspace:*"
+    "@oneum-io/core": "workspace:*"
   },
   "devDependencies": {
     "@graphql-codegen/cli": "^5.0.0",

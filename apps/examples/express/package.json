@@ -18,7 +18,7 @@
   "author": "Rexford Essilfie <rexfordessilfie09@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "@auth/express": "latest",
+    "@oneum-io/express": "latest",
     "express": "^4.19.2",
     "morgan": "^1.10.0",
     "pug": "^3.0.2",

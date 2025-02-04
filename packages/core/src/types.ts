@@ -5,10 +5,10 @@
  * ## Installation
  *
  * ```bash npm2yarn
- * npm install @auth/core
+ * npm install @oneum-io/core
  * ```
  *
- * You can then import this submodule from `@auth/core/types`.
+ * You can then import this submodule from `@oneum-io/core/types`.
  *
  * ## Usage
  *
@@ -25,7 +25,7 @@
  *
  * @example
  * ```ts title=index.ts
- * import { Auth } from "@auth/core"
+ * import { Auth } from "@oneum-io/core"
  *
  * const request = new Request("https://example.com")
  * const response = await Auth(request, {

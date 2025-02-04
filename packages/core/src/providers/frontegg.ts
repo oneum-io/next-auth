@@ -42,8 +42,8 @@ export interface FronteggProfile {
  *
  * #### Configuration
  * ```ts
- * import { Auth } from "@auth/core"
- * import Frontegg from "@auth/core/providers/frontegg"
+ * import { Auth } from "@oneum-io/core"
+ * import Frontegg from "@oneum-io/core/providers/frontegg"
  *
  * const request = new Request(origin)
  * const response = await Auth(request, {

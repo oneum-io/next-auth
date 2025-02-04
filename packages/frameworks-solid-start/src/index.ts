@@ -1,7 +1,7 @@
 /**
  *
  * :::warning
- * `@auth/solid-start` is currently experimental. The API _will_ change in the future.
+ * `@oneum-io/solid-start` is currently experimental. The API _will_ change in the future.
  * :::
  *
  * SolidStart Auth is the official SolidStart integration for Auth.js.
@@ -10,24 +10,24 @@
  * ## Installation
  *
  * ```bash npm2yarn
- * npm install @auth/core @auth/solid-start
+ * npm install @oneum-io/core @oneum-io/solid-start
  * ```
  *
- * @module @auth/solid-start
+ * @module @oneum-io/solid-start
  */
 
-import { Auth, type AuthConfig, customFetch } from "@auth/core"
-import type { AuthAction, Session } from "@auth/core/types"
+import { Auth, type AuthConfig, customFetch } from "@oneum-io/core"
+import type { AuthAction, Session } from "@oneum-io/core/types"
 
 export { customFetch }
-export { AuthError, CredentialsSignin } from "@auth/core/errors"
+export { AuthError, CredentialsSignin } from "@oneum-io/core/errors"
 export type {
   Account,
   DefaultSession,
   Profile,
   Session,
   User,
-} from "@auth/core/types"
+} from "@oneum-io/core/types"
 
 export interface SolidAuthConfig extends AuthConfig {
   /**
@@ -84,8 +84,8 @@ function SolidAuthHandler(prefix: string, authOptions: SolidAuthConfig) {
  *
  * ```ts
  * // routes/api/auth/[...solidauth].ts
- * import { SolidAuth, type SolidAuthConfig } from "@auth/solid-start"
- * import GitHub from "@auth/core/providers/github"
+ * import { SolidAuth, type SolidAuthConfig } from "@oneum-io/solid-start"
+ * import GitHub from "@oneum-io/core/providers/github"
  *
  * export const authOpts: SolidAuthConfig = {
  *   providers: [
@@ -103,7 +103,7 @@ function SolidAuthHandler(prefix: string, authOptions: SolidAuthConfig) {
  * ## Getting the current session
  *
  * ```ts
- * import { getSession } from "@auth/solid-start"
+ * import { getSession } from "@oneum-io/solid-start"
  * import { createServerData$ } from "solid-start/server"
  * import { authOpts } from "~/routes/api/auth/[...solidauth]"
  *
@@ -130,8 +130,8 @@ function SolidAuthHandler(prefix: string, authOptions: SolidAuthConfig) {
  *
  * ```tsx
  * // components/Protected.tsx
- * import { type Session } from "@auth/core/types";
- * import { getSession } from "@auth/solid-start";
+ * import { type Session } from "@oneum-io/core/types";
+ * import { getSession } from "@oneum-io/solid-start";
  * import { Component, Show } from "solid-js";
  * import { useRouteData } from "solid-start";
  * import { createServerData$, redirect } from "solid-start/server";
@@ -193,8 +193,8 @@ function SolidAuthHandler(prefix: string, authOptions: SolidAuthConfig) {
  *
  * ```tsx
  * // entry-server.tsx
- * import { Session } from "@auth/core";
- * import { getSession } from "@auth/solid-start";
+ * import { Session } from "@oneum-io/core";
+ * import { getSession } from "@oneum-io/solid-start";
  * import { redirect } from "solid-start";
  * import {
  *   StartServer,

@@ -73,8 +73,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   <Code.Qwik>
   
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import IdentityServer4 from "@auth/qwik/providers/identity-server4"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import IdentityServer4 from "@oneum-io/qwik/providers/identity-server4"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -87,8 +87,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   <Code.Svelte>
 
 ```ts filename="/src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import IdentityServer4 from "@auth/sveltekit/providers/identity-server4"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import IdentityServer4 from "@oneum-io/sveltekit/providers/identity-server4"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
   providers: [IdentityServer4],
@@ -99,8 +99,8 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
   <Code.Express>
 
 ```ts filename="/src/app.ts"
-import { ExpressAuth } from "@auth/express"
-import IdentityServer4 from "@auth/express/providers/identity-server4"
+import { ExpressAuth } from "@oneum-io/express"
+import IdentityServer4 from "@oneum-io/express/providers/identity-server4"
 
 app.use("/auth/*", ExpressAuth({ providers: [IdentityServer4] }))
 ```

@@ -1,5 +1,5 @@
 {
-  "name": "@auth/sequelize-adapter",
+  "name": "@oneum-io/sequelize-adapter",
   "version": "2.7.4",
   "description": "Sequelize adapter for Auth.js",
   "homepage": "https://authjs.dev",
@@ -38,7 +38,7 @@
     "clean": "rm -rf *.js *.d.ts*"
   },
   "dependencies": {
-    "@auth/core": "workspace:*"
+    "@oneum-io/core": "workspace:*"
   },
   "peerDependencies": {
     "sequelize": "^6.6.5"

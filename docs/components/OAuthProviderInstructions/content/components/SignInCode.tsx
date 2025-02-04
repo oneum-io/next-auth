@@ -117,7 +117,7 @@ export default component$(() => {
           dangerouslySetInnerHTML={{
             __html: highlight(`
 <script lang="ts">
-   import { signIn } from "@auth/sveltekit/client"
+   import { signIn } from "@oneum-io/sveltekit/client"
 </script>
  
 <div>
@@ -160,7 +160,7 @@ export const actions: Actions = { default: signIn }
           dangerouslySetInnerHTML={{
             __html: highlight(`
 <script lang="ts">
-   import { SignIn } from "@auth/sveltekit/components"
+   import { SignIn } from "@oneum-io/sveltekit/components"
 </script>
  
 <div>

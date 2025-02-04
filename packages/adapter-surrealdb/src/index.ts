@@ -9,10 +9,10 @@
  * ## Installation
  *
  * ```bash npm2yarn
- * npm install @auth/surrealdb-adapter surrealdb.js
+ * npm install @oneum-io/surrealdb-adapter surrealdb.js
  * ```
  *
- * @module @auth/surrealdb-adapter
+ * @module @oneum-io/surrealdb-adapter
  */
 import Surreal, { ExperimentalSurrealHTTP } from "surrealdb.js"
 import type {
@@ -21,8 +21,8 @@ import type {
   AdapterAccount,
   AdapterSession,
   VerificationToken,
-} from "@auth/core/adapters"
-import type { ProviderType } from "@auth/core/providers"
+} from "@oneum-io/core/adapters"
+import type { ProviderType } from "@oneum-io/core/providers"
 
 type Document = Record<string, string | null | undefined> & { id: string }
 export type UserDoc = Document & { email: string }

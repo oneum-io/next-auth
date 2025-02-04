@@ -22,8 +22,8 @@ import type { OAuthConfig, OAuthUserConfig } from "./index.js"
  *
  * #### Configuration
  *```ts
- * import { Auth } from "@auth/core"
- * import OneLogin from "@auth/core/providers/onelogin"
+ * import { Auth } from "@oneum-io/core"
+ * import OneLogin from "@oneum-io/core/providers/onelogin"
  *
  * const request = new Request(origin)
  * const response = await Auth(request, {

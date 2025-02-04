@@ -65,8 +65,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   <Code.Qwik>
 
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import Apple from "@auth/qwik/providers/apple"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import Apple from "@oneum-io/qwik/providers/apple"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -79,8 +79,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   <Code.Svelte>
 
 ```ts filename="./src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import Apple from "@auth/sveltekit/providers/apple"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import Apple from "@oneum-io/sveltekit/providers/apple"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
   providers: [Apple],
@@ -91,8 +91,8 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
   <Code.Express>
 
 ```ts filename="/src/app.ts"
-import { ExpressAuth } from "@auth/express"
-import Apple from "@auth/express/providers/apple"
+import { ExpressAuth } from "@oneum-io/express"
+import Apple from "@oneum-io/express/providers/apple"
 
 app.use("/auth/*", ExpressAuth({ providers: [Apple] }))
 ```

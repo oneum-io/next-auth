@@ -9,11 +9,11 @@
  * ## Installation
  *
  * ```bash npm2yarn
- * npm install @prisma/client @auth/prisma-adapter
+ * npm install @prisma/client @oneum-io/prisma-adapter
  * npm install prisma --save-dev
  * ```
  *
- * @module @auth/prisma-adapter
+ * @module @oneum-io/prisma-adapter
  */
 import { type PrismaClient } from "@prisma/client"
 import { PrismaClientKnownRequestError } from "@prisma/client/runtime/library"
@@ -22,7 +22,7 @@ import type {
   AdapterAccount,
   AdapterSession,
   AdapterUser,
-} from "@auth/core/adapters"
+} from "@oneum-io/core/adapters"
 
 export function PrismaAdapter(
   prisma: PrismaClient | ReturnType<PrismaClient["$extends"]>

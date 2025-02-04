@@ -30,8 +30,8 @@ export interface DribbbleProfile extends Record<string, any> {
  *
  * #### Configuration
  *```ts
- * import { Auth } from "@auth/core"
- * import Dribbble from "@auth/core/providers/dribbble"
+ * import { Auth } from "@oneum-io/core"
+ * import Dribbble from "@oneum-io/core/providers/dribbble"
  *
  * const request = new Request(origin)
  * const response = await Auth(request, {

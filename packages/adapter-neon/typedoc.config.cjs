@@ -7,7 +7,7 @@ module.exports = {
   entryPoints: ["src/index.ts"],
   entryPointStrategy: "expand",
   tsconfig: "./tsconfig.json",
-  entryModule: "@auth/neon-adapter",
+  entryModule: "@oneum-io/neon-adapter",
   entryFileName: "../neon-adapter.mdx",
   includeVersion: true,
   readme: 'none',

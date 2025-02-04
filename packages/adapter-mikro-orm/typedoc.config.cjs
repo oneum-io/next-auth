@@ -7,7 +7,7 @@ module.exports = {
   entryPoints: ["src/index.ts", "src/lib/entities.ts"],
   entryPointStrategy: "expand",
   tsconfig: "./tsconfig.json",
-  entryModule: "@auth/mikro-orm-adapter",
+  entryModule: "@oneum-io/mikro-orm-adapter",
   entryFileName: "../mikro-orm-adapter.mdx",
   includeVersion: true,
   readme: 'none',

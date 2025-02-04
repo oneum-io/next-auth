@@ -20,8 +20,8 @@ import type {
   AdapterSession,
   AdapterUser,
   VerificationToken,
-} from "@auth/core/adapters"
-import { Awaitable } from "@auth/core/types"
+} from "@oneum-io/core/adapters"
+import { Awaitable } from "@oneum-io/core/types"
 
 export function defineTables(
   schema: Partial<DefaultPostgresSchema> = {}

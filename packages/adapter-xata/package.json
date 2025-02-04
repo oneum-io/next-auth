@@ -1,5 +1,5 @@
 {
-  "name": "@auth/xata-adapter",
+  "name": "@oneum-io/xata-adapter",
   "version": "1.7.4",
   "description": "Xata adapter for Auth.js",
   "homepage": "https://authjs.dev",
@@ -38,7 +38,7 @@
     "clean": "rm -rf *.js *.d.ts*"
   },
   "dependencies": {
-    "@auth/core": "workspace:*"
+    "@oneum-io/core": "workspace:*"
   },
   "peerDependencies": {
     "@xata.io/client": ">=0.28.0"

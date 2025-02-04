@@ -1,7 +1,7 @@
 /**
  *
  * :::warning
- * `@auth/express` is currently experimental. The API _will_ change in the future.
+ * `@oneum-io/express` is currently experimental. The API _will_ change in the future.
  * :::
  *
  * Express Auth is the official Express integration for Auth.js.
@@ -9,14 +9,14 @@
  *
  * ## Installation
  * ```bash npm2yarn
- * npm install @auth/express
+ * npm install @oneum-io/express
  * ```
  *
  * ## Usage
  *
  * ```ts title="src/routes/auth.route.ts"
- * import { ExpressAuth } from "@auth/express"
- * import GitHub from "@auth/express/providers/github"
+ * import { ExpressAuth } from "@oneum-io/express"
+ * import GitHub from "@oneum-io/express/providers/github"
  * import express from "express"
  *
  * const app = express()
@@ -46,7 +46,7 @@
  * If you are using Express with a template engine (e.g EJS, Pug), you can make the session data available to all routes via middleware as follows
  *
  * ```ts title="app.ts"
- * import { getSession } from "@auth/express"
+ * import { getSession } from "@oneum-io/express"
  *
  * export function authSession(req: Request, res: Response, next: NextFunction) {
  *   res.locals.session = await getSession(req)
@@ -122,15 +122,15 @@
  * ```
  *
  * ## Notes on ESM
- * @auth/express is ESM only. This means your package.json must contain `"type": "module"` and tsconfig.json should contain `"module": "NodeNext"` or `ESNext`.
+ * @oneum-io/express is ESM only. This means your package.json must contain `"type": "module"` and tsconfig.json should contain `"module": "NodeNext"` or `ESNext`.
  * File imports must use the `.js` extension, e.g. `import { MyRouter } from "./my-router.js"`.
  *
  * Your dev server should either be run with [tsx](https://www.npmjs.com/package/tsx) with `tsx index.ts` (fast startup, with no type checking), or ts-node with 'node --loader ts-node/esm index.ts' (slower startup, but has type checking).
  *
- * While it is NOT recommended, if you wish to use @auth/express within a CommonJS project without migrating and making the above changes, you can run the dev server with tsx and may be able to compile with [pkgroll](https://tsx.is/compilation).
+ * While it is NOT recommended, if you wish to use @oneum-io/express within a CommonJS project without migrating and making the above changes, you can run the dev server with tsx and may be able to compile with [pkgroll](https://tsx.is/compilation).
  * Add '"name": "./dist/index.js"' or '"name": "./dist/index.mjs"' to your package.json and run 'pkgroll' to compile with both ESM and CommonJS support. For new projects it is recommended to just use ESM.
  *
- * @module @auth/express
+ * @module @oneum-io/express
  */
 
 import {
@@ -139,20 +139,20 @@ import {
   setEnvDefaults,
   createActionURL,
   customFetch,
-} from "@auth/core"
-import type { Session } from "@auth/core/types"
+} from "@oneum-io/core"
+import type { Session } from "@oneum-io/core/types"
 import * as e from "express"
 import { toWebRequest, toExpressResponse } from "./lib/index.js"
 
 export { customFetch }
-export { AuthError, CredentialsSignin } from "@auth/core/errors"
+export { AuthError, CredentialsSignin } from "@oneum-io/core/errors"
 export type {
   Account,
   DefaultSession,
   Profile,
   Session,
   User,
-} from "@auth/core/types"
+} from "@oneum-io/core/types"
 
 export type ExpressAuthConfig = Omit<AuthConfig, "raw">
 

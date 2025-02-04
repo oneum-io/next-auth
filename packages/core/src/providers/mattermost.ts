@@ -78,8 +78,8 @@ export interface MattermostProfile {
  *
  * #### Configuration
  *```ts
- * import { Auth } from "@auth/core"
- * import Mattermost from "@auth/core/providers/mattermost"
+ * import { Auth } from "@oneum-io/core"
+ * import Mattermost from "@oneum-io/core/providers/mattermost"
  *
  * const request = new Request(origin)
  * const response = await Auth(request, {

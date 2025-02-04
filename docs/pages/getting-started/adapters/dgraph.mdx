@@ -14,7 +14,7 @@ import { Code } from "@/components/Code"
 ### Installation
 
 ```bash npm2yarn
-npm install @auth/dgraph-adapter
+npm install @oneum-io/dgraph-adapter
 ```
 
 ### Environment Variables
@@ -31,7 +31,7 @@ AUTH_DGRAPH_GRAPHQL_KEY=abc123
 
 ```ts filename="./auth.ts"
 import NextAuth from "next-auth"
-import { DgraphAdapter } from "@auth/dgraph-adapter"
+import { DgraphAdapter } from "@oneum-io/dgraph-adapter"
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   providers: [],
@@ -49,8 +49,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 <Code.Qwik>
 
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import { DgraphAdapter } from "@auth/dgraph-adapter"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import { DgraphAdapter } from "@oneum-io/dgraph-adapter"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -70,8 +70,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
 <Code.Svelte>
 
 ```ts filename="./src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import { DgraphAdapter } from "@auth/dgraph-adapter"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import { DgraphAdapter } from "@oneum-io/dgraph-adapter"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
   providers: [],
@@ -89,8 +89,8 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
 <Code.Express>
 
 ```ts filename="./src/routes/auth.route.ts"
-import { ExpressAuth } from "@auth/express"
-import { DgraphAdapter } from "@auth/dgraph-adapter"
+import { ExpressAuth } from "@oneum-io/express"
+import { DgraphAdapter } from "@oneum-io/dgraph-adapter"
 
 const app = express()
 
@@ -170,13 +170,13 @@ type VerificationToken {
 ### Secure schema
 
 For production deployments you will want to restrict the access to the types used
-by next-auth. The main form of access control used in Dgraph is via `@auth` directive alongside types in the schema.
+by next-auth. The main form of access control used in Dgraph is via `@oneum-io` directive alongside types in the schema.
 
 #### Example
 
 ```graphql
 type Account
-  @auth(
+  @oneum-io(
     delete: { rule: "{$nextAuth: { eq: true } }" }
     add: { rule: "{$nextAuth: { eq: true } }" }
     query: { rule: "{$nextAuth: { eq: true } }" }
@@ -198,7 +198,7 @@ type Account
   user: User @hasInverse(field: "accounts")
 }
 type Session
-  @auth(
+  @oneum-io(
     delete: { rule: "{$nextAuth: { eq: true } }" }
     add: { rule: "{$nextAuth: { eq: true } }" }
     query: { rule: "{$nextAuth: { eq: true } }" }
@@ -210,7 +210,7 @@ type Session
   user: User @hasInverse(field: "sessions")
 }
 type User
-  @auth(
+  @oneum-io(
     query: {
       or: [
         {
@@ -244,7 +244,7 @@ type User
 }
 
 type VerificationToken
-  @auth(
+  @oneum-io(
     delete: { rule: "{$nextAuth: { eq: true } }" }
     add: { rule: "{$nextAuth: { eq: true } }" }
     query: { rule: "{$nextAuth: { eq: true } }" }
@@ -286,7 +286,7 @@ each type defined in your secure schema.
 
 ```js
 type VerificationRequest
-  @auth(
+  @oneum-io(
     delete: { rule: "{$nextAuth: { eq: true } }" },
     add: { rule: "{$nextAuth: { eq: true } }" },
     query: { rule: "{$nextAuth: { eq: true } }" },
@@ -295,7 +295,7 @@ type VerificationRequest
 }
 ```
 
-### JWT session and `@auth` directive
+### JWT session and `@oneum-io` directive
 
 Dgraph only works with HS256 or RS256 algorithms. If you want to use session jwt to securely interact with your dgraph
 database you must customize next-auth `encode` and `decode` functions, as the default algorithm is HS512. You can
@@ -324,4 +324,4 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 })
 ```
 
-Once your `Dgraph.Authorization` is defined in your schema and the JWT settings are set, this will allow you to define [`@auth rules`](https://dgraph.io/docs/graphql/authorization/authorization-overview/) for every part of your schema.
+Once your `Dgraph.Authorization` is defined in your schema and the JWT settings are set, this will allow you to define [`@oneum-io rules`](https://dgraph.io/docs/graphql/authorization/authorization-overview/) for every part of your schema.

@@ -27,8 +27,8 @@ import WebAuthn, {
  *
  * #### Configuration
  * ```ts
- * import { Auth } from "@auth/core"
- * import Passkey from "@auth/core/providers/passkey"
+ * import { Auth } from "@oneum-io/core"
+ * import Passkey from "@oneum-io/core/providers/passkey"
  *
  * const request = new Request(origin)
  * const response = await Auth(request, {

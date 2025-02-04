@@ -43,8 +43,8 @@ export interface AuthentikProfile extends Record<string, any> {
  *
  * #### Configuration
  *```ts
- * import { Auth } from "@auth/core"
- * import Authentik from "@auth/core/providers/authentik"
+ * import { Auth } from "@oneum-io/core"
+ * import Authentik from "@oneum-io/core/providers/authentik"
  *
  * const request = new Request(origin)
  * const response = await Auth(request, {

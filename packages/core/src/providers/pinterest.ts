@@ -29,8 +29,8 @@ export interface PinterestProfile extends Record<string, any> {
  *
  * #### Configuration
  *```ts
- * import { Auth } from "@auth/core"
- * import Pinterest from "@auth/core/providers/pinterest"
+ * import { Auth } from "@oneum-io/core"
+ * import Pinterest from "@oneum-io/core/providers/pinterest"
  *
  * const request = new Request(origin)
  * const response = await Auth(request, {

@@ -8,14 +8,14 @@
   </a>
   <h3 align="center"><b>Postgres Adapter</b> - NextAuth.js / Auth.js</a></h3>
   <p align="center" style="align: center;">
-    <a href="https://npm.im/@auth/pg-adapter">
+    <a href="https://npm.im/@oneum-io/pg-adapter">
       <img src="https://img.shields.io/badge/TypeScript-blue?style=flat-square" alt="TypeScript" />
     </a>
-    <a href="https://npm.im/@auth/pg-adapter">
-      <img alt="npm" src="https://img.shields.io/npm/v/@auth/pg-adapter?color=green&label=@auth/pg-adapter&style=flat-square">
+    <a href="https://npm.im/@oneum-io/pg-adapter">
+      <img alt="npm" src="https://img.shields.io/npm/v/@oneum-io/pg-adapter?color=green&label=@oneum-io/pg-adapter&style=flat-square">
     </a>
-    <a href="https://www.npmtrends.com/@auth/pg-adapter">
-      <img src="https://img.shields.io/npm/dm/@auth/pg-adapter?label=%20downloads&style=flat-square" alt="Downloads" />
+    <a href="https://www.npmtrends.com/@oneum-io/pg-adapter">
+      <img src="https://img.shields.io/npm/dm/@oneum-io/pg-adapter?label=%20downloads&style=flat-square" alt="Downloads" />
     </a>
     <a href="https://github.com/nextauthjs/next-auth/stargazers">
       <img src="https://img.shields.io/github/stars/nextauthjs/next-auth?style=flat-square" alt="GitHub Stars" />

@@ -89,10 +89,10 @@ export const { handlers, auth } = NextAuth({
 <Code.Qwik>
   
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import Google from "@auth/qwik/providers/google"
-import Twitter from "@auth/qwik/providers/twitter"
-import GitHub from "@auth/qwik/providers/github"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import Google from "@oneum-io/qwik/providers/google"
+import Twitter from "@oneum-io/qwik/providers/twitter"
+import GitHub from "@oneum-io/qwik/providers/github"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -105,10 +105,10 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
 <Code.Svelte>
 
 ```ts filename="./auth.ts" {7}
-import SvelteKitAuth from "@auth/sveltekit"
-import Google from "@auth/sveltekit/providers/google"
-import Twitter from "@auth/sveltekit/providers/twitter"
-import GitHub from "@auth/sveltekit/providers/github"
+import SvelteKitAuth from "@oneum-io/sveltekit"
+import Google from "@oneum-io/sveltekit/providers/google"
+import Twitter from "@oneum-io/sveltekit/providers/twitter"
+import GitHub from "@oneum-io/sveltekit/providers/github"
 
 export const { handle } = SvelteKitAuth({
   providers: [Google, Twitter, GitHub],
@@ -149,8 +149,8 @@ export const { handlers, auth } = NextAuth({
 <Code.Qwik>
   
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import Google from "@auth/qwik/providers/google"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import Google from "@oneum-io/qwik/providers/google"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -168,8 +168,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
 <Code.Svelte>
 
 ```ts filename="./src/auth.ts" {8-9}
-import SvelteKitAuth from "@auth/sveltekit"
-import Google from "@auth/sveltekit/providers/google"
+import SvelteKitAuth from "@oneum-io/sveltekit"
+import Google from "@oneum-io/sveltekit/providers/google"
 import { env } from "$env/dynamic/private"
 
 export const { handle } = SvelteKitAuth({

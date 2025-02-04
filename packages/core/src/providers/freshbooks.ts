@@ -22,8 +22,8 @@ import type { OAuthConfig, OAuthUserConfig } from "./index.js"
  *
  * #### Configuration
  *```ts
- * import { Auth } from "@auth/core"
- * import FreshBooks from "@auth/core/providers/freshbooks"
+ * import { Auth } from "@oneum-io/core"
+ * import FreshBooks from "@oneum-io/core/providers/freshbooks"
  *
  * const request = new Request(origin)
  * const response = await Auth(request, {

@@ -64,8 +64,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   <Code.Qwik>
   
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import TikTok from "@auth/qwik/providers/tiktok"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import TikTok from "@oneum-io/qwik/providers/tiktok"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -78,8 +78,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   <Code.Svelte>
 
 ```ts filename="/src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import TikTok from "@auth/sveltekit/providers/tiktok"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import TikTok from "@oneum-io/sveltekit/providers/tiktok"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
   providers: [TikTok],
@@ -90,8 +90,8 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
   <Code.Express>
 
 ```ts filename="/src/app.ts"
-import { ExpressAuth } from "@auth/express"
-import TikTok from "@auth/express/providers/tiktok"
+import { ExpressAuth } from "@oneum-io/express"
+import TikTok from "@oneum-io/express/providers/tiktok"
 
 app.use("/auth/*", ExpressAuth({ providers: [TikTok] }))
 ```

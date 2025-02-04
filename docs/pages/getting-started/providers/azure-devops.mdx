@@ -112,8 +112,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   <Code.Qwik>
   
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import AzureDevOps from "@auth/qwik/providers/azure-devops"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import AzureDevOps from "@oneum-io/qwik/providers/azure-devops"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -131,8 +131,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   <Code.Svelte>
 
 ```ts filename="/src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import AzureDevOps from "@auth/sveltekit/providers/azure-devops"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import AzureDevOps from "@oneum-io/sveltekit/providers/azure-devops"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
   providers: [
@@ -148,8 +148,8 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
   <Code.Express>
 
 ```ts filename="/src/app.ts"
-import { ExpressAuth } from "@auth/express"
-import AzureDevOps from "@auth/express/providers/azure-devops"
+import { ExpressAuth } from "@oneum-io/express"
+import AzureDevOps from "@oneum-io/express/providers/azure-devops"
 
 app.use(
   "/auth/*",

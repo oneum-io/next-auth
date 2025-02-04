@@ -24,21 +24,21 @@ Start by installing the appropriate package for your framework.
   <Code.Svelte>
   
     ```bash npm2yarn
-    npm install @auth/sveltekit
+    npm install @oneum-io/sveltekit
     ```
   </Code.Svelte>
   <Code.Express>
   
     ```bash npm2yarn
-    npm install @auth/express
+    npm install @oneum-io/express
     ```
   
   </Code.Express>
 </Code>
 
 <Callout type="info">
-  Installing `@auth/core` is not necessary, as a user you should never have to
-  interact with `@auth/core`.
+  Installing `@oneum-io/core` is not necessary, as a user you should never have
+  to interact with `@oneum-io/core`.
 </Callout>
 
 ### Setup Environment
@@ -98,7 +98,7 @@ export { auth as middleware } from "@/auth"
 1. Start by creating a new `plugin@auth.ts` file in your `src/routes` directory with the following content.
 
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
+import { QwikAuth$ } from "@oneum-io/qwik"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -113,7 +113,7 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
 1. Start by creating a new `auth.ts` file in your `src/` directory with the following content.
 
 ```ts filename="./src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
 
 export const { handle } = SvelteKitAuth({
   providers: [],
@@ -146,7 +146,7 @@ export const load: LayoutServerLoad = async (event) => {
 1. Start by importing `ExpressAuth` and adding the handler to the auth route.
 
 ```ts filename="./src/routes/auth.route.ts" {1, 9}
-import { ExpressAuth } from "@auth/express"
+import { ExpressAuth } from "@oneum-io/express"
 import express from "express"
 
 const app = express()

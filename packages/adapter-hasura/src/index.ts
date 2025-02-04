@@ -9,13 +9,13 @@
  * ## Installation
  *
  * ```bash npm2yarn
- * npm install @auth/hasura-adapter
+ * npm install @oneum-io/hasura-adapter
  * ```
  *
- * @module @auth/hasura-adapter
+ * @module @oneum-io/hasura-adapter
  */
 
-import { isDate, type Adapter } from "@auth/core/adapters"
+import { isDate, type Adapter } from "@oneum-io/core/adapters"
 
 import {
   client as hasuraClient,

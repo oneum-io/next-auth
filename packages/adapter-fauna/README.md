@@ -8,14 +8,14 @@
   </a>
   <h3 align="center"><b>Fauna Adapter</b> - NextAuth.js / Auth.js</a></h3>
   <p align="center" style="align: center;">
-    <a href="https://npm.im/@auth/fauna-adapter">
+    <a href="https://npm.im/@oneum-io/fauna-adapter">
       <img src="https://img.shields.io/badge/TypeScript-blue?style=flat-square" alt="TypeScript" />
     </a>
-    <a href="https://npm.im/@auth/fauna-adapter">
-      <img alt="npm" src="https://img.shields.io/npm/v/@auth/fauna-adapter?color=green&label=@auth/fauna-adapter&style=flat-square">
+    <a href="https://npm.im/@oneum-io/fauna-adapter">
+      <img alt="npm" src="https://img.shields.io/npm/v/@oneum-io/fauna-adapter?color=green&label=@oneum-io/fauna-adapter&style=flat-square">
     </a>
-    <a href="https://www.npmtrends.com/@auth/fauna-adapter">
-      <img src="https://img.shields.io/npm/dm/@auth/fauna-adapter?label=%20downloads&style=flat-square" alt="Downloads" />
+    <a href="https://www.npmtrends.com/@oneum-io/fauna-adapter">
+      <img src="https://img.shields.io/npm/dm/@oneum-io/fauna-adapter?label=%20downloads&style=flat-square" alt="Downloads" />
     </a>
     <a href="https://github.com/nextauthjs/next-auth/stargazers">
       <img src="https://img.shields.io/github/stars/nextauthjs/next-auth?style=flat-square" alt="GitHub Stars" />

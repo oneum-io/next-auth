@@ -60,8 +60,8 @@ export interface LogtoProfile {
  *
  * #### Configuration
  * ```ts
- * import { Auth } from "@auth/core"
- * import Logto from "@auth/core/providers/logto"
+ * import { Auth } from "@oneum-io/core"
+ * import Logto from "@oneum-io/core/providers/logto"
  *
  * const request = new Request(origin)
  * const response = await Auth(request, {

@@ -7,7 +7,7 @@ module.exports = {
   entryPoints: ["src/index.ts"],
   entryPointStrategy: "expand",
   tsconfig: "./tsconfig.json",
-  entryModule: "@auth/qwik",
+  entryModule: "@oneum-io/qwik",
   entryFileName: "../qwik.mdx",
   includeVersion: true,
   readme: 'none',

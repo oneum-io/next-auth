@@ -5,8 +5,8 @@ import type {
   AdapterSession,
   AdapterUser,
   VerificationToken,
-} from "@auth/core/adapters"
-import type { Account } from "@auth/core/types"
+} from "@oneum-io/core/adapters"
+import type { Account } from "@oneum-io/core/types"
 
 const url = process.env.SUPABASE_URL ?? "http://127.0.0.1:54321"
 const secret =

@@ -6,4 +6,4 @@
  * @module jwt
  */
 
-export * from "@auth/core/jwt"
+export * from "@oneum-io/core/jwt"

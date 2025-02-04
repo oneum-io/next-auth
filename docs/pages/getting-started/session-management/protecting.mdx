@@ -116,7 +116,7 @@ export const load: PageServerLoad = async (event) => {
 You can protect routes by checking for the presence of a session and then redirect to a login page if the session is not present. This can either be done per route, or for a group of routes using a middleware such as the following:
 
 ```ts filename="lib.ts"
-import { getSession } from "@auth/express"
+import { getSession } from "@oneum-io/express"
 
 export async function authenticatedUser(
   req: Request,

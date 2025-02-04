@@ -1,5 +1,5 @@
 {
-  "name": "@auth/drizzle-adapter",
+  "name": "@oneum-io/drizzle-adapter",
   "version": "1.7.4",
   "description": "Drizzle adapter for Auth.js.",
   "homepage": "https://authjs.dev",
@@ -26,7 +26,7 @@
   "license": "ISC",
   "keywords": [
     "next-auth",
-    "@auth",
+    "@oneum-io",
     "Auth.js",
     "next.js",
     "oauth",
@@ -47,7 +47,7 @@
     "dev": "drizzle-kit generate:mysql --schema=src/schema.ts --out=.drizzle && tsc -w"
   },
   "dependencies": {
-    "@auth/core": "workspace:*"
+    "@oneum-io/core": "workspace:*"
   },
   "devDependencies": {
     "@types/uuid": "^8.3.3",

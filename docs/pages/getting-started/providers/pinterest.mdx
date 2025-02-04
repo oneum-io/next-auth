@@ -63,8 +63,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   <Code.Qwik>
   
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import Pinterest from "@auth/qwik/providers/pinterest"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import Pinterest from "@oneum-io/qwik/providers/pinterest"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -77,8 +77,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   <Code.Svelte>
 
 ```ts filename="/src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import Pinterest from "@auth/sveltekit/providers/pinterest"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import Pinterest from "@oneum-io/sveltekit/providers/pinterest"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
   providers: [Pinterest],
@@ -89,8 +89,8 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
   <Code.Express>
 
 ```ts filename="/src/app.ts"
-import { ExpressAuth } from "@auth/express"
-import Pinterest from "@auth/express/providers/pinterest"
+import { ExpressAuth } from "@oneum-io/express"
+import Pinterest from "@oneum-io/express/providers/pinterest"
 
 app.use("/auth/*", ExpressAuth({ providers: [Pinterest] }))
 ```

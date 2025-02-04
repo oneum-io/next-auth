@@ -1,7 +1,7 @@
 /**
  *
  * :::warning
- * `@auth/<framework-id>` is currently experimental. The API _will_ change in the future.
+ * `@oneum-io/<framework-id>` is currently experimental. The API _will_ change in the future.
  * :::
  *
  * <framework-name> Auth is the official <framework-name> integration for Auth.js.
@@ -9,7 +9,7 @@
  *
  * ## Installation
  * ```bash npm2yarn
- * npm install @auth/<framework-id>
+ * npm install @oneum-io/<framework-id>
  * ```
  *
  * ## Usage
@@ -24,7 +24,7 @@
  *
  * ```
  *
- * @module @auth/<framework-id>
+ * @module @oneum-io/<framework-id>
  */
 
 // Re-export types of Auth.js
@@ -34,7 +34,7 @@ export type {
   Profile,
   Session,
   User,
-} from "@auth/core/types"
+} from "@oneum-io/core/types"
 
 export function FrameworkAuth() {
   throw new Error("Not implemented")

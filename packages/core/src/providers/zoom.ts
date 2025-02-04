@@ -55,8 +55,8 @@ export interface ZoomProfile extends Record<string, any> {
  *
  * #### Configuration
  *```ts
- * import { Auth } from "@auth/core"
- * import Zoom from "@auth/core/providers/zoom"
+ * import { Auth } from "@oneum-io/core"
+ * import Zoom from "@oneum-io/core/providers/zoom"
  *
  * const request = new Request(origin)
  * const response = await Auth(request, {

@@ -76,8 +76,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   <Code.Qwik>
   
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import Asgardeo from "@auth/qwik/providers/asgardeo"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import Asgardeo from "@oneum-io/qwik/providers/asgardeo"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -90,8 +90,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   <Code.Svelte>
 
 ```ts filename="/src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import Asgardeo from "@auth/sveltekit/providers/asgardeo"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import Asgardeo from "@oneum-io/sveltekit/providers/asgardeo"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
   providers: [Asgardeo],
@@ -102,8 +102,8 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
   <Code.Express>
 
 ```ts filename="/src/app.ts"
-import { ExpressAuth } from "@auth/express"
-import Asgardeo from "@auth/express/providers/asgardeo"
+import { ExpressAuth } from "@oneum-io/express"
+import Asgardeo from "@oneum-io/express/providers/asgardeo"
 
 app.use("/auth/*", ExpressAuth({ providers: [Asgardeo] }))
 ```

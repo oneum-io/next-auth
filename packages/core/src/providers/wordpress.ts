@@ -22,8 +22,8 @@ import type { OAuthConfig, OAuthUserConfig } from "./index.js"
  *
  * #### Configuration
  *```ts
- * import { Auth } from "@auth/core"
- * import WordPress from "@auth/core/providers/wordpress"
+ * import { Auth } from "@oneum-io/core"
+ * import WordPress from "@oneum-io/core/providers/wordpress"
  *
  * const request = new Request(origin)
  * const response = await Auth(request, {

@@ -14,7 +14,7 @@ import { Code } from "@/components/Code"
 ### Installation
 
 ```bash npm2yarn
-npm install @auth/hasura-adapter
+npm install @oneum-io/hasura-adapter
 ```
 
 ### Environment variables
@@ -31,7 +31,7 @@ AUTH_HASURA_SECRET=abc123
 
 ```ts filename="./auth.ts"
 import NextAuth from "next-auth"
-import { HasuraAdapter } from "@auth/hasura-adapter"
+import { HasuraAdapter } from "@oneum-io/hasura-adapter"
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   adapter: HasuraAdapter({
@@ -45,8 +45,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 <Code.Qwik>
 
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import { HasuraAdapter } from "@auth/hasura-adapter"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import { HasuraAdapter } from "@oneum-io/hasura-adapter"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -63,8 +63,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
 <Code.Svelte>
 
 ```ts filename="./auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import { HasuraAdapter } from "@auth/hasura-adapter"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import { HasuraAdapter } from "@oneum-io/hasura-adapter"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
   adapter: HasuraAdapter({
@@ -78,8 +78,8 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
 <Code.Express>
 
 ```ts filename="./src/routes/auth.route.ts"
-import { ExpressAuth } from "@auth/express"
-import { HasuraAdapter } from "@auth/hasura-adapter"
+import { ExpressAuth } from "@oneum-io/express"
+import { HasuraAdapter } from "@oneum-io/hasura-adapter"
 
 const app = express()
 

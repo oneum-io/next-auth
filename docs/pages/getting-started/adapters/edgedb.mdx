@@ -13,7 +13,7 @@ import { Code } from "@/components/Code"
 ### Installation
 
 ```bash npm2yarn
-npm install edgedb @auth/edgedb-adapter
+npm install edgedb @oneum-io/edgedb-adapter
 npm install @edgedb/generate --save-dev
 ```
 
@@ -32,7 +32,7 @@ AUTH_EDGEDB_DSN="edgedb://edgedb:p4ssw0rd@10.0.0.1"
 
 ```js filename="./auth.ts"
 import NextAuth from "next-auth"
-import { EdgeDBAdapter } from "@auth/edgedb-adapter"
+import { EdgeDBAdapter } from "@oneum-io/edgedb-adapter"
 import { createClient } from "edgedb"
 
 const client = createClient({ dsn: process.env.AUTH_EDGEDB_DSN })
@@ -47,8 +47,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 <Code.Qwik>
 
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import { EdgeDBAdapter } from "@auth/edgedb-adapter"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import { EdgeDBAdapter } from "@oneum-io/edgedb-adapter"
 import { createClient } from "edgedb"
 
 const client = createClient({ dsn: import.meta.env.AUTH_EDGEDB_DSN })
@@ -65,8 +65,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
 <Code.Svelte>
 
 ```js filename="./auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import { EdgeDBAdapter } from "@auth/edgedb-adapter"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import { EdgeDBAdapter } from "@oneum-io/edgedb-adapter"
 import { createClient } from "edgedb"
 
 const client = createClient({ dsn: process.env.AUTH_EDGEDB_DSN })
@@ -81,8 +81,8 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
 <Code.Express>
 
 ```ts filename="./src/routes/auth.route.ts"
-import { ExpressAuth } from "@auth/express"
-import { EdgeDBAdapter } from "@auth/edgedb-adapter"
+import { ExpressAuth } from "@oneum-io/express"
+import { EdgeDBAdapter } from "@oneum-io/edgedb-adapter"
 import { createClient } from "edgedb"
 
 const app = express()

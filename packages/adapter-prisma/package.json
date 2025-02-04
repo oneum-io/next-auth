@@ -1,5 +1,5 @@
 {
-  "name": "@auth/prisma-adapter",
+  "name": "@oneum-io/prisma-adapter",
   "version": "2.7.5",
   "description": "Prisma adapter for Auth.js",
   "homepage": "https://authjs.dev/reference/adapter/prisma",
@@ -51,7 +51,7 @@
     "studio": "prisma studio"
   },
   "dependencies": {
-    "@auth/core": "workspace:*"
+    "@oneum-io/core": "workspace:*"
   },
   "peerDependencies": {
     "@prisma/client": ">=2.26.0 || >=3 || >=4 || >=5 || >=6"

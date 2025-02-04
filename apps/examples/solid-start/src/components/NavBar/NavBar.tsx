@@ -1,8 +1,8 @@
 import { Show, type Component } from "solid-js"
 import { createServerData$ } from "solid-start/server"
 import { authOpts } from "~/routes/api/auth/[...solidauth]"
-import { signIn, signOut } from "@auth/solid-start/client"
-import { getSession } from "@auth/solid-start"
+import { signIn, signOut } from "@oneum-io/solid-start/client"
+import { getSession } from "@oneum-io/solid-start"
 import { A } from "solid-start"
 
 interface INavBarProps {}

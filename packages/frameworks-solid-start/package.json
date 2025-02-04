@@ -1,5 +1,5 @@
 {
-  "name": "@auth/solid-start",
+  "name": "@oneum-io/solid-start",
   "version": "0.15.4",
   "description": "Authentication for SolidStart.",
   "license": "ISC",
@@ -55,7 +55,7 @@
     "clean": "rm -rf *.js *.d.ts* providers src/providers"
   },
   "dependencies": {
-    "@auth/core": "workspace:*"
+    "@oneum-io/core": "workspace:*"
   },
   "devDependencies": {
     "@solidjs/meta": "^0.28.0",

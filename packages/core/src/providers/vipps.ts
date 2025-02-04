@@ -55,7 +55,7 @@ export interface VippsProfile extends Record<string, any> {
  * ## Example
  *
  * ```ts
- * import Vipps from "@auth/core/providers/vipps"
+ * import Vipps from "@oneum-io/core/providers/vipps"
  * ...
  * providers: [
  *  Vipps({

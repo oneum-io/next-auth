@@ -7,7 +7,7 @@ module.exports = {
   entryPoints: ["src/index.ts"],
   entryPointStrategy: "expand",
   tsconfig: "./tsconfig.json",
-  entryModule: "@auth/fauna-adapter",
+  entryModule: "@oneum-io/fauna-adapter",
   entryFileName: "../fauna-adapter.mdx",
   includeVersion: true,
   readme: 'none',

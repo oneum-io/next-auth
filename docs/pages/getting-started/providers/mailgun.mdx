@@ -64,8 +64,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 <Code.Qwik>
 
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import Mailgun from "@auth/qwik/providers/mailgun"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import Mailgun from "@oneum-io/qwik/providers/mailgun"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -84,8 +84,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
 <Code.Svelte>
 
 ```ts filename="./src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import Mailgun from "@auth/sveltekit/providers/mailgun"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import Mailgun from "@oneum-io/sveltekit/providers/mailgun"
 import { env } from "$env/dynamic/prviate"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({

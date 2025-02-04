@@ -19,7 +19,7 @@
     "Thang Huu Vu <hi@thvu.dev>"
   ],
   "dependencies": {
-    "@auth/unstorage-adapter": "^2.0.0",
+    "@oneum-io/unstorage-adapter": "^2.0.0",
     "@radix-ui/react-avatar": "^1.0.3",
     "@radix-ui/react-collapsible": "^1.0.3",
     "@radix-ui/react-dropdown-menu": "^2.0.5",

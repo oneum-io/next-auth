@@ -13,7 +13,7 @@ import { Code } from "@/components/Code"
 ### Installation
 
 ```bash npm2yarn
-npm install @auth/neo4j-adapter neo4j-driver
+npm install @oneum-io/neo4j-adapter neo4j-driver
 ```
 
 ### Environment Variables
@@ -32,7 +32,7 @@ NEO4J_PASSWORD=abc
 ```ts filename="./auth.ts"
 import NextAuth from "next-auth"
 import neo4j from "neo4j-driver"
-import { Neo4jAdapter } from "@auth/neo4j-adapter"
+import { Neo4jAdapter } from "@oneum-io/neo4j-adapter"
 
 const driver = neo4j.driver(
   process.env.NEO4J_URI,
@@ -51,9 +51,9 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 <Code.Qwik>
 
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
+import { QwikAuth$ } from "@oneum-io/qwik"
 import neo4j from "neo4j-driver"
-import { Neo4jAdapter } from "@auth/neo4j-adapter"
+import { Neo4jAdapter } from "@oneum-io/neo4j-adapter"
 
 const driver = neo4j.driver(
   import.meta.env.NEO4J_URI,
@@ -77,9 +77,9 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
 <Code.Svelte>
 
 ```ts filename="./src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
 import neo4j from "neo4j-driver"
-import { Neo4jAdapter } from "@auth/neo4j-adapter"
+import { Neo4jAdapter } from "@oneum-io/neo4j-adapter"
 
 const driver = neo4j.driver(
   process.env.NEO4J_URI,
@@ -98,9 +98,9 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
 <Code.Express>
 
 ```ts filename="./src/routes/auth.route.ts"
-import { ExpressAuth } from "@auth/express"
+import { ExpressAuth } from "@oneum-io/express"
 import neo4j from "neo4j-driver"
-import { Neo4jAdapter } from "@auth/neo4j-adapter"
+import { Neo4jAdapter } from "@oneum-io/neo4j-adapter"
 
 const app = express()
 

@@ -175,8 +175,8 @@ export interface WikimediaProfile extends Record<string, any> {
  *
  * #### Configuration
  *```ts
- * import { Auth } from "@auth/core"
- * import Wikimedia from "@auth/core/providers/wikimedia"
+ * import { Auth } from "@oneum-io/core"
+ * import Wikimedia from "@oneum-io/core/providers/wikimedia"
  *
  * const request = new Request(origin)
  * const response = await Auth(request, {

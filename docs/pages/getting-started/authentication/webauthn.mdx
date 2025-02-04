@@ -17,7 +17,7 @@ is currently only supported in the following framework integration and database 
 Support for more frameworks and adapters are coming soon.
 
 - `next-auth@5.0.0-beta.8` or above
-- `@auth/prisma-adapter@1.3.0` or above
+- `@oneum-io/prisma-adapter@1.3.0` or above
 - `node@20.0.0` or above
 
 <Steps>
@@ -32,7 +32,7 @@ The `@simplewebauthn/browser` peer dependency **is only required for custom sign
 
 ### Apply the required schema Migrations
 
-This is the raw SQL migration for PostgreSQL, for more details including example migrations for other databases, check out the updated Prisma schemas at the [`@auth/prisma-adapter` docs](/getting-started/adapters/prisma).
+This is the raw SQL migration for PostgreSQL, for more details including example migrations for other databases, check out the updated Prisma schemas at the [`@oneum-io/prisma-adapter` docs](/getting-started/adapters/prisma).
 
 In short, the Passkeys provider requires an additional table called `Authenticator`.
 
@@ -62,7 +62,7 @@ Add the `Passkeys` provider to your configuration. Also make sure you're using a
 
 ```ts filename="./auth.ts"
 import Passkey from "next-auth/providers/passkey"
-import { PrismaAdapter } from "@auth/prisma-adapter"
+import { PrismaAdapter } from "@oneum-io/prisma-adapter"
 import { PrismaClient } from "@prisma/client"
 
 const prisma = new PrismaClient()

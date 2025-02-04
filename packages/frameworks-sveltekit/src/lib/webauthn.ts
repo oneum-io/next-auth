@@ -1,9 +1,9 @@
 import { base } from "$app/paths"
 import { startAuthentication, startRegistration } from "@simplewebauthn/browser"
 
-import type { LoggerInstance } from "@auth/core/types"
-import type { WebAuthnOptionsResponseBody } from "@auth/core/types"
-import type { ProviderId } from "@auth/core/providers"
+import type { LoggerInstance } from "@oneum-io/core/types"
+import type { WebAuthnOptionsResponseBody } from "@oneum-io/core/types"
+import type { ProviderId } from "@oneum-io/core/providers"
 import type {
   SignInAuthorizationParams,
   SignInOptions,
@@ -79,7 +79,7 @@ export async function signIn<Redirect extends boolean = true>(
     throw new TypeError(
       [
         `Provider id "${provider}" does not refer to a WebAuthn provider.`,
-        'Please use `import { signIn } from "@auth/sveltekit/client"` instead.',
+        'Please use `import { signIn } from "@oneum-io/sveltekit/client"` instead.',
       ].join("\n")
     )
   }

@@ -7,7 +7,7 @@ module.exports = {
   entryPoints: ["src/index.ts", "src/lib/mysql.ts", "src/lib/pg.ts", "src/lib/sqlite.ts", "src/lib/utils.ts"],
   entryPointStrategy: "expand",
   tsconfig: "./tsconfig.json",
-  entryModule: "@auth/drizzle-adapter",
+  entryModule: "@oneum-io/drizzle-adapter",
   entryFileName: "../drizzle-adapter.mdx",
   includeVersion: true,
   readme: 'none',

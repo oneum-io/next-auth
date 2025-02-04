@@ -62,8 +62,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   <Code.Qwik>
   
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import Twitter from "@auth/qwik/providers/twitter"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import Twitter from "@oneum-io/qwik/providers/twitter"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -76,8 +76,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   <Code.Svelte>
 
 ```ts filename="/src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import Twitter from "@auth/sveltekit/providers/twitter"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import Twitter from "@oneum-io/sveltekit/providers/twitter"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
   providers: [Twitter],
@@ -88,8 +88,8 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
   <Code.Express>
 
 ```ts filename="/src/app.ts"
-import { ExpressAuth } from "@auth/express"
-import Twitter from "@auth/express/providers/twitter"
+import { ExpressAuth } from "@oneum-io/express"
+import Twitter from "@oneum-io/express/providers/twitter"
 
 app.use("/auth/*", ExpressAuth({ providers: [Twitter] }))
 ```

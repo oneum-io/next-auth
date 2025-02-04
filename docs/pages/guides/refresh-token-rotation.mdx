@@ -155,7 +155,7 @@ Using the database session strategy is similar, but instead we will save the `ac
 ```ts filename="./auth.ts"
 import NextAuth from "next-auth"
 import Google from "next-auth/providers/google"
-import { PrismaAdapter } from "@auth/prisma-adapter"
+import { PrismaAdapter } from "@oneum-io/prisma-adapter"
 import { PrismaClient } from "@prisma/client"
 
 const prisma = new PrismaClient()

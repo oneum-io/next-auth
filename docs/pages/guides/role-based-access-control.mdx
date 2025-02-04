@@ -31,8 +31,8 @@ export const { handlers, auth } = NextAuth({
 <Code.Qwik>
   
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import Google from "@auth/qwik/providers/google"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import Google from "@oneum-io/qwik/providers/google"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -51,8 +51,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
 <Code.Svelte>
 
 ```ts filename="./src/auth.ts"
-import SvelteKitAuth from "@auth/sveltekit"
-import Google from "@auth/sveltekit/providers/google"
+import SvelteKitAuth from "@oneum-io/sveltekit"
+import Google from "@oneum-io/sveltekit/providers/google"
 
 export const { handle } = SvelteKitAuth({
   providers: [
@@ -115,8 +115,8 @@ export const { handlers, auth } = NextAuth({
 <Code.Qwik>
   
 ```ts filename="/src/routes/plugin@auth.ts" {9}
-import { QwikAuth$ } from "@auth/qwik"
-import Google from "@auth/qwik/providers/google"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import Google from "@oneum-io/qwik/providers/google"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -145,8 +145,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
 <Code.Svelte>
 
 ```ts filename="./src/auth.ts" {8}
-import SvelteKitAuth from "@auth/sveltekit"
-import Google from "@auth/sveltekit/providers/google"
+import SvelteKitAuth from "@oneum-io/sveltekit"
+import Google from "@oneum-io/sveltekit/providers/google"
 
 export const { handle } = SvelteKitAuth({
   providers: [
@@ -230,8 +230,8 @@ export const { handlers, auth } = NextAuth({
 <Code.Qwik>
 
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import { PrismaAdapter } from "@auth/prisma-adapter"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import { PrismaAdapter } from "@oneum-io/prisma-adapter"
 import { PrismaClient } from "@prisma/client"
 
 const prisma = new PrismaClient()
@@ -254,8 +254,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
 <Code.Svelte>
 
 ```ts filename="./src/auth.ts"
-import SvelteKitAuth from "@auth/sveltekit"
-import Google from "@auth/sveltekit/providers/google"
+import SvelteKitAuth from "@oneum-io/sveltekit"
+import Google from "@oneum-io/sveltekit/providers/google"
 import prisma from "lib/prisma"
 
 export const { handle, auth } = SvelteKitAuth({

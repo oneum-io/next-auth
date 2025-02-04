@@ -9,10 +9,10 @@
  * ## Installation
  *
  * ```bash npm2yarn
- * npm install @upstash/redis @auth/upstash-redis-adapter
+ * npm install @upstash/redis @oneum-io/upstash-redis-adapter
  * ```
  *
- * @module @auth/upstash-redis-adapter
+ * @module @oneum-io/upstash-redis-adapter
  */
 import {
   type Adapter,
@@ -21,7 +21,7 @@ import {
   type AdapterSession,
   type VerificationToken,
   isDate,
-} from "@auth/core/adapters"
+} from "@oneum-io/core/adapters"
 import type { Redis } from "@upstash/redis"
 
 /** This is the interface of the Upstash Redis adapter options. */

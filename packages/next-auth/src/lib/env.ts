@@ -1,7 +1,7 @@
 // @ts-expect-error Next.js does not yet correctly use the `package.json#exports` field
 import { NextRequest } from "next/server"
 import type { NextAuthConfig } from "./index.js"
-import { setEnvDefaults as coreSetEnvDefaults } from "@auth/core"
+import { setEnvDefaults as coreSetEnvDefaults } from "@oneum-io/core"
 
 /** If `NEXTAUTH_URL` or `AUTH_URL` is defined, override the request's URL. */
 export function reqWithEnvURL(req: NextRequest): NextRequest {

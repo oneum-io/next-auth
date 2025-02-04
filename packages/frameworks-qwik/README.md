@@ -7,8 +7,8 @@
   Authentication for Qwik.
 </p>
 <p align="center">
-  <a href="https://www.npmjs.com/package/@auth/qwik"><img src="https://img.shields.io/npm/v/@auth/qwik?style=flat-square&label=latest&color=purple" alt="npm latest release" /></a>
-  <a href="https://www.npmtrends.com/@auth/qwik"><img src="https://img.shields.io/npm/dm/@auth/qwik?style=flat-square&color=cyan" alt="Downloads" /></a>
+  <a href="https://www.npmjs.com/package/@oneum-io/qwik"><img src="https://img.shields.io/npm/v/@oneum-io/qwik?style=flat-square&label=latest&color=purple" alt="npm latest release" /></a>
+  <a href="https://www.npmtrends.com/@oneum-io/qwik"><img src="https://img.shields.io/npm/dm/@oneum-io/qwik?style=flat-square&color=cyan" alt="Downloads" /></a>
   <a href="https://github.com/nextauthjs/next-auth/stargazers"><img src="https://img.shields.io/github/stars/nextauthjs/next-auth?style=flat-square&color=orange" alt="Github Stars" /></a>
   <img src="https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=fff&style=flat-square" alt="TypeScript" />
 </p>

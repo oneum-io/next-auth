@@ -13,7 +13,7 @@ import { Code } from "@/components/Code"
 ### Installation
 
 ```bash npm2yarn
-npm install @auth/neon-adapter @neondatabase/serverless
+npm install @oneum-io/neon-adapter @neondatabase/serverless
 ```
 
 ### Environment Variables
@@ -29,7 +29,7 @@ DATABASE_URL=
 
 ```ts filename="./auth.ts"
 import NextAuth from "next-auth"
-import NeonAdapter from "@auth/neon-adapter"
+import NeonAdapter from "@oneum-io/neon-adapter"
 import { Pool } from "@neondatabase/serverless"
 
 // *DO NOT* create a `Pool` here, outside the request handler.
@@ -48,8 +48,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth(() => {
 <Code.Qwik>
 
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import NeonAdapter from "@auth/neon-adapter"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import NeonAdapter from "@oneum-io/neon-adapter"
 import { Pool } from "@neondatabase/serverless"
 
 // *DO NOT* create a `Pool` here, outside the request handler.
@@ -70,8 +70,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
 <Code.Svelte>
 
 ```ts filename="./src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import NeonAdapter from "@auth/neon-adapter"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import NeonAdapter from "@oneum-io/neon-adapter"
 import { Pool } from "@neondatabase/serverless"
 
 // *DO NOT* create a `Pool` here, outside the request handler.
@@ -90,8 +90,8 @@ export const { handle, signIn, signOut } = SvelteKitAuth(() => {
 <Code.Express>
 
 ```ts filename="./src/routes/auth.route.ts"
-import { ExpressAuth } from "@auth/express"
-import NeonAdapter from "@auth/neon-adapter"
+import { ExpressAuth } from "@oneum-io/express"
+import NeonAdapter from "@oneum-io/neon-adapter"
 import { Pool } from "@neondatabase/serverless"
 
 const pool = new Pool({ connectionString: process.env.DATABASE_URL })

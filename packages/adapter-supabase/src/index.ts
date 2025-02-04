@@ -9,10 +9,10 @@
  * ## Installation
  *
  * ```bash npm2yarn
- * npm install @supabase/supabase-js @auth/supabase-adapter
+ * npm install @supabase/supabase-js @oneum-io/supabase-adapter
  * ```
  *
- * @module @auth/supabase-adapter
+ * @module @oneum-io/supabase-adapter
  */
 import { createClient } from "@supabase/supabase-js"
 import {
@@ -21,7 +21,7 @@ import {
   type AdapterUser,
   type VerificationToken,
   isDate,
-} from "@auth/core/adapters"
+} from "@oneum-io/core/adapters"
 
 export function format<T>(obj: Record<string, any>): T {
   for (const [key, value] of Object.entries(obj)) {
@@ -55,7 +55,7 @@ export function SupabaseAdapter(options: SupabaseAdapterOptions): Adapter {
   const { url, secret } = options
   const supabase = createClient<Database, "next_auth">(url, secret, {
     db: { schema: "next_auth" },
-    global: { headers: { "X-Client-Info": "@auth/supabase-adapter" } },
+    global: { headers: { "X-Client-Info": "@oneum-io/supabase-adapter" } },
     auth: { persistSession: false },
   })
   return {

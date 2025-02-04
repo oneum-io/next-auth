@@ -7,7 +7,7 @@ module.exports = {
   entryPoints: ["src/index.ts"],
   entryPointStrategy: "expand",
   tsconfig: "./tsconfig.json",
-  entryModule: "@auth/edgedb-adapter",
+  entryModule: "@oneum-io/edgedb-adapter",
   entryFileName: "../edgedb-adapter.mdx",
   includeVersion: true,
   readme: 'none',

@@ -2,14 +2,14 @@ import { describe, it, expect, vi, beforeEach, afterEach } from "vitest"
 import { NextRequest } from "next/server.js"
 
 import { reqWithEnvURL, setEnvDefaults } from "../lib/env"
-import { setEnvDefaults as coreSetEnvDefaults } from "@auth/core"
+import { setEnvDefaults as coreSetEnvDefaults } from "@oneum-io/core"
 import type { NextAuthConfig } from "../lib/index.js"
 
 vi.mock("next/server.js", () => ({
   NextRequest: vi.fn(),
 }))
 
-vi.mock("@auth/core", () => ({
+vi.mock("@oneum-io/core", () => ({
   setEnvDefaults: vi.fn(),
 }))
 

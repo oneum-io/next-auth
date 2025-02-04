@@ -9,10 +9,10 @@
  * ## Installation
  *
  * ```bash npm2yarn
- * npm install next-auth @auth/azure-tables-adapter
+ * npm install next-auth @oneum-io/azure-tables-adapter
  * ```
  *
- * @module @auth/azure-tables-adapter
+ * @module @oneum-io/azure-tables-adapter
  */
 
 import type {
@@ -21,7 +21,7 @@ import type {
   AdapterAccount,
   AdapterSession,
   VerificationToken,
-} from "@auth/core/adapters"
+} from "@oneum-io/core/adapters"
 import {
   GetTableEntityResponse,
   TableClient,

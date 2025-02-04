@@ -14,7 +14,7 @@ import { Code } from "@/components/Code"
 ### Installation
 
 ```bash npm2yarn
-npm install kysely @auth/kysely-adapter
+npm install kysely @oneum-io/kysely-adapter
 ```
 
 ### Environment Variables
@@ -40,7 +40,7 @@ npm install --save-dev @types/pg
 
 ```ts filename="./auth.ts"
 import NextAuth from "next-auth"
-import { KyselyAdapter } from "@auth/kysely-adapter"
+import { KyselyAdapter } from "@oneum-io/kysely-adapter"
 import { db } from "../../../db"
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
@@ -53,8 +53,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 <Code.Qwik>
 
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import { KyselyAdapter } from "@auth/kysely-adapter"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import { KyselyAdapter } from "@oneum-io/kysely-adapter"
 import { db } from "../../../db"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
@@ -69,8 +69,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
 <Code.Svelte>
 
 ```ts filename="./src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import { KyselyAdapter } from "@auth/kysely-adapter"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import { KyselyAdapter } from "@oneum-io/kysely-adapter"
 import { db } from "../../../db"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
@@ -83,8 +83,8 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
 <Code.Express>
 
 ```ts filename="./src/routes/auth.route.ts"
-import { ExpressAuth } from "@auth/express"
-import { KyselyAdapter } from "@auth/kysely-adapter"
+import { ExpressAuth } from "@oneum-io/express"
+import { KyselyAdapter } from "@oneum-io/kysely-adapter"
 import { db } from "../../../db"
 
 const app = express()
@@ -112,7 +112,7 @@ import { Pool } from "pg"
 // that can be used to provide additional type-safety.
 // While using it isn't required, it is recommended as it will verify
 // that the database interface has all the fields that Auth.js expects.
-import { KyselyAuth } from "@auth/kysely-adapter"
+import { KyselyAuth } from "@oneum-io/kysely-adapter"
 
 import type { GeneratedAlways } from "kysely"
 
@@ -167,7 +167,7 @@ export const db = new KyselyAuth<Database>({
 An alternative to manually defining types is generating them from the database schema using [kysely-codegen](https://github.com/RobinBlomberg/kysely-codegen), or from Prisma schemas using [prisma-kysely](https://github.com/valtyr/prisma-kysely). When using generated types with `KyselyAuth`, import `Codegen` and pass it as the second generic arg:
 
 ```ts
-import type { Codegen } from "@auth/kysely-adapter"
+import type { Codegen } from "@oneum-io/kysely-adapter"
 new KyselyAuth<Database, Codegen>()
 ```
 

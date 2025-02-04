@@ -1,5 +1,5 @@
 {
-  "name": "@auth/upstash-redis-adapter",
+  "name": "@oneum-io/upstash-redis-adapter",
   "version": "2.7.4",
   "description": "Upstash adapter for Auth.js.",
   "homepage": "https://authjs.dev",
@@ -39,7 +39,7 @@
     "clean": "rm -rf *.js *.d.ts*"
   },
   "dependencies": {
-    "@auth/core": "workspace:*"
+    "@oneum-io/core": "workspace:*"
   },
   "peerDependencies": {
     "@upstash/redis": "^1.0.1"

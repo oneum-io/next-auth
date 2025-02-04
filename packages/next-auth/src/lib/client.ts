@@ -1,9 +1,9 @@
 "use client"
 
 import * as React from "react"
-import type { ProviderId, ProviderType } from "@auth/core/providers"
-import type { LoggerInstance, Session } from "@auth/core/types"
-import { AuthError } from "@auth/core/errors"
+import type { ProviderId, ProviderType } from "@oneum-io/core/providers"
+import type { LoggerInstance, Session } from "@oneum-io/core/types"
+import { AuthError } from "@oneum-io/core/errors"
 
 /** @todo */
 class ClientFetchError extends AuthError {}

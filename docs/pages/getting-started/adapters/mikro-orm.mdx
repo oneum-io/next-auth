@@ -13,7 +13,7 @@ import { Code } from "@/components/Code"
 ### Installation
 
 ```bash npm2yarn
-npm install @mikro-orm/core @auth/mikro-orm-adapter
+npm install @mikro-orm/core @oneum-io/mikro-orm-adapter
 ```
 
 ### Environment Variables
@@ -29,7 +29,7 @@ DATABASE_CONNECTION_STRING=./db.sqlite
 
 ```ts filename="./auth.ts"
 import NextAuth from "next-auth"
-import { MikroOrmAdapter } from "@auth/mikro-orm-adapter"
+import { MikroOrmAdapter } from "@oneum-io/mikro-orm-adapter"
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   adapter: MikroOrmAdapter({
@@ -46,8 +46,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 <Code.Qwik>
 
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import { MikroOrmAdapter } from "@auth/mikro-orm-adapter"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import { MikroOrmAdapter } from "@oneum-io/mikro-orm-adapter"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -66,8 +66,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
 <Code.Svelte>
 
 ```ts filename="./src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import { MikroOrmAdapter } from "@auth/mikro-orm-adapter"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import { MikroOrmAdapter } from "@oneum-io/mikro-orm-adapter"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
   adapter: MikroOrmAdapter({
@@ -84,8 +84,8 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
 <Code.Express>
 
 ```ts filename="./src/routes/auth.route.ts"
-import { ExpressAuth } from "@auth/express"
-import { MikroOrmAdapter } from "@auth/mikro-orm-adapter"
+import { ExpressAuth } from "@oneum-io/express"
+import { MikroOrmAdapter } from "@oneum-io/mikro-orm-adapter"
 
 const app = express()
 
@@ -126,7 +126,7 @@ import {
   Property,
   Unique,
 } from "@mikro-orm/core"
-import { defaultEntities } from "@auth/mikro-orm-adapter"
+import { defaultEntities } from "@oneum-io/mikro-orm-adapter"
 
 const type { Account, Session } = defaultEntities
 
@@ -183,7 +183,7 @@ To achieve that include them in your "entities" array:
 
 ```typescript filename="config/mikro-orm.ts"
 import { Options } from "@mikro-orm/core"
-import { defaultEntities } from "@auth/mikro-orm-adapter"
+import { defaultEntities } from "@oneum-io/mikro-orm-adapter"
 
 const config: Options = {
   entities: [VeryImportantEntity, ...Object.values(defaultEntities)],

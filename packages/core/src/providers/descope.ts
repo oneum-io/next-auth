@@ -46,8 +46,8 @@ export interface DescopeProfile {
  *
  * #### Configuration
  * ```ts
- * import { Auth } from "@auth/core"
- * import Descope from "@auth/core/providers/descope"
+ * import { Auth } from "@oneum-io/core"
+ * import Descope from "@oneum-io/core/providers/descope"
  *
  * const request = new Request(origin)
  * const response = await Auth(request, { providers: [Descope({ clientId: AUTH_DESCOPE_ID, clientSecret: AUTH_DESCOPE_SECRET, issuer: AUTH_DESCOPE_ISSUER })] })

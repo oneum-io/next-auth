@@ -16,10 +16,10 @@
  * ## Installation
  *
  * ```bash npm2yarn
- * npm install @auth/core
+ * npm install @oneum-io/core
  * ```
  *
- * You can then import this submodule from `@auth/core/jwt`.
+ * You can then import this submodule from `@oneum-io/core/jwt`.
  *
  * ## Usage
  *

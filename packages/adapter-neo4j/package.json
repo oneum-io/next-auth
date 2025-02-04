@@ -1,5 +1,5 @@
 {
-  "name": "@auth/neo4j-adapter",
+  "name": "@oneum-io/neo4j-adapter",
   "version": "2.7.4",
   "description": "neo4j adapter for Auth.js",
   "homepage": "https://authjs.dev",
@@ -48,6 +48,6 @@
     "neo4j-driver": "^5.7.0"
   },
   "dependencies": {
-    "@auth/core": "workspace:*"
+    "@oneum-io/core": "workspace:*"
   }
 }

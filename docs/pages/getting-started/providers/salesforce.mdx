@@ -62,8 +62,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   <Code.Qwik>
   
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import Salesforce from "@auth/qwik/providers/salesforce"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import Salesforce from "@oneum-io/qwik/providers/salesforce"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -76,8 +76,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   <Code.Svelte>
 
 ```ts filename="/src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import Salesforce from "@auth/sveltekit/providers/salesforce"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import Salesforce from "@oneum-io/sveltekit/providers/salesforce"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
   providers: [Salesforce],
@@ -88,8 +88,8 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
   <Code.Express>
 
 ```ts filename="/src/app.ts"
-import { ExpressAuth } from "@auth/express"
-import Salesforce from "@auth/express/providers/salesforce"
+import { ExpressAuth } from "@oneum-io/express"
+import Salesforce from "@oneum-io/express/providers/salesforce"
 
 app.use("/auth/*", ExpressAuth({ providers: [Salesforce] }))
 ```

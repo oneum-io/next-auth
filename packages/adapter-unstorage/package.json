@@ -1,5 +1,5 @@
 {
-  "name": "@auth/unstorage-adapter",
+  "name": "@oneum-io/unstorage-adapter",
   "version": "2.7.4",
   "description": "Unstorage adapter for Auth.js.",
   "homepage": "https://authjs.dev",
@@ -39,7 +39,7 @@
     "clean": "rm -rf *.js *.d.ts*"
   },
   "dependencies": {
-    "@auth/core": "workspace:*"
+    "@oneum-io/core": "workspace:*"
   },
   "peerDependencies": {
     "unstorage": "^1.10.1"

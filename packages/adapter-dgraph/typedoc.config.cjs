@@ -7,7 +7,7 @@ module.exports = {
   entryPoints: ["src/index.ts", "src/lib/client.ts", "src/lib/utils.ts", "src/lib/graphql/fragments.ts"],
   entryPointStrategy: "expand",
   tsconfig: "./tsconfig.json",
-  entryModule: "@auth/dgraph-adapter",
+  entryModule: "@oneum-io/dgraph-adapter",
   entryFileName: "../dgraph-adapter.mdx",
   includeVersion: true,
   readme: 'none',

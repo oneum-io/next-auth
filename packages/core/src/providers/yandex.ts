@@ -95,8 +95,8 @@ export interface YandexProfile {
  *
  * #### Configuration
  * ```ts
- * import { Auth } from "@auth/core"
- * import Yandex from "@auth/core/providers/yandex"
+ * import { Auth } from "@oneum-io/core"
+ * import Yandex from "@oneum-io/core/providers/yandex"
  *
  * const request = new Request(origin)
  * const response = await Auth(request, {

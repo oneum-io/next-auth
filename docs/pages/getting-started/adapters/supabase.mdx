@@ -14,7 +14,7 @@ import { Code } from "@/components/Code"
 ### Installation
 
 ```bash npm2yarn
-npm install @supabase/supabase-js @auth/supabase-adapter
+npm install @supabase/supabase-js @oneum-io/supabase-adapter
 ```
 
 ### Environment Variables
@@ -31,7 +31,7 @@ SUPABASE_SERVICE_ROLE_KEY
 
 ```ts filename="./auth.ts"
 import NextAuth from "next-auth"
-import { SupabaseAdapter } from "@auth/supabase-adapter"
+import { SupabaseAdapter } from "@oneum-io/supabase-adapter"
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   providers: [],
@@ -46,8 +46,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 <Code.Qwik>
 
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import { SupabaseAdapter } from "@auth/supabase-adapter"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import { SupabaseAdapter } from "@oneum-io/supabase-adapter"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -64,8 +64,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
 <Code.Svelte>
 
 ```ts filename="./src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import { SupabaseAdapter } from "@auth/supabase-adapter"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import { SupabaseAdapter } from "@oneum-io/supabase-adapter"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
   providers: [],
@@ -80,8 +80,8 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
 <Code.Express>
 
 ```ts filename="./src/routes/auth.route.ts"
-import { ExpressAuth } from "@auth/express"
-import { SupabaseAdapter } from "@auth/supabase-adapter"
+import { ExpressAuth } from "@oneum-io/express"
+import { SupabaseAdapter } from "@oneum-io/supabase-adapter"
 
 const app = express()
 
@@ -246,7 +246,7 @@ To sign the JWT use the Supabase JWT secret which can be found in the [API setti
 
 ```ts filename="./auth.ts"
 import NextAuth from "next-auth"
-import { SupabaseAdapter } from "@auth/supabase-adapter"
+import { SupabaseAdapter } from "@oneum-io/supabase-adapter"
 import jwt from "jsonwebtoken"
 
 // For more information on each option (and a full list of options) go to

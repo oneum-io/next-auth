@@ -9,13 +9,13 @@
  * ## Installation
  *
  * ```bash npm2yarn
- * npm install next-auth @auth/dgraph-adapter
+ * npm install next-auth @oneum-io/dgraph-adapter
  * ```
  *
- * @module @auth/dgraph-adapter
+ * @module @oneum-io/dgraph-adapter
  */
 import { client as dgraphClient } from "./lib/client.js"
-import { isDate, type Adapter } from "@auth/core/adapters"
+import { isDate, type Adapter } from "@oneum-io/core/adapters"
 import type { DgraphClientParams } from "./lib/client.js"
 import * as defaultFragments from "./lib/graphql/fragments.js"
 import {
@@ -23,7 +23,7 @@ import {
   AdapterSession,
   AdapterUser,
   VerificationToken,
-} from "@auth/core/adapters"
+} from "@oneum-io/core/adapters"
 
 export type { DgraphClientParams, DgraphClientError } from "./lib/client.js"
 

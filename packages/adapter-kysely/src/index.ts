@@ -9,10 +9,10 @@
  * ## Installation
  *
  * ```bash npm2yarn
- * npm install kysely @auth/kysely-adapter
+ * npm install kysely @oneum-io/kysely-adapter
  * ```
  *
- * @module @auth/kysely-adapter
+ * @module @oneum-io/kysely-adapter
  */
 
 import { Kysely, SqliteAdapter } from "kysely"
@@ -24,7 +24,7 @@ import {
   type AdapterSession,
   type VerificationToken,
   isDate,
-} from "@auth/core/adapters"
+} from "@oneum-io/core/adapters"
 
 export interface Database {
   User: AdapterUser

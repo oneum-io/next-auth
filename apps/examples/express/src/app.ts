@@ -11,7 +11,7 @@ import {
   currentSession,
 } from "./middleware/auth.middleware.js"
 
-import { ExpressAuth } from "@auth/express"
+import { ExpressAuth } from "@oneum-io/express"
 import { authConfig } from "./config/auth.config.js"
 import * as pug from "pug"
 

@@ -7,7 +7,7 @@ module.exports = {
   entryPoints: ["src/index.ts", "src/client.ts", "src/adapters.ts"],
   entryPointStrategy: "expand",
   tsconfig: "./tsconfig.json",
-  entryModule: "@auth/solid-start",
+  entryModule: "@oneum-io/solid-start",
   entryFileName: "../solid-start.mdx",
   includeVersion: true,
   readme: 'none',

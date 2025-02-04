@@ -84,8 +84,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 <Code.Svelte>
 ### Configure AuthJS with the Loops Provider
 ```ts filename="./src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import Loops from "@auth/sveltekit/providers/loops"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import Loops from "@oneum-io/sveltekit/providers/loops"
 import { AUTH_LOOPS_KEY, AUTH_LOOPS_TRANSACTIONAL_ID } from "@env/static/private"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({

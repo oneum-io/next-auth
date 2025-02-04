@@ -67,8 +67,8 @@ export interface GitLabProfile extends Record<string, any> {
  *
  * #### Configuration
  *```ts
- * import { Auth } from "@auth/core"
- * import GitLab from "@auth/core/providers/gitlab"
+ * import { Auth } from "@oneum-io/core"
+ * import GitLab from "@oneum-io/core/providers/gitlab"
  *
  * const request = new Request(origin)
  * const response = await Auth(request, {

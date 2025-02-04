@@ -26,7 +26,7 @@
     "qwik": "qwik"
   },
   "devDependencies": {
-    "@auth/qwik": "workspace:*",
+    "@oneum-io/qwik": "workspace:*",
     "@builder.io/qwik": "^1.5.5",
     "@builder.io/qwik-city": "^1.5.5",
     "@types/eslint": "^8.56.10",

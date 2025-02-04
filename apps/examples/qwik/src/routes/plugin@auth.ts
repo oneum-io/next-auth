@@ -1,7 +1,7 @@
-import { DefaultSession, QwikAuth$ } from "@auth/qwik";
-import GitHub from "@auth/qwik/providers/github";
+import { DefaultSession, QwikAuth$ } from "@oneum-io/qwik";
+import GitHub from "@oneum-io/qwik/providers/github";
 
-declare module "@auth/qwik" {
+declare module "@oneum-io/qwik" {
   interface Session {
     user: {
       roles: string[];

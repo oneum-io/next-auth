@@ -83,8 +83,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   <Code.Qwik>
   
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import Vipps from "@auth/qwik/providers/vipps"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import Vipps from "@oneum-io/qwik/providers/vipps"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -97,8 +97,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   <Code.Svelte>
 
 ```ts filename="/src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import Vipps from "@auth/sveltekit/providers/vipps"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import Vipps from "@oneum-io/sveltekit/providers/vipps"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
   providers: [Vipps],
@@ -109,8 +109,8 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
   <Code.Express>
 
 ```ts filename="/src/app.ts"
-import { ExpressAuth } from "@auth/express"
-import Vipps from "@auth/express/providers/vipps"
+import { ExpressAuth } from "@oneum-io/express"
+import Vipps from "@oneum-io/express/providers/vipps"
 
 app.use("/auth/*", ExpressAuth({ providers: [Vipps] }))
 ```

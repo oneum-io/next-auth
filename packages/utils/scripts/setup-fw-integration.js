@@ -56,7 +56,7 @@ for (const file of files) {
 // Rename `name` field in package.json
 const packageJsonPath = path.join(destinationDir, "package.json")
 let packageJson = JSON.parse(await fs.readFile(packageJsonPath, "utf8"))
-packageJson.name = `@auth/frameworks-${id}`
+packageJson.name = `@oneum-io/frameworks-${id}`
 await fs.writeFile(packageJsonPath, JSON.stringify(packageJson, null, 2))
 
 // Update redirects in vercel.json

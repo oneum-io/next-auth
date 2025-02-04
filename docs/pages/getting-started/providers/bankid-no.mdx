@@ -69,8 +69,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   <Code.Qwik>
   
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import BankIDNorway from "@auth/qwik/providers/bankid-no"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import BankIDNorway from "@oneum-io/qwik/providers/bankid-no"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -83,8 +83,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   <Code.Svelte>
 
 ```ts filename="/src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import BankIDNorway from "@auth/sveltekit/providers/bankid-no"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import BankIDNorway from "@oneum-io/sveltekit/providers/bankid-no"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
   providers: [BankIDNorway],
@@ -95,8 +95,8 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
   <Code.Express>
 
 ```ts filename="/src/app.ts"
-import { ExpressAuth } from "@auth/express"
-import BankIDNorway from "@auth/express/providers/bankid-no"
+import { ExpressAuth } from "@oneum-io/express"
+import BankIDNorway from "@oneum-io/express/providers/bankid-no"
 
 app.use("/auth/*", ExpressAuth({ providers: [BankIDNorway] }))
 ```

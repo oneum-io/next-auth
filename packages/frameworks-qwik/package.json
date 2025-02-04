@@ -1,5 +1,5 @@
 {
-  "name": "@auth/qwik",
+  "name": "@oneum-io/qwik",
   "version": "0.5.4",
   "description": "Authentication for Qwik.",
   "license": "ISC",
@@ -53,7 +53,7 @@
     "providers": "node ../utils/scripts/providers"
   },
   "dependencies": {
-    "@auth/core": "workspace:*",
+    "@oneum-io/core": "workspace:*",
     "set-cookie-parser": "^2.6.0"
   },
   "devDependencies": {

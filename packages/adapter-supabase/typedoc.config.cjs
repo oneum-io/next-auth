@@ -7,7 +7,7 @@ module.exports = {
   entryPoints: ["src/index.ts"],
   entryPointStrategy: "expand",
   tsconfig: "./tsconfig.json",
-  entryModule: "@auth/supabase-adapter",
+  entryModule: "@oneum-io/supabase-adapter",
   entryFileName: "../supabase-adapter.mdx",
   includeVersion: true,
   readme: 'none',

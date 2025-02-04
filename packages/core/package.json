@@ -1,5 +1,5 @@
 {
-  "name": "@auth/core",
+  "name": "@oneum-io/core",
   "version": "0.37.5",
   "description": "Authentication for the Web.",
   "keywords": [

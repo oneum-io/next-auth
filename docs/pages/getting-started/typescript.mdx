@@ -28,7 +28,7 @@ With module augmentation, you defined the types once, and you can be sure that t
 
 ## Module Augmentation
 
-Auth.js libraries come with certain interfaces that are shared across submodules and different Auth.js libraries (For example: `next-auth` and `@auth/prisma-adapter` will rely on types from `@auth/core`).
+Auth.js libraries come with certain interfaces that are shared across submodules and different Auth.js libraries (For example: `next-auth` and `@oneum-io/prisma-adapter` will rely on types from `@oneum-io/core`).
 
 Good examples of such interfaces are `Session` or `User`. You can use TypeScript's [Module
 Augmentation](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#module-augmentation) to extend these types to add your own properties across Auth.js without having to pass generic all over the place.
@@ -80,9 +80,9 @@ export const { auth, handlers } = NextAuth({
 <Code.Qwik>
 
 ```ts filename="plugin@auth.ts"
-import { DefaultSession, QwikAuth$ } from "@auth/qwik"
+import { DefaultSession, QwikAuth$ } from "@oneum-io/qwik"
 
-declare module "@auth/qwik" {
+declare module "@oneum-io/qwik" {
   /**
    * Returned by the `useSession` hook and the `session` object in the sharedMap
    */
@@ -123,9 +123,9 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
 <Code.Svelte>
 
 ```ts filename="auth.ts"
-import SvelteKitAuth, { type DefaultSession } from "@auth/sveltekit"
+import SvelteKitAuth, { type DefaultSession } from "@oneum-io/sveltekit"
 
-declare module "@auth/sveltekit" {
+declare module "@oneum-io/sveltekit" {
   interface Session {
     user: {
       userId: string
@@ -156,9 +156,9 @@ export const { handle } = SvelteKitAuth({
 </Code.Svelte>
 <Code.Express>
 ```ts filename="auth.ts"
-import { ExpressAuthConfig } from "@auth/express";
+import { ExpressAuthConfig } from "@oneum-io/express";
 // Extend the default Session type to include custom properties
-declare module "@auth/express" {
+declare module "@oneum-io/express" {
   interface Session {
     user: {
       id: string; // Add a custom `id` property to the session user object

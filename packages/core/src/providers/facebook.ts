@@ -34,8 +34,8 @@ export interface FacebookProfile extends Record<string, any> {
  *
  * #### Configuration
  *```ts
- * import { Auth } from "@auth/core"
- * import Facebook from "@auth/core/providers/facebook"
+ * import { Auth } from "@oneum-io/core"
+ * import Facebook from "@oneum-io/core/providers/facebook"
  *
  * const request = new Request(origin)
  * const response = await Auth(request, {

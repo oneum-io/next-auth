@@ -22,8 +22,8 @@ import type { OAuthConfig, OAuthUserConfig } from "./index.js"
  *
  * #### Configuration
  *```ts
- * import { Auth } from "@auth/core"
- * import Dropbox from "@auth/core/providers/dropbox"
+ * import { Auth } from "@oneum-io/core"
+ * import Dropbox from "@oneum-io/core/providers/dropbox"
  *
  * const request = new Request(origin)
  * const response = await Auth(request, {

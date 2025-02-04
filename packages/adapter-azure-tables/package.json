@@ -1,5 +1,5 @@
 {
-  "name": "@auth/azure-tables-adapter",
+  "name": "@oneum-io/azure-tables-adapter",
   "version": "1.7.4",
   "description": "Azure Tables Storage adapter for next-auth.",
   "homepage": "https://authjs.dev",
@@ -42,7 +42,7 @@
     "clean": "rm -rf *.js *.d.ts*"
   },
   "dependencies": {
-    "@auth/core": "workspace:*"
+    "@oneum-io/core": "workspace:*"
   },
   "peerDependencies": {
     "@azure/data-tables": "^13.2.1"

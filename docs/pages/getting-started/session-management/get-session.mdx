@@ -185,7 +185,7 @@ Then you can access the `session` on the `$page.data` object in your page.
 <Code.Express>
 
 ```ts filename="app.ts"
-import { getSession } from "@auth/express"
+import { getSession } from "@oneum-io/express"
 
 export function authSession(req: Request, res: Response, next: NextFunction) {
   res.locals.session = await getSession(req)

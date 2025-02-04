@@ -9,10 +9,10 @@
  * ## Installation
  *
  * ```bash npm2yarn
- * npm install @auth/typeorm-adapter typeorm
+ * npm install @oneum-io/typeorm-adapter typeorm
  * ```
  *
- * @module @auth/typeorm-adapter
+ * @module @oneum-io/typeorm-adapter
  */
 
 import type {
@@ -20,7 +20,7 @@ import type {
   AdapterUser,
   AdapterAccount,
   AdapterSession,
-} from "@auth/core/adapters"
+} from "@oneum-io/core/adapters"
 import { DataSourceOptions, DataSource, EntityManager } from "typeorm"
 import * as defaultEntities from "./entities.js"
 import { parseDataSourceConfig, updateConnectionEntities } from "./utils.js"

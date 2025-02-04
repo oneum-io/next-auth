@@ -62,8 +62,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   <Code.Qwik>
   
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import Twitch from "@auth/qwik/providers/twitch"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import Twitch from "@oneum-io/qwik/providers/twitch"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -76,8 +76,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   <Code.Svelte>
 
 ```ts filename="/src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import Twitch from "@auth/sveltekit/providers/twitch"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import Twitch from "@oneum-io/sveltekit/providers/twitch"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
   providers: [Twitch],
@@ -88,8 +88,8 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
   <Code.Express>
 
 ```ts filename="/src/app.ts"
-import { ExpressAuth } from "@auth/express"
-import Twitch from "@auth/express/providers/twitch"
+import { ExpressAuth } from "@oneum-io/express"
+import Twitch from "@oneum-io/express/providers/twitch"
 
 app.use("/auth/*", ExpressAuth({ providers: [Twitch] }))
 ```

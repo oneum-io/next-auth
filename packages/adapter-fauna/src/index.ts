@@ -9,10 +9,10 @@
  * ## Installation
  *
  * ```bash npm2yarn
- * npm install @auth/fauna-adapter fauna
+ * npm install @oneum-io/fauna-adapter fauna
  * ```
  *
- * @module @auth/fauna-adapter
+ * @module @oneum-io/fauna-adapter
  */
 import {
   Client,
@@ -29,7 +29,7 @@ import type {
   AdapterSession,
   VerificationToken,
   AdapterAccount,
-} from "@auth/core/adapters"
+} from "@oneum-io/core/adapters"
 
 type ToFauna<T> = {
   [P in keyof T]: T[P] extends Date | null

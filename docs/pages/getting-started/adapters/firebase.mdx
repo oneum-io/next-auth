@@ -16,7 +16,7 @@ import { Code } from "@/components/Code"
 ### Installation
 
 ```bash npm2yarn
-npm install @auth/firebase-adapter firebase-admin
+npm install @oneum-io/firebase-adapter firebase-admin
 ```
 
 ### Environment variables
@@ -38,7 +38,7 @@ AUTH_FIREBASE_PRIVATE_KEY
 
 ```ts filename="auth.ts"
 import NextAuth from "next-auth"
-import { FirestoreAdapter } from "@auth/firebase-adapter"
+import { FirestoreAdapter } from "@oneum-io/firebase-adapter"
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   providers: [],
@@ -50,8 +50,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 <Code.Qwik>
 
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import { FirestoreAdapter } from "@auth/firebase-adapter"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import { FirestoreAdapter } from "@oneum-io/firebase-adapter"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -65,8 +65,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
 <Code.Svelte>
 
 ```ts filename="src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import { FirestoreAdapter } from "@auth/firebase-adapter"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import { FirestoreAdapter } from "@oneum-io/firebase-adapter"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
   providers: [],
@@ -78,8 +78,8 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
 <Code.Express>
 
 ```ts filename="./src/routes/auth.route.ts"
-import { ExpressAuth } from "@auth/express"
-import { FirestoreAdapter } from "@auth/firebase-adapter"
+import { ExpressAuth } from "@oneum-io/express"
+import { FirestoreAdapter } from "@oneum-io/firebase-adapter"
 
 const app = express()
 
@@ -116,7 +116,7 @@ First, create a Firebase project and generate a service account key. Visit: `htt
 
 ```ts filename="./auth.ts"
 import NextAuth from "next-auth"
-import { FirestoreAdapter } from "@auth/firebase-adapter"
+import { FirestoreAdapter } from "@oneum-io/firebase-adapter"
 import { cert } from "firebase-admin/app"
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
@@ -146,7 +146,7 @@ If you already have a Firestore instance, you can pass that to the adapter direc
 
 ```ts filename="./auth.ts"
 import NextAuth from "next-auth"
-import { FirestoreAdapter } from "@auth/firebase-adapter"
+import { FirestoreAdapter } from "@oneum-io/firebase-adapter"
 import { firestore } from "lib/firestore"
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
@@ -158,7 +158,7 @@ Utility function that helps making sure that there is no duplicate app initializ
 If no parameter is passed, it will use the `GOOGLE_APPLICATION_CREDENTIALS` environment variable to initialize a Firestore instance.
 
 ```ts filename="lib/firestore.ts"
-import { initFirestore } from "@auth/firebase-adapter"
+import { initFirestore } from "@oneum-io/firebase-adapter"
 import { cert } from "firebase-admin/app"
 
 export const firestore = initFirestore({

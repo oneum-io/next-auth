@@ -68,8 +68,8 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   <Code.Qwik>
   
 ```ts filename="/src/routes/plugin@auth.ts"
-import { QwikAuth$ } from "@auth/qwik"
-import WorkOS from "@auth/qwik/providers/workos"
+import { QwikAuth$ } from "@oneum-io/qwik"
+import WorkOS from "@oneum-io/qwik/providers/workos"
 
 export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   () => ({
@@ -82,8 +82,8 @@ export const { onRequest, useSession, useSignIn, useSignOut } = QwikAuth$(
   <Code.Svelte>
 
 ```ts filename="/src/auth.ts"
-import { SvelteKitAuth } from "@auth/sveltekit"
-import WorkOS from "@auth/sveltekit/providers/workos"
+import { SvelteKitAuth } from "@oneum-io/sveltekit"
+import WorkOS from "@oneum-io/sveltekit/providers/workos"
 
 export const { handle, signIn, signOut } = SvelteKitAuth({
   providers: [WorkOS({ connection: "conn_abc123" })],
@@ -94,8 +94,8 @@ export const { handle, signIn, signOut } = SvelteKitAuth({
   <Code.Express>
 
 ```ts filename="/src/app.ts"
-import { ExpressAuth } from "@auth/express"
-import WorkOS from "@auth/express/providers/workos"
+import { ExpressAuth } from "@oneum-io/express"
+import WorkOS from "@oneum-io/express/providers/workos"
 
 app.use(
   "/auth/*",

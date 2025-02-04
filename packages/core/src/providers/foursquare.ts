@@ -22,8 +22,8 @@ import type { OAuthConfig, OAuthUserConfig } from "./index.js"
  *
  * #### Configuration
  *```ts
- * import { Auth } from "@auth/core"
- * import FourSquare from "@auth/core/providers/foursquare"
+ * import { Auth } from "@oneum-io/core"
+ * import FourSquare from "@oneum-io/core/providers/foursquare"
  *
  * const request = new Request(origin)
  * const response = await Auth(request, {

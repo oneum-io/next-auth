@@ -9,10 +9,10 @@
  * ## Installation
  *
  * ```bash npm2yarn
- * npm install next-auth @auth/sequelize-adapter sequelize
+ * npm install next-auth @oneum-io/sequelize-adapter sequelize
  * ```
  *
- * @module @auth/sequelize-adapter
+ * @module @oneum-io/sequelize-adapter
  */
 import type {
   Adapter,
@@ -20,7 +20,7 @@ import type {
   AdapterAccount,
   AdapterSession,
   VerificationToken,
-} from "@auth/core/adapters"
+} from "@oneum-io/core/adapters"
 import { Sequelize, Model, ModelCtor } from "sequelize"
 import * as defaultModels from "./models.js"
 

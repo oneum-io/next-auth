@@ -36,7 +36,7 @@ import Zoom from "next-auth/providers/zoom"
 import { createStorage } from "unstorage"
 import memoryDriver from "unstorage/drivers/memory"
 import vercelKVDriver from "unstorage/drivers/vercel-kv"
-import { UnstorageAdapter } from "@auth/unstorage-adapter"
+import { UnstorageAdapter } from "@oneum-io/unstorage-adapter"
 
 const storage = createStorage({
   driver: process.env.VERCEL

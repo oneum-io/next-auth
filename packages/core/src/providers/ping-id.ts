@@ -34,7 +34,7 @@ export interface PingProfile extends Record<string, any> {
  * ## Example
  *
  * ```ts
- * import PingId from "@auth/core/providers/ping-id"
+ * import PingId from "@oneum-io/core/providers/ping-id"
  *
  * ...
  * providers: [

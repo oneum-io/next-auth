@@ -9,10 +9,10 @@
  * ## Installation
  *
  * ```bash npm2yarn
- * npm install next-auth @auth/dynamodb-adapter
+ * npm install next-auth @oneum-io/dynamodb-adapter
  * ```
  *
- * @module @auth/dynamodb-adapter
+ * @module @oneum-io/dynamodb-adapter
  */
 
 import type {
@@ -26,7 +26,7 @@ import {
   type AdapterUser,
   type VerificationToken,
   isDate,
-} from "@auth/core/adapters"
+} from "@oneum-io/core/adapters"
 
 export interface DynamoDBAdapterOptions {
   tableName?: string

@@ -9,10 +9,10 @@
  * ## Installation
  *
  * ```bash npm2yarn
- * npm install unstorage @auth/unstorage-adapter
+ * npm install unstorage @oneum-io/unstorage-adapter
  * ```
  *
- * @module @auth/unstorage-adapter
+ * @module @oneum-io/unstorage-adapter
  */
 import type {
   Adapter,
@@ -21,8 +21,8 @@ import type {
   AdapterSession,
   AdapterAuthenticator,
   VerificationToken,
-} from "@auth/core/adapters"
-import { isDate } from "@auth/core/adapters"
+} from "@oneum-io/core/adapters"
+import { isDate } from "@oneum-io/core/adapters"
 import type { Storage, StorageValue } from "unstorage"
 
 /** This is the interface of the Unstorage adapter options. */

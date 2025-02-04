@@ -2,9 +2,9 @@ import { apiBaseUrl } from "./lib/client.js"
 import { startAuthentication, startRegistration } from "@simplewebauthn/browser"
 import { getCsrfToken, getProviders, __NEXTAUTH } from "./react.js"
 
-import type { LoggerInstance } from "@auth/core/types"
-import type { WebAuthnOptionsResponseBody } from "@auth/core/types"
-import type { ProviderId } from "@auth/core/providers"
+import type { LoggerInstance } from "@oneum-io/core/types"
+import type { WebAuthnOptionsResponseBody } from "@oneum-io/core/types"
+import type { ProviderId } from "@oneum-io/core/providers"
 import type {
   AuthClientConfig,
   SignInAuthorizationParams,

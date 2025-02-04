@@ -3,8 +3,8 @@ import supertest from "supertest"
 import express from "express"
 import { ExpressAuth, getSession } from "../src/index.js"
 
-import CredentialsProvider from "@auth/core/providers/credentials"
-import type { AuthConfig } from "@auth/core"
+import CredentialsProvider from "@oneum-io/core/providers/credentials"
+import type { AuthConfig } from "@oneum-io/core"
 
 export const authConfig = {
   secret: "secret",
