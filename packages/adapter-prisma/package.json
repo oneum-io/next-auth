@@ -1,9 +1,9 @@
 {
   "name": "@auth/prisma-adapter",
-  "version": "2.7.4",
+  "version": "2.7.5",
   "description": "Prisma adapter for Auth.js",
   "homepage": "https://authjs.dev/reference/adapter/prisma",
-  "repository": "https://github.com/nextauthjs/next-auth",
+  "repository": "https://github.com/oneum-io/next-auth",
   "bugs": {
     "url": "https://github.com/nextauthjs/next-auth/issues"
   },
@@ -34,7 +34,8 @@
   ],
   "private": false,
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "clean": "rm ./prisma/dev.db* || echo 'File deleted' && rm -rf *.js *.d.ts*",
