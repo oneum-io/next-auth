@@ -16,7 +16,7 @@
   "homepage": "https://authjs.dev",
   "repository": "https://github.com/oneum-io/next-auth.git",
   "publishConfig": {
-    "access": "restricted",
+    "access": "public",
     "registry": "https://npm.pkg.github.com"
   },
   "author": "Balázs Orbán <info@balazsorban.com>",
