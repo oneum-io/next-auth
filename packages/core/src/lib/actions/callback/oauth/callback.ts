@@ -1,4 +1,5 @@
 import * as checks from "./checks.js"
+import * as callbackOptions from "./callback-options.js"
 import * as o from "oauth4webapi"
 import {
   OAuthCallbackError,
@@ -156,6 +157,12 @@ export async function handleOAuth(
     redirect_uri = provider.redirectProxyUrl
   }
 
+  // Has additiona parameters when customFetch and customCallbackParams are present
+  const additionalParameters = callbackOptions.additionalParameters(
+    provider,
+    codeGrantParams
+  )
+
   let codeGrantResponse = await o.authorizationCodeGrantRequest(
     as,
     client,
@@ -172,6 +179,7 @@ export async function handleOAuth(
         }
         return (provider[customFetch] ?? fetch)(...args)
       },
+      additionalParameters,
     }
   )
 

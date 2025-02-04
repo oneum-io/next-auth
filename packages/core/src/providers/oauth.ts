@@ -302,7 +302,9 @@ export type OIDCConfigInternal<Profile> = OAuthConfigInternal<Profile> & {
 export type OAuthUserConfig<Profile> = Omit<
   Partial<OAuthConfig<Profile>>,
   "options" | "type"
->
+> & {
+  customCallbackParams?: string[]
+}
 
 export type OIDCUserConfig<Profile> = Omit<
   Partial<OIDCConfig<Profile>>,
