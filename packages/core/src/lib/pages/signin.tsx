@@ -177,27 +177,34 @@ export default function SigninPage(props: {
               {provider.type === "credentials" && (
                 <form action={provider.callbackUrl} method="POST">
                   <input type="hidden" name="csrfToken" value={csrfToken} />
-                  {Object.keys(provider.credentials).map((credential) => {
-                    return (
-                      <div key={`input-group-${provider.id}`}>
-                        <label
-                          className="section-header"
-                          htmlFor={`input-${credential}-for-${provider.id}-provider`}
-                        >
-                          {provider.credentials[credential].label ?? credential}
-                        </label>
-                        <input
-                          name={credential}
-                          id={`input-${credential}-for-${provider.id}-provider`}
-                          type={provider.credentials[credential].type ?? "text"}
-                          placeholder={
-                            provider.credentials[credential].placeholder ?? ""
-                          }
-                          {...provider.credentials[credential]}
-                        />
-                      </div>
+                  {Object.keys(provider.credentials)
+                    .filter(
+                      (credential) => !provider.credentials[credential].optional
                     )
-                  })}
+                    .map((credential) => {
+                      return (
+                        <div key={`input-group-${provider.id}`}>
+                          <label
+                            className="section-header"
+                            htmlFor={`input-${credential}-for-${provider.id}-provider`}
+                          >
+                            {provider.credentials[credential].label ??
+                              credential}
+                          </label>
+                          <input
+                            name={credential}
+                            id={`input-${credential}-for-${provider.id}-provider`}
+                            type={
+                              provider.credentials[credential].type ?? "text"
+                            }
+                            placeholder={
+                              provider.credentials[credential].placeholder ?? ""
+                            }
+                            {...provider.credentials[credential]}
+                          />
+                        </div>
+                      )
+                    })}
                   <button id="submitButton" type="submit" tabIndex={0}>
                     Sign in with {provider.name}
                   </button>

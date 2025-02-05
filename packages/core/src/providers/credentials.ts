@@ -10,6 +10,7 @@ import type { JSX } from "preact"
 export interface CredentialInput
   extends Partial<JSX.IntrinsicElements["input"]> {
   label?: string
+  optional?: boolean
 }
 
 /** The Credentials Provider needs to be configured. */
