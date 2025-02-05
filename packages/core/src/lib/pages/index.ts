@@ -51,7 +51,10 @@ type RenderPageParams = {
  * we render a set of default ones, using Preact SSR.
  */
 export default function renderPage(params: RenderPageParams) {
-  const { url, theme, query, cookies, pages, providers } = params
+  const { url, theme, query: defaultQuery, cookies, pages, providers } = params
+
+  const ps = parseQueryProviders(defaultQuery)
+  const { p: _, ...query } = defaultQuery || {}
 
   return {
     csrf(skip: boolean, options: InternalOptions, cookies: Cookie[]) {
@@ -73,13 +76,15 @@ export default function renderPage(params: RenderPageParams) {
     providers(providers: InternalProvider[]) {
       return {
         headers: { "Content-Type": "application/json" },
-        body: providers.reduce<Record<string, PublicProvider>>(
-          (acc, { id, name, type, signinUrl, callbackUrl }) => {
-            acc[id] = { id, name, type, signinUrl, callbackUrl }
-            return acc
-          },
-          {}
-        ),
+        body: providers
+          .filter((provider) => useProvider(provider, ps))
+          .reduce<Record<string, PublicProvider>>(
+            (acc, { id, name, type, signinUrl, callbackUrl }) => {
+              acc[id] = { id, name, type, signinUrl, callbackUrl }
+              return acc
+            },
+            {}
+          ),
       }
     },
     signin(providerId?: string, error?: any) {
@@ -108,9 +113,6 @@ export default function renderPage(params: RenderPageParams) {
         simpleWebAuthnBrowserScript = `<script src="https://unpkg.com/@simplewebauthn/browser@${simpleWebAuthnBrowserVersion}/dist/bundle/index.umd.min.js" crossorigin="anonymous"></script>`
       }
 
-      const ps = parseQueryProviders(query)
-      const { p: _, ...signInQuery } = query || {}
-
       return send({
         cookies,
         theme,
@@ -133,7 +135,7 @@ export default function renderPage(params: RenderPageParams) {
           callbackUrl: params.callbackUrl,
           theme: params.theme,
           error,
-          ...signInQuery,
+          ...query,
         }),
         title: "Sign In",
         headTags: simpleWebAuthnBrowserScript,
