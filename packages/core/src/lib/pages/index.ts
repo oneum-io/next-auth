@@ -14,6 +14,7 @@ import type {
   PublicProvider,
 } from "../../types.js"
 import type { Cookie } from "../utils/cookie.js"
+import { useProvider, parseQueryProviders } from "../utils/query.js"
 
 function send({
   html,
@@ -107,6 +108,9 @@ export default function renderPage(params: RenderPageParams) {
         simpleWebAuthnBrowserScript = `<script src="https://unpkg.com/@simplewebauthn/browser@${simpleWebAuthnBrowserVersion}/dist/bundle/index.umd.min.js" crossorigin="anonymous"></script>`
       }
 
+      const ps = parseQueryProviders(query)
+      const { p: _, ...signInQuery } = query || {}
+
       return send({
         cookies,
         theme,
@@ -115,19 +119,21 @@ export default function renderPage(params: RenderPageParams) {
           // We only want to render providers
           providers: params.providers?.filter(
             (provider) =>
+              // Check if provider was filtered out by query
+              useProvider(provider, ps) &&
               // Always render oauth and email type providers
-              ["email", "oauth", "oidc"].includes(provider.type) ||
-              // Only render credentials type provider if credentials are defined
-              (provider.type === "credentials" && provider.credentials) ||
-              // Only render webauthn type provider if formFields are defined
-              (provider.type === "webauthn" && provider.formFields) ||
-              // Don't render other provider types
-              false
+              (["email", "oauth", "oidc"].includes(provider.type) ||
+                // Only render credentials type provider if credentials are defined
+                (provider.type === "credentials" && provider.credentials) ||
+                // Only render webauthn type provider if formFields are defined
+                (provider.type === "webauthn" && provider.formFields) ||
+                // Don't render other provider types
+                false)
           ),
           callbackUrl: params.callbackUrl,
           theme: params.theme,
           error,
-          ...query,
+          ...signInQuery,
         }),
         title: "Sign In",
         headTags: simpleWebAuthnBrowserScript,

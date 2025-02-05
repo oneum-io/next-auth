@@ -71,5 +71,29 @@ describe("pages", () => {
         `action="http://localhost:3000/auth/signin/github"`
       )
     })
+
+    it("should attempt to render signin page and filter provider", async () => {
+      const { options } = await init({
+        authOptions: authOptions,
+        action: "signin",
+        providerId: "github",
+        url: new URL("http://localhost:3000/auth/signin"),
+        cookies: {},
+        isPost: true,
+        csrfDisabled: true,
+      })
+
+      const render = renderPage({
+        ...options,
+        query: { p: "google" },
+        cookies: [],
+      })
+      const signInPage = render.signin()
+
+      expect(signInPage.body).toContain(`<title>Sign In</title>`)
+      expect(signInPage.body).not.toContain(
+        `action="http://localhost:3000/auth/signin/github"`
+      )
+    })
   })
 })
