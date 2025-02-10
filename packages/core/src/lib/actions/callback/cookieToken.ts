@@ -20,10 +20,14 @@ const databaseToken = (
       expires: session.expires,
     },
   })
+
+  return cookies
 }
 
 const jwtNullToken = (cookies: Cookie[], sessionStore: SessionStore) => {
   cookies.push(...sessionStore.clean())
+
+  return cookies
 }
 
 const jwtStringToken = async (
@@ -47,6 +51,8 @@ const jwtStringToken = async (
   })
 
   cookies.push(...sessionCookies)
+
+  return cookies
 }
 
 const createToken = async (
@@ -100,11 +106,10 @@ const jwtToken = async (
 
   // Clear cookies if token is null
   if (token === null) {
-    jwtNullToken(cookies, sessionStore)
-    return
+    return jwtNullToken(cookies, sessionStore)
   }
 
-  await jwtStringToken(
+  return await jwtStringToken(
     token,
     cookies,
     sessionStore,
@@ -129,10 +134,8 @@ export const sessionCookies = async (
   options: InternalOptions,
   useJwtSession: boolean
 ) => {
-  const newCookies = [...cookies]
-
   if (useJwtSession) {
-    await jwtToken(
+    return await jwtToken(
       user,
       account,
       profile,
@@ -147,5 +150,5 @@ export const sessionCookies = async (
     )
   }
 
-  databaseToken(newCookies, session as AdapterSession, options)
+  return databaseToken(cookies, session as AdapterSession, options)
 }
