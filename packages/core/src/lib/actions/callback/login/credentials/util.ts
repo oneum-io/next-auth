@@ -3,6 +3,7 @@ import type {
   AdapterSession,
   AdapterUser,
 } from "../../../../../adapters.js"
+import { AccountNotLinked } from "../../../../../errors.js"
 import { JWT } from "../../../../../jwt.js"
 import type { InternalOptions } from "../../../../../types.js"
 import type { SessionToken } from "../../../../utils/cookie.js"
@@ -27,6 +28,10 @@ const getUserWithSession = (
   // If the user is currently signed in, but the new account they are signin in
   // with is already associated with another user, then we cannot link them
   // and need to return an error.
+  throw new AccountNotLinked(
+    "The account is already associated with another user",
+    { provider: account.provider }
+  )
 }
 
 const getUserWithNoSession = (user: AdapterUser, account: AdapterAccount) => {
