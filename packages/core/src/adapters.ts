@@ -190,7 +190,7 @@ export interface AdapterUser extends User {
  */
 export type AdapterAccountType = Extract<
   ProviderType,
-  "oauth" | "oidc" | "email" | "webauthn"
+  "oauth" | "oidc" | "email" | "webauthn" | "credentials"
 >
 
 /**

@@ -656,6 +656,12 @@ export interface AuthConfig {
      * @default false
      */
     enableWebAuthn?: boolean
+    /**
+     * Enable credentials session support
+     *
+     * @default false
+     */
+    enableCredentialsSession?: boolean
   }
   /**
    * The base path of the Auth.js API endpoints.

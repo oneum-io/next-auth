@@ -39,7 +39,7 @@ export type WebAuthnRegister = "register"
 export type WebAuthnAuthenticate = "authenticate"
 export type WebAuthnAction = WebAuthnRegister | WebAuthnAuthenticate
 
-type InternalOptionsWebAuthn = InternalOptions<WebAuthnProviderType> & {
+export type InternalOptionsWebAuthn = InternalOptions<WebAuthnProviderType> & {
   adapter: Required<Adapter>
 }
 export type WebAuthnOptionsResponseBody =
