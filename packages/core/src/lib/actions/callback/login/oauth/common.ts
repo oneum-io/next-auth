@@ -115,7 +115,8 @@ const signinByUser = async (
   user: AdapterUser,
   options: InternalOptions<"oauth" | "oidc">
 ) => {
-  await linkUserAccounts(profile, account, account, user, options)
+  const currentAccount = getCurrentAccount(account, user)
+  await linkUserAccounts(profile, account, currentAccount, user, options)
 
   // As they are already signed in, we don't need to do anything after linking them
   return { user, isNewUser: false, hasSession: true }
