@@ -1,7 +1,7 @@
 {
   "name": "@oneum-io/express",
   "description": "Authentication for Express.",
-  "version": "0.8.13",
+  "version": "0.8.15",
   "type": "module",
   "files": [
     "*.js",
@@ -31,7 +31,7 @@
   },
   "scripts": {
     "build": "pnpm clean && pnpm providers && tsc",
-    "clean": "rm -rf lib *.js *.d.ts* src/lib/providers",
+    "clean": "rm -rf lib *.js *.d.ts* src/lib/providers src/providers providers",
     "test": "vitest run -c ../utils/vitest.config.ts",
     "providers": "node ../utils/scripts/providers"
   },
@@ -58,7 +58,8 @@
   "author": "Rexford Essilfie <rexfordessilfie09@gmail.com>",
   "contributors": [
     "Rexford Essilfie <rexfordessilfie09@gmail.com>",
-    "Lachie Hill <lachiehill@gmail.com>"
+    "Lachie Hill <lachiehill@gmail.com>",
+    "Oneum Team <dev@oneum.io>"
   ],
   "repository": "https://github.com/oneum-io/next-auth",
   "license": "ISC"

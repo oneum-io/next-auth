@@ -1,6 +1,6 @@
 {
   "name": "@oneum-io/core",
-  "version": "0.37.15",
+  "version": "0.38.2",
   "description": "Authentication for the Web.",
   "keywords": [
     "authentication",
@@ -25,7 +25,8 @@
     "Nico Domino <yo@ndo.dev>",
     "Lluis Agusti <hi@llu.lu>",
     "Thang Huu Vu <hi@thvu.dev>",
-    "Iain Collins <me@iaincollins.com>"
+    "Iain Collins <me@iaincollins.com>",
+    "Oneum Team <dev@oneum.io>"
   ],
   "type": "module",
   "types": "./index.d.ts",

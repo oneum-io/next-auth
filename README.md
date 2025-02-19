@@ -27,6 +27,9 @@
   <p align="center">
      <kbd>Sponsored</kbd> Looking for a hosted alternative? <a href="https://go.clerk.com/5115vfK" target="_blank">Use Clerk →</a>
   </p>
+  <p align="center">
+    <a href="https://oneum.io"><kbd>Oneum</kbd></a> fork.
+  </p>
 </p>
 
 ## Features

@@ -31,6 +31,11 @@ model Account {
   expires_at        Int?
   token_type        String?
   scope             String?
+  domain            String?
+  memberId          String?
+  redirect_uri      String?
+  client_endpoint   String?
+  server_endpoint   String?
   id_token          String?
   session_state     String?
 
