@@ -92,6 +92,7 @@ export interface Theme {
   logo?: string
   brandColor?: string
   buttonText?: string
+  icons?: string
 }
 
 /**

@@ -34,6 +34,15 @@ const authURL = currentURL.substring(0, currentURL.lastIndexOf('/'));
   )
 }
 
+function isValidUrl(u?: string) {
+  try {
+    new URL(String(u || ""))
+    return true
+  } catch (_) {
+    return false
+  }
+}
+
 export default function SigninPage(props: {
   csrfToken?: string
   providers?: InternalProvider[]
@@ -67,7 +76,10 @@ export default function SigninPage(props: {
 
   const error = errorType && (signinErrors[errorType] ?? signinErrors.default)
 
-  const providerLogoPath = "https://authjs.dev/img/providers"
+  const providerLogoPath =
+    theme && isValidUrl(theme.icons)
+      ? theme.icons
+      : "https://authjs.dev/img/providers"
 
   const conditionalUIProviderID = providers.find(
     (provider) => provider.type === "webauthn" && provider.enableConditionalUI
