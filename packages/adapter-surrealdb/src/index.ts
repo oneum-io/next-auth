@@ -105,7 +105,14 @@ export const sessionToDoc = (
   const doc = {
     ...session,
     expires: session.expires.toISOString(),
+  } as unknown as SessionDoc
+
+  if (doc.credentials) {
+    doc.credentials = "true"
+  } else {
+    delete doc.credentials
   }
+
   return doc
 }
 

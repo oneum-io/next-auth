@@ -1,6 +1,6 @@
 {
   "name": "@oneum-io/core",
-  "version": "0.38.3",
+  "version": "0.38.4",
   "description": "Authentication for the Web.",
   "keywords": [
     "authentication",

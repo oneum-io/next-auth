@@ -108,13 +108,20 @@ export const getNewSession = async (
   const {
     adapter,
     session: { generateSessionToken, maxAge },
+    experimental: { enableCredentialsSession = false },
   } = options
 
-  return await adapter?.createSession({
+  const session: AdapterSession = {
     sessionToken: generateSessionToken(),
     userId: user.id,
     expires: fromDate(maxAge),
-  })
+  }
+
+  if (enableCredentialsSession && options.provider.type === "credentials") {
+    session.credentials = true
+  }
+
+  return await adapter?.createSession(session)
 }
 
 export const getDbUser = async (

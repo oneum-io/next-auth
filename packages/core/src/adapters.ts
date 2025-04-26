@@ -231,6 +231,8 @@ export interface AdapterSession {
    *
    */
   expires: Date
+  /** Marks a session created by credentials provider */
+  credentials?: boolean | null
 }
 
 /**
@@ -344,6 +346,7 @@ export interface Adapter {
     sessionToken: string
     userId: string
     expires: Date
+    credentials?: boolean | null
   }): Awaitable<AdapterSession>
   /**
    * Returns a session and a userfrom the database in one go.
